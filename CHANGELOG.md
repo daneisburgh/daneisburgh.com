@@ -1,3 +1,10 @@
+# 1.0.0 (2021-06-10)
+
+
+### Features
+
+* first commit ([28f854d](https://github.com/daneisburgh/daneisburgh.com/commit/28f854d7b9f1351dc1f2c55bd6d6e0886c237bc3))
+
 # 1.0.0 (2021-05-28)
 
 
