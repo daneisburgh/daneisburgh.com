@@ -1,0 +1,52 @@
+<div class="display-5">What to know about me</div>
+<div class="row d-flex align-items-center">
+    <div class="col-lg-5 pe-lg-4 mt-2">
+        I'm a software engineer living in Cincinnati, OH with my beautiful wife, Sarah.
+        I enjoy developing apps, playing games, and riding my motorcycle around Cincy.
+        I grew up in Loveland, OH and graduated from the University of Cincinnati in 2018.
+        While in college, I worked for the Air Force Research Lab, several startups, and as a Teaching
+        Assistant.
+    </div>
+    <div class="col-sm-6 col-lg-3 mt-4 px-3 d-flex">
+        <img class="img-fluid rounded mx-auto" [src]="getImageFilePath('motorcycle')"
+            (click)="imageGallery.openGallery(0)">
+    </div>
+    <div class="col-sm-6 col-lg-4 mt-4 px-3 d-flex">
+        <img class="img-fluid rounded mx-auto" [src]="getImageFilePath('cabo')" (click)="imageGallery.openGallery(1)">
+    </div>
+</div>
+<div class="row d-flex align-items-center">
+    <div class="col-lg-5 pe-lg-4 mt-4">
+        Since graduating, I've been working as an Analytics Engineer for GE Digital, developing enterprise
+        web apps and large-scale data automation in the cloud.
+        My better half works for GE as well and we nerd out about technology on a regular basis.
+        Besides work, we love to travel, cook new food, and spend time with our friends and family.
+    </div>
+    <div class="col-sm-6 col-lg-4 mt-4 px-3 d-flex">
+        <img class="img-fluid rounded mx-auto" [src]="getImageFilePath('zugspitze')"
+            (click)="imageGallery.openGallery(2)">
+    </div>
+    <div class="col-sm-6 col-lg-3 mt-4 px-3 d-flex">
+        <img class="img-fluid rounded mx-auto" [src]="getImageFilePath('fonteinen')"
+            (click)="imageGallery.openGallery(3)">
+    </div>
+</div>
+<div class="row d-flex align-items-center">
+    <div class="col-lg-5 pe-lg-4 mt-4">
+        Sarah and I met during our sophomore year of college while on co-op at the AFRL in 2016 and have
+        been best friends ever since.
+        She attended the University of Kentucky and moved to Cincinnati after graduation before landing her
+        current role at GE.
+        We were married in 2020 and are enjoying our simple work/life balance while we save up to purchase a
+        home next year.
+    </div>
+    <div class="col-sm-6 col-lg-3 mt-4 px-3 d-flex">
+        <img class="img-fluid rounded mx-auto" [src]="getImageFilePath('wedding1')"
+            (click)="imageGallery.openGallery(4)">
+    </div>
+    <div class="col-sm-6 col-lg-4 mt-4 px-3 d-flex">
+        <img class="img-fluid rounded mx-auto" [src]="getImageFilePath('wedding2')"
+            (click)="imageGallery.openGallery(5)">
+    </div>
+</div>
+<app-image-gallery #imageGallery [imageDirectory]="imageDirectory" [galleryData]="galleryData"></app-image-gallery>

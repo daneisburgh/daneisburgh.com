@@ -1,0 +1,43 @@
+<div class="card mt-4" *ngFor="let element of projectElements">
+    <div class="card-body">
+        <div class="card-title fs-4">
+            <div class="row">
+                <div class="col">
+                    {{element.title}}
+                    <div class="fs-6 text-muted">{{elementService.getDateSubtitle(element)}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-element" *ngIf="element.imageDirectory"
+                        (click)="openGallery.emit(element)">
+                        <fa-icon [icon]="faImage"></fa-icon>
+                        Photos
+                    </button>
+                    <a class="btn btn-element" *ngIf="element.fileName"
+                        [href]="'assets/files/projects/' + element.fileName + '.pdf'" target="_blank">
+                        <fa-icon [icon]="faFileAlt"></fa-icon>
+                        Docs
+                        <fa-icon class="fa-icon-external-link" [icon]="faExternalLinkAlt"></fa-icon>
+                    </a>
+                    <a class="btn btn-element" *ngIf="element.githubRepo"
+                        [href]="'https://github.com/daneisburgh/' + element.githubRepo" target="_blank">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                        GitHub
+                        <fa-icon class="fa-icon-external-link" [icon]="faExternalLinkAlt"></fa-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3" [innerHTML]="element.description"></div>
+        <div class="technologies">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-2 mx-auto w-100">
+                <div class="col mt-2 px-1" *ngFor="let technology of element.technologies">
+                    <div class="technology p-2 text-center rounded" [style.borderColor]="technology.color">
+                        {{technology.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

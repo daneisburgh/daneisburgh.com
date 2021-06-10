@@ -1,0 +1,60 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~hamburgers/dist/hamburgers.css";
+@import "~photoswipe/dist/photoswipe.css";
+@import "~photoswipe/dist/default-skin/default-skin.css";
+
+html,
+body,
+app-root {
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 !important;
+    overflow-y: scroll !important;
+}
+
+nav {
+    padding: 0.5rem 0 !important;
+}
+
+a,
+.form-check,
+.form-check-input,
+.form-check-label {
+    cursor: pointer;
+}
+
+a.nav-link > img {
+    width: 2rem;
+}
+
+a.nav-link > span {
+    border-bottom: 1px transparent;
+    transition: border-bottom 0.3s;
+}
+
+a.nav-link.active > span {
+    border-bottom: 1px solid;
+}
+
+.btn-element {
+    border: 2px solid;
+    padding: 2px 8px;
+    margin: 10px 10px 8px 0;
+}
+
+.card {
+    border-width: 2px;
+    border-color: #90a4ae;
+}
+
+.fa-icon-external-link {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.fs-5 {
+    font-size: calc(1rem + 0.3vw) !important;
+}

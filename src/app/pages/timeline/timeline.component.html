@@ -1,0 +1,36 @@
+<div class="display-5">What I've been up to</div>
+<div class="fs-5 mb-3 mb-md-4">
+    Below is a short timeline including some of my major life events and trips with Sarah.
+</div>
+<div class="row">
+    <div class="col mt-3">
+        <ul class="timeline mb-0">
+            <li *ngFor="let element of timelineElements; let timelineIndex = index;"
+                [ngClass]="{'timeline-inverted': timelineIndex % 2}">
+                <div class="timeline-badge d-flex align-items-center">
+                    <fa-icon class="mx-auto" [icon]="element.icon"></fa-icon>
+                </div>
+                <div class="timeline-panel p-3" [class]="element.color" [style.zIndex]="1000 - timelineIndex">
+                    <div class="timeline-heading mb-2">
+                        <div class="fs-4">{{element.title}}</div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="fs-6 text-muted">{{elementService.getDateSubtitle(element)}}</div>
+                            </div>
+                            <div class="col-sm-4 text-sm-end fa-icon-column">
+                                <button type="button" class="btn btn-element" *ngIf="element.imageDirectory"
+                                    (click)="openGallery(element)">
+                                    <fa-icon [icon]="faImage"></fa-icon>
+                                    Photos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-body" [innerHTML]="element.description"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<app-image-gallery #imageGallery *ngIf="imageDirectory" [imageDirectory]="imageDirectory"
+    (galleryClose)="onImageGalleryClose()"></app-image-gallery>

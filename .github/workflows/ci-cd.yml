@@ -1,0 +1,51 @@
+name: CI/CD
+on: [push, pull_request]
+
+jobs:
+    install_lint_test:
+        name: Install, Lint, and Test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: "14"
+            - uses: actions/cache@v2
+              with:
+                  path: node_modules
+                  key: node-modules-${{ hashFiles('package-lock.json') }}
+            - name: Install
+              run: npm install
+            - name: Lint
+              run: npm run lint
+            - name: Test
+              run: npm run test
+    build_deploy_release:
+        name: Build, Deploy, and Release
+        if: ${{ github.ref == 'refs/heads/main' }}
+        needs: install_lint_test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: "14"
+            - uses: actions/cache@v2
+              with:
+                  path: node_modules
+                  key: node-modules-${{ hashFiles('package-lock.json') }}
+            - name: Install
+              run: npm install
+            - name: Build
+              run: npm run build
+            - name: Deploy
+              run: npm run deploy
+              env:
+                  AWS_REGION: ${{ secrets.AWS_REGION }}
+                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+            - name: Release
+              run: npm run release
+              env:
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}

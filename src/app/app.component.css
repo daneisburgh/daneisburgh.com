@@ -1,0 +1,67 @@
+main {
+    margin-top: 62px;
+}
+
+main,
+nav > div,
+footer {
+    min-width: 300px;
+    max-width: 992px;
+}
+
+hr {
+    margin: 3.5rem 0 3rem;
+}
+
+#error {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    text-align: center;
+}
+
+.hamburger-box {
+    width: 32px;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    height: 2px;
+    width: 32px;
+}
+
+.navbar-toggler > img {
+    width: 1.5rem;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
+
+.shrug {
+    padding-top: 5rem;
+    font-size: calc(7rem + 4.5vw);
+}
+
+@media (min-width: 768px) {
+    main {
+        margin-top: 82px;
+    }
+
+    hr {
+        margin: 4rem 0 3rem;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="display-5">What I've worked on</div>
+<div class="fs-5 mb-2">
+    Below is a selection of personal, professional, and school projects with the technologies that were implemented.
+    Some projects contain photos, videos, and related documents if available/shareable.
+</div>
+<div class="row row-cols-1 row-cols-lg-2">
+    <div class="col d-block d-lg-none">
+        <app-project-cards [projectElements]="projectElements" (openGallery)="openGallery($event)">
+        </app-project-cards>
+    </div>
+    <div class="col d-none d-lg-block">
+        <app-project-cards [projectElements]="projectElements1" (openGallery)="openGallery($event)">
+        </app-project-cards>
+    </div>
+    <div class="col d-none d-lg-block">
+        <app-project-cards [projectElements]="projectElements2" (openGallery)="openGallery($event)">
+        </app-project-cards>
+    </div>
+</div>
+<app-image-gallery #imageGallery *ngIf="imageDirectory" [imageDirectory]="imageDirectory"
+    (galleryClose)="onImageGalleryClose()"></app-image-gallery>
