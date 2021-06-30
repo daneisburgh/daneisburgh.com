@@ -241,7 +241,7 @@ export const timelineElements: TimelineElement[] = [
         color: undefined,
         imageDirectory: undefined,
         description: `
-            I worked for
+            I worked for several small businesses as a developer with
             <a href="https://lamproslabs.com/" target="_blank">LAMPros Labs</a>
             for my final three co-op rotations during my junior and senior years at UC.
             LAMPros was my introduction to AWS and cloud hosting, as well as to enterprise web frameworks.
