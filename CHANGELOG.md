@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.0.0...v1.1.0) (2021-06-30)
+
+
+### Features
+
+* update résumé ([bdc0f9a](https://github.com/daneisburgh/daneisburgh.com/commit/bdc0f9a67e96603f6651e8b67c1a6e04e419d6f3))
+* update timeline data ([b8d2a4d](https://github.com/daneisburgh/daneisburgh.com/commit/b8d2a4d6b57aa8f430ee24eddbeab38b5ae1f7fe))
+
 # 1.0.0 (2021-06-10)
 
 
