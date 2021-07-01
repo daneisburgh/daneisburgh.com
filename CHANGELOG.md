@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.1.0...v1.2.0) (2021-07-01)
+
+
+### Features
+
+* add house info and pictures ([f3cf0dc](https://github.com/daneisburgh/daneisburgh.com/commit/f3cf0dc403b9d543aac21e8065c126426da0e181))
+* update résumé ([179415a](https://github.com/daneisburgh/daneisburgh.com/commit/179415a8a3c4fc3439343d371a19c38d9c6bf32c))
+
 # [1.1.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.0.0...v1.1.0) (2021-06-30)
 
 
