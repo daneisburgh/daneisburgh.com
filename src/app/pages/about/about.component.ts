@@ -12,8 +12,8 @@ export class AboutComponent {
         { name: 'cabo', description: 'Having fun during our first trip to Cabo San Lucas' },
         { name: 'zugspitze', description: 'Staying warm on top of Zugspitze Mountain in Germany' },
         { name: 'fonteinen', description: 'Enjoying a lambic at 3 Fonteinen brewery in Belgium' },
-        { name: 'wedding1', description: 'Posing together after our first look' },
-        { name: 'wedding2', description: 'Trying to casually walk and not step on Sarah\'s dress' }
+        { name: 'wedding', description: 'Posing together after our first look' },
+        { name: 'house', description: 'Our first home in West Chester, Ohio' }
     ];
 
     public getImageFilePath(name: string) {

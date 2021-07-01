@@ -7,6 +7,7 @@ import {
     faGem,
     faGraduationCap,
     faHiking,
+    faHome,
     faHorse,
     faMotorcycle,
     faPlaceOfWorship,
@@ -21,6 +22,22 @@ export interface TimelineElement extends Element {
 }
 
 export const timelineElements: TimelineElement[] = [
+    {
+        icon: faHome,
+        title: 'First House',
+        startDate: new Date(2021, 4),
+        endDate: new Date(2021, 4),
+        color: undefined,
+        imageDirectory: 'house',
+        description: `
+            After a lot of searching, Sarah and I bought our first home in May of 2021.
+            The house is in West Chester, just north of our previous apartment and equidistant to our families
+            in Ohio and Kentucky.
+            We officially moved into our new home in early June and are currently working to paint and remodel
+            much of the house.
+            We're very fortunate and excited to have found a home that we can grow into for years to come.
+        `
+    },
     {
         icon: faDesktop,
         title: 'Current Computer Build',
