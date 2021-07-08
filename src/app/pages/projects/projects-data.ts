@@ -43,7 +43,7 @@ const getTechnology = (name: string) => {
 export const projectElements: ProjectElement[] = [
     {
         icon: faCode,
-        title: 'Sports App @ LAMPros',
+        title: 'Sports App @ UC',
         fileName: undefined,
         imageDirectory: 'sdd',
         githubRepo: undefined,
@@ -57,7 +57,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Data Science')
         ],
         description: `
-            One of my first projects at LAMPros was a social networking and management web application for sports
+            One of my first projects while on co-op was a social networking and management web application for sports
             professionals named Sports Digital Dashboard (SDD).
             It was hosted using AWS's
             <a href="https://aws.amazon.com/elasticbeanstalk/" target="_blank">Elastic Beanstalk</a>
@@ -72,7 +72,7 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Broadband App @ LAMPros',
+        title: 'Broadband App @ UC',
         fileName: undefined,
         imageDirectory: undefined,
         githubRepo: undefined,
@@ -88,7 +88,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Data Science')
         ],
         description: `
-            My last project at LAMPros was assisting in the development of a web and embedded application
+            My last project while on co-op was assisting in the development of a web and embedded application
             to manage enterprise broadband routers.
             The service's web app was built with an
             <a href="https://angular.io/" target="_blank">Angular</a>
@@ -295,7 +295,7 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Puzzle Game @ LAMPros',
+        title: 'Puzzle Game @ UC',
         fileName: undefined,
         imageDirectory: 'boxoff',
         githubRepo: undefined,
@@ -305,7 +305,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Java')
         ],
         description: `
-            My second major project at LAMPros was an Android puzzle game called
+            My second major project while on co-op was an Android puzzle game called
             <a href="https://play.google.com/store/apps/details?id=com.cyningstan.boxoff" target="_blank">BoxOff</a>.
             I was responsible for developing the UI components, completing the procedural puzzle generation,
             incorporating in-app purchasing, and deploying the application to the Play Store.
