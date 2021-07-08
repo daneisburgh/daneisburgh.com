@@ -252,16 +252,15 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faBriefcase,
-        title: 'Full Stack Developer @ LAMPros',
+        title: 'Full Stack Developer @ UC',
         startDate: new Date(2016, 4),
         endDate: new Date(2017, 8),
         color: undefined,
         imageDirectory: undefined,
         description: `
-            I worked for several small businesses as a developer with
-            <a href="https://lamproslabs.com/" target="_blank">LAMPros Labs</a>
-            for my final three co-op rotations during my junior and senior years at UC.
-            LAMPros was my introduction to AWS and cloud hosting, as well as to enterprise web frameworks.
+            I worked for several small businesses as a developer at UC
+            for my final three co-op rotations during my junior and senior years of college.
+            It was my introduction to AWS and cloud hosting, as well as to enterprise web frameworks.
             I learned a lot and got to work on both large and small web application projects as well as built
             and deployed an Android puzzle game.
         `
