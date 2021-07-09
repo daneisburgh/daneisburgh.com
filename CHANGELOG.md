@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.2.0...v1.2.1) (2021-07-09)
+
+
+### Bug Fixes
+
+* typos ([5d58d44](https://github.com/daneisburgh/daneisburgh.com/commit/5d58d443d59b6b49f7be6dad7db829d9dd3d7072))
+
 # [1.2.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.1.0...v1.2.0) (2021-07-01)
 
 
