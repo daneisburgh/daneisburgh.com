@@ -14,7 +14,7 @@
         "lint": "ng lint --fix",
         "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
         "e2e": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
-        "build": "ng build --prod",
+        "build": "ng build --configuration production",
         "deploy": "./deploy.sh"
     },
     "config": {
