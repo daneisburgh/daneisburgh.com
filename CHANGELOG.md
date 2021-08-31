@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.2.1...v1.2.2) (2021-08-31)
+
+
+### Bug Fixes
+
+* lint error ([57bd19a](https://github.com/daneisburgh/daneisburgh.com/commit/57bd19a5212407557930232e32fab250a71615bb))
+
 ## [1.2.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.2.0...v1.2.1) (2021-07-09)
 
 
