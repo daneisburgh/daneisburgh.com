@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.2.2...v1.3.0) (2021-09-26)
+
+
+### Features
+
+* add Kroger job info to timeline data ([d191868](https://github.com/daneisburgh/daneisburgh.com/commit/d191868774683ed02283624e1e62417201018a68))
+* update about page to include new job info ([60dd884](https://github.com/daneisburgh/daneisburgh.com/commit/60dd8840285db266063b45e6005720ba13430722))
+* update timeline data and add pictures ([661468c](https://github.com/daneisburgh/daneisburgh.com/commit/661468cecd092a4e809bb2a3aaaa38cbb2cbdb55))
+
 ## [1.2.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.2.1...v1.2.2) (2021-08-31)
 
 
