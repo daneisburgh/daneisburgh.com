@@ -44,7 +44,7 @@ export const timelineElements: TimelineElement[] = [
         imageDirectory: 'columbia',
         description: `
             Sarah and I went on a short trip to an <a href="https://www.airbnb.com/rooms/48522039" target="_blank">Airbnb</a>
-            just north of Lake Cumberland while I was between jobs.
+            just north of Lake Cumberland.
             We spent our time fishing, reading, and hanging out with the farm's six horses, six cats, four dogs, and flock of chickens
             as well as visiting the nearby towns in the Kentucky countryside.
         `
