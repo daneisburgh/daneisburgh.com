@@ -66,35 +66,6 @@ export const timelineElements: TimelineElement[] = [
         `
     },
     {
-        icon: faDesktop,
-        title: 'Current Computer Build',
-        startDate: new Date(2020, 2),
-        endDate: new Date(2020, 2),
-        color: undefined,
-        imageDirectory: undefined,
-        description: `
-            Sarah and I built my current desktop at the beginning of the pandemic as a side project.
-            It includes an AMD Ryzen 5 CPU (3.6Ghz, 12 threads), Nvidia GeForce 2060S GPU (1650Mhz, 8GB GDDR6),
-            32GB DDR4 memory, and a 500GB NVMe SSD inside of an NZXT H210 Mini-ITX case.
-            It's been a great machine and you can check out the performance results
-            <a href="https://www.userbenchmark.com/UserRun/41559348" target="_blank">here</a>.
-        `
-    },
-    {
-        icon: faDesktop,
-        title: 'First Computer Build',
-        startDate: new Date(2015, 9),
-        endDate: new Date(2015, 9),
-        color: undefined,
-        imageDirectory: undefined,
-        description: `
-            I built my first computer with Sarah while at the AFRL.
-            The parts included an AMD FX 8350 CPU (4GHz, 8 threads), Nvidia GeForce 660 GPU (1033MHz, 2GB GDDR5),
-            16GB DDR3 memory, and a 250GB SSD inside of an NZXT S340 ATX Mid-Tower case.
-            It was a great budget build that lasted over four years before I was ready for an upgrade.
-        `
-    },
-    {
         icon: faShip,
         title: 'Michigan City',
         startDate: new Date(2020, 7),
