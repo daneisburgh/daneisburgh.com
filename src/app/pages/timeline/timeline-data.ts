@@ -23,6 +23,20 @@ export interface TimelineElement extends Element {
 
 export const timelineElements: TimelineElement[] = [
     {
+        icon: faHorse,
+        title: 'Relaxing in Columbia, KY',
+        startDate: new Date(2021, 7),
+        endDate: new Date(2021, 7),
+        color: undefined,
+        imageDirectory: 'columbia',
+        description: `
+            Sarah and I went on a short trip to an <a href="https://www.airbnb.com/rooms/48522039" target="_blank">Airbnb</a>
+            just north of Lake Cumberland while I was between jobs.
+            We spent our time fishing, reading, and hanging out with the farm's six horses, six cats, four dogs, and flock of chickens
+            as well as visiting the nearby towns in the Kentucky countryside.
+        `
+    },
+    {
         icon: faHome,
         title: 'First House',
         startDate: new Date(2021, 4),
@@ -210,13 +224,12 @@ export const timelineElements: TimelineElement[] = [
         icon: faBriefcase,
         title: 'Analytics Engineer @ GE',
         startDate: new Date(2018, 4),
-        endDate: undefined,
+        endDate: new Date(2021, 7),
         color: undefined,
         imageDirectory: undefined,
         description: `
-            I landed my current job as an Analytics Engineer for GE during my senior year of college.
-            While at GE, I've had the opportunity to use new technologies to solve old and new problems alike.
-            Over the last few years, I've helped build several enterprise applications and data automation projects to
+            I started my professional career as an Analytics Engineer for GE after graduating from UC.
+            While at GE, I had the opportunity to build several enterprise applications and data automation projects to
             host/manage both physical and cloud infrastructure.
         `
     },
