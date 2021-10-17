@@ -13,16 +13,16 @@ import { TimelineElement, timelineElements } from './timeline-data';
 export class TimelineComponent implements OnInit {
     @ViewChild('imageGallery') imageGallery!: ImageGalleryComponent;
 
-    public faImage = faImage;
-    public faWrench = faWrench;
-    public faSortUp = faSortUp;
-    public faSortDown = faSortDown;
-    public imageDirectory!: string | undefined;
-    public timelineElements = this.elementService.sortData(timelineElements) as TimelineElement[];
+    faImage = faImage;
+    faWrench = faWrench;
+    faSortUp = faSortUp;
+    faSortDown = faSortDown;
+    imageDirectory!: string | undefined;
+    timelineElements = this.elementService.sortData(timelineElements) as TimelineElement[];
 
     constructor(public elementService: ElementService) { }
 
-    public ngOnInit() {
+    ngOnInit() {
         let colorIndex = 0;
         const timelineColors = ['teal', 'purple', 'blue'];;
         this.timelineElements.forEach(element => {
@@ -31,7 +31,7 @@ export class TimelineComponent implements OnInit {
         });
     }
 
-    public async openGallery(element: TimelineElement) {
+    async openGallery(element: TimelineElement) {
         this.imageDirectory = `timeline/${element.imageDirectory}`;
 
         if (!this.imageGallery) {
@@ -41,7 +41,7 @@ export class TimelineComponent implements OnInit {
         }
     }
 
-    public onImageGalleryClose() {
+    onImageGalleryClose() {
         this.imageDirectory = undefined;
     }
 }

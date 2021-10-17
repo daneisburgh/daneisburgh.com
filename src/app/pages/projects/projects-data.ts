@@ -239,7 +239,7 @@ export const projectElements: ProjectElement[] = [
         ],
         description: `
             I worked on a robotics web and embedded app, codenamed Botsyn, with three of my classmates for our senior design capstone.
-            It started as one of my side projects in early 2017 and ultimately became a public web app and open-source
+            It started as one of my side projects in early 2017 and ultimately became a web app and open-source
             embedded robotics module that allowed users to build and operate other users' robots over the internet.
             The app included an
             <a href="https://angular.io/" target="_blank">Angular</a>

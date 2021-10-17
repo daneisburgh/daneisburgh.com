@@ -15,15 +15,15 @@ import { ElementService } from 'src/app/shared/services/element/element.service'
 })
 export class ProjectCardsComponent {
     @Input()
-    public projectElements: ProjectElement[] = [];
+    projectElements: ProjectElement[] = [];
 
     @Output()
-    public openGallery: EventEmitter<ProjectElement> = new EventEmitter();
+    openGallery: EventEmitter<ProjectElement> = new EventEmitter();
 
-    public faExternalLinkAlt = faExternalLinkAlt;
-    public faFileAlt = faFileAlt;
-    public faGithub = faGithub;
-    public faImage = faImage;
+    faExternalLinkAlt = faExternalLinkAlt;
+    faFileAlt = faFileAlt;
+    faGithub = faGithub;
+    faImage = faImage;
 
     constructor(public elementService: ElementService) {}
 }

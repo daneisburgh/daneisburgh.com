@@ -33,7 +33,7 @@ export class ScrollService {
     private supportsPassive = false;
     private wheelOpt: false | { passive: false } = false;
 
-    public setWheelOpt() {
+    setWheelOpt() {
         try {
             window.addEventListener('test', () => { }, Object.defineProperty({}, 'passive', {
                 get: () => { this.supportsPassive = true; }
@@ -42,14 +42,14 @@ export class ScrollService {
         this.wheelOpt = this.supportsPassive ? { passive: false } : false;
     }
 
-    public disableScroll() {
+    disableScroll() {
         window.addEventListener('DOMMouseScroll', preventDefault, false);
         window.addEventListener(this.wheelEvent, preventDefault, this.wheelOpt);
         window.addEventListener('touchmove', preventDefault, this.wheelOpt);
         window.addEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 
-    public enableScroll() {
+    enableScroll() {
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
         window.removeEventListener(this.wheelEvent, preventDefault);
         window.removeEventListener('touchmove', preventDefault);

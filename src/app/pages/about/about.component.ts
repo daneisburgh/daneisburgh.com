@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
     styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-    public readonly imageDirectory = 'about';
-    public readonly galleryData = [
+    readonly imageDirectory = 'about';
+    readonly galleryData = [
         { name: 'motorcycle', description: 'One of our favorite engagement photos' },
         { name: 'cabo', description: 'Having fun during our first trip to Cabo San Lucas' },
         { name: 'zugspitze', description: 'Staying warm on top of Zugspitze Mountain in Germany' },
@@ -16,7 +16,7 @@ export class AboutComponent {
         { name: 'house', description: 'Our first home in West Chester, Ohio' }
     ];
 
-    public getImageFilePath(name: string) {
+    getImageFilePath(name: string) {
         return `assets/images/about/${name}.jpg`;
     }
 }

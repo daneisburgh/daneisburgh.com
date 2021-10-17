@@ -15,22 +15,23 @@ export interface Element {
     providedIn: 'root'
 })
 export class ElementService {
-    public sortData(elements: Element[]) {
+    sortData(elements: Element[]) {
         return orderBy(elements, 'endDate', 'desc');
     }
 
-    public getDateSubtitle(element: Element) {
+    getDateSubtitle(element: Element) {
         const startDate = element.startDate;
         const endDate = element.endDate;
+        const startDateString = this.getDateString(startDate);
 
         if (endDate === undefined) {
-            return `${this.getDateString(startDate)} - Present`;
+            return `${startDateString} - Present`;
         } else if (startDate.getTime() === endDate.getTime()) {
-            return `${this.getDateString(startDate)}`;
+            return `${startDateString}`;
         } else if (startDate.getFullYear() === endDate.getFullYear()) {
             return `${this.getDateMonth(startDate)} - ${this.getDateMonth(endDate)} ${startDate.getFullYear()}`;
         } else {
-            return `${this.getDateString(startDate)} - ${this.getDateString(endDate)}`;
+            return `${startDateString} - ${this.getDateString(endDate)}`;
         }
     }
 

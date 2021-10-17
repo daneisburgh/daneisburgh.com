@@ -19,24 +19,24 @@ interface Link {
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-    public static isHamburgerDisabled = false;
-    public isHamburgerActive = false;
-    public get isHamburgerDisabled() { return AppComponent.isHamburgerDisabled; }
+    static isHamburgerDisabled = false;
+    isHamburgerActive = false;
+    get isHamburgerDisabled() { return AppComponent.isHamburgerDisabled; }
 
-    public readonly email = 'hello@daneisburgh.com';
-    public readonly currentYear = new Date().getFullYear();
-    public readonly links: Link[] = [
+    readonly email = 'hello@daneisburgh.com';
+    readonly currentYear = new Date().getFullYear();
+    readonly links: Link[] = [
         { id: 'home', icon: 'home', bottom: 0 },
         { id: 'about', icon: 'info', bottom: 0 },
         { id: 'timeline', icon: 'timeline', bottom: 0 },
         { id: 'projects', icon: 'support', bottom: 0 }
     ];
 
-    public isReady = false;
-    public isError = false;
-    public activeLink: Link | undefined;
-    public faExternalLinkAlt = faExternalLinkAlt;
-    public upperFirst = upperFirst;
+    isReady = false;
+    isError = false;
+    activeLink: Link | undefined;
+    faExternalLinkAlt = faExternalLinkAlt;
+    upperFirst = upperFirst;
 
     private isNavigating = false;
     private isScrollNavigation = false;
@@ -53,28 +53,28 @@ export class AppComponent implements OnInit, AfterViewInit {
         private title: Title
     ) { }
 
-    public static temporarilyDisableHamburger() {
+    static temporarilyDisableHamburger() {
         this.isHamburgerDisabled = true;
         setTimeout(() => this.isHamburgerDisabled = false, 350);
     }
 
-    public ngOnInit() {
+    ngOnInit() {
         this.scrollService.setWheelOpt();
         this.watchScroll();
         this.watchRoute();
     }
 
-    public ngAfterViewInit() {
+    ngAfterViewInit() {
         this.isReady = true;
         this.cdr.detectChanges();
     }
 
-    public toggleHamburger() {
+    toggleHamburger() {
         this.isHamburgerActive = !this.isHamburgerActive;
         AppComponent.temporarilyDisableHamburger();
     }
 
-    public getLinkIcon(icon: string) {
+    getLinkIcon(icon: string) {
         return `assets/flat-color-icons/${icon}.svg`;
     }
 

@@ -14,18 +14,18 @@ export class ProjectsComponent implements OnInit {
     @ViewChild('imageGallery') imageGallery!: ImageGalleryComponent;
     @ViewChild('projectModal') projectModal!: ElementRef;
 
-    public projectFilter = 'Hide';
-    public projectFilters = ['Hide', 'Technology', 'Type'];
-    public projectModalElement: ProjectElement | undefined;
-    public imageDirectory!: string | undefined;
-    public technologies = orderBy(technologies, 'name');
-    public projectElements = this.elementService.sortData(projectElements) as ProjectElement[];
-    public projectElements1: ProjectElement[] = [];
-    public projectElements2: ProjectElement[] = [];
+    projectFilter = 'Hide';
+    projectFilters = ['Hide', 'Technology', 'Type'];
+    projectModalElement: ProjectElement | undefined;
+    imageDirectory!: string | undefined;
+    technologies = orderBy(technologies, 'name');
+    projectElements = this.elementService.sortData(projectElements) as ProjectElement[];
+    projectElements1: ProjectElement[] = [];
+    projectElements2: ProjectElement[] = [];
 
     constructor(private elementService: ElementService) { }
 
-    public ngOnInit() {
+    ngOnInit() {
         this.projectElements.forEach(element => element.technologies = orderBy(element.technologies, 'name'));
 
         for (let i = 0; i < this.projectElements.length; i++) {
@@ -37,7 +37,7 @@ export class ProjectsComponent implements OnInit {
         }
     }
 
-    public async openGallery(element: any) {
+    async openGallery(element: any) {
         this.imageDirectory = `projects/${element.imageDirectory}`;
 
         if (!this.imageGallery) {
@@ -47,7 +47,7 @@ export class ProjectsComponent implements OnInit {
         }
     }
 
-    public onImageGalleryClose() {
+    onImageGalleryClose() {
         this.imageDirectory = undefined;
     }
 }

@@ -19,26 +19,26 @@ interface ImageData {
 })
 export class ImageGalleryComponent {
     @Input()
-    public imageDirectory!: string | undefined;
+    imageDirectory!: string | undefined;
 
     @Input()
-    public galleryData!: ImageData[] | undefined;
+    galleryData!: ImageData[] | undefined;
 
     @Output()
-    public galleryClose: EventEmitter<any> = new EventEmitter();
+    galleryClose: EventEmitter<any> = new EventEmitter();
 
     @ViewChild('photoswipeElement')
     photoswipeElement!: ElementRef;
 
-    public get imageDirectoryPath() { return `assets/images/${this.imageDirectory}`; }
+    get imageDirectoryPath() { return `assets/images/${this.imageDirectory}`; }
 
     constructor(private scrollService: ScrollService) { }
 
-    public getImageFilePath(imageName: string) {
+    getImageFilePath(imageName: string) {
         return `${this.imageDirectoryPath}/${imageName}.jpg`;
     }
 
-    public openGallery(index: number) {
+    openGallery(index: number) {
         let images: any[] = [];
         this.scrollService.disableScroll();
 
