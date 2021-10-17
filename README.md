@@ -8,7 +8,7 @@ This is the second version of my personal website that I've built to include bas
 # Development
 1) Install [Node.js LTS](https://nodejs.org/en/download/)
 2) Install project dependencies: `npm install`
-2) Start local server: `npm run start`
+3) Start local server: `npm start`
 
 # Deployment
 The project uses a Github Action for [CI/CD](https://github.com/daneisburgh/daneisburgh.com/actions/workflows/ci-cd.yml) to automatically run jobs on changes to the repo.
