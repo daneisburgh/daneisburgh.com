@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.3.0...v1.4.0) (2021-10-17)
+
+
+### Features
+
+* display navigation after view init ([7e02802](https://github.com/daneisburgh/daneisburgh.com/commit/7e02802efdfc31dafddedee219e87e2537d1dd48))
+
 # [1.3.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.2.2...v1.3.0) (2021-09-26)
 
 
