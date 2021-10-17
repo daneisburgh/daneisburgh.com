@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "cli": {
-      "analytics": "2a33f205-88a9-4948-8592-2a59035e7aec"
+        "analytics": "2a33f205-88a9-4948-8592-2a59035e7aec"
     },
     "version": 1,
     "newProjectRoot": "projects",
@@ -45,7 +45,20 @@
                             "photoswipe"
                         ]
                     },
+                    "defaultConfiguration": "development",
                     "configurations": {
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": {
+                                "scripts": false,
+                                "styles": false,
+                                "fonts": false
+                            },
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        },
                         "production": {
                             "fileReplacements": [
                                 {
