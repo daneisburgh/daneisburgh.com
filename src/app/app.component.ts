@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NavigationStart, Router } from '@angular/router';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ interface Link {
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
     public static isHamburgerDisabled = false;
     public isHamburgerActive = false;
     public get isHamburgerDisabled() { return AppComponent.isHamburgerDisabled; }
@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
         { id: 'projects', icon: 'support', bottom: 0 }
     ];
 
+    public isReady = false;
     public isError = false;
     public activeLink: Link | undefined;
     public faExternalLinkAlt = faExternalLinkAlt;
@@ -45,6 +46,7 @@ export class AppComponent implements OnInit {
     private get topDiff() { return window.innerWidth < 768 ? 86 : 106; }
 
     constructor(
+        private cdr: ChangeDetectorRef,
         private location: Location,
         private scrollService: ScrollService,
         private router: Router,
@@ -60,6 +62,11 @@ export class AppComponent implements OnInit {
         this.scrollService.setWheelOpt();
         this.watchScroll();
         this.watchRoute();
+    }
+
+    public ngAfterViewInit() {
+        this.isReady = true;
+        this.cdr.detectChanges();
     }
 
     public toggleHamburger() {
