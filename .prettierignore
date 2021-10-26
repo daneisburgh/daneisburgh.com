@@ -1,3 +1,7 @@
+dist
+src/assets/websites
+
 .czrc
 .prettierignore
+CHANGELOG.md
 deploy.sh
