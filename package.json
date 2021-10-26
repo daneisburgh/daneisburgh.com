@@ -13,46 +13,11 @@
         "start:local": "ng serve --host=0.0.0.0 --disableHostCheck",
         "lint": "ng lint",
         "lint:fix": "ng lint --fix",
+        "format": "prettier --write .",
         "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
         "e2e": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
         "build": "ng build --configuration production",
         "deploy": "./deploy.sh"
-    },
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog",
-            "maxHeaderWidth": 50
-        }
-    },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ],
-        "rules": {
-            "body-max-line-length": [
-                2,
-                "always",
-                200
-            ]
-        },
-        "ignores": []
-    },
-    "lint-staged": {
-        "*.ts": "eslint"
-    },
-    "release": {
-        "branches": [
-            "main"
-        ],
-        "npmPublish": false,
-        "plugins": [
-            "@semantic-release/commit-analyzer",
-            "@semantic-release/release-notes-generator",
-            "@semantic-release/changelog",
-            "@semantic-release/npm",
-            "@semantic-release/git",
-            "@semantic-release/github"
-        ]
     },
     "dependencies": {
         "@angular/animations": "^12.2.7",
@@ -100,9 +65,11 @@
         "commitizen": "^4.2.4",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "2.24.2",
         "eslint-plugin-jsdoc": "36.1.0",
         "eslint-plugin-prefer-arrow": "1.2.3",
+        "eslint-plugin-prettier": "^4.0.0",
         "husky": "^7.0.2",
         "jasmine-core": "~3.9.0",
         "jasmine-spec-reporter": "~7.0.0",
@@ -112,6 +79,7 @@
         "karma-jasmine": "~4.0.1",
         "karma-jasmine-html-reporter": "^1.7.0",
         "lint-staged": "^11.1.2",
+        "prettier": "^2.4.1",
         "protractor": "~7.0.0",
         "semantic-release": "^18.0.0",
         "semantic-release-cli": "^5.4.4",
