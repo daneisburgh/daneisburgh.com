@@ -1,0 +1,31 @@
+name: Deployment
+on:
+    workflow_run:
+        workflows: ["Integration"]
+        branches: [main]
+        types: [completed]
+jobs:
+    release-deploy:
+        name: Release and Deploy
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+            - uses: actions/cache@v2
+              with:
+                  path: node_modules
+                  key: node-modules-${{ hashFiles('package-lock.json') }}
+            - run: npm install
+            - run: npm build
+            - run: npm run release
+              env:
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+            - run: npm run deploy
+              env:
+                  AWS_REGION: ${{ secrets.AWS_REGION }}
+                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
