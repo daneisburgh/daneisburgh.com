@@ -1,26 +1,32 @@
 {
     "root": true,
-    "ignorePatterns": [
-        "projects/**/*"
-    ],
+    "ignorePatterns": ["projects/**/*"],
     "overrides": [
         {
-            "files": [
-                "*.ts"
-            ],
+            "files": ["*.ts"],
             "parserOptions": {
-                "project": [
-                    "tsconfig.json",
-                    "e2e/tsconfig.json"
-                ],
+                "project": ["tsconfig.json", "e2e/tsconfig.json"],
                 "createDefaultProgram": true
             },
+            "plugins": ["@typescript-eslint/eslint-plugin", "prettier"],
             "extends": [
+                "plugin:@typescript-eslint/recommended",
                 "plugin:@angular-eslint/ng-cli-compat",
                 "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
-                "plugin:@angular-eslint/template/process-inline-templates"
+                "plugin:@angular-eslint/template/process-inline-templates",
+                "prettier"
             ],
             "rules": {
+                "@typescript-eslint/interface-name-prefix": "off",
+                "@typescript-eslint/explicit-function-return-type": "off",
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "@typescript-eslint/no-explicit-any": "off",
+                "@angular-eslint/component-class-suffix": [
+                    "error",
+                    {
+                        "suffixes": ["Page", "Component"]
+                    }
+                ],
                 "@angular-eslint/component-selector": [
                     "error",
                     {
@@ -36,17 +42,22 @@
                         "prefix": "app",
                         "style": "camelCase"
                     }
-                ]
+                ],
+                "prettier/prettier": "error"
             }
         },
         {
-            "files": [
-                "*.html"
-            ],
-            "extends": [
-                "plugin:@angular-eslint/template/recommended"
-            ],
-            "rules": {}
+            "files": ["*.html"],
+            "extends": ["plugin:@angular-eslint/template/recommended"],
+            "parserOptions": {
+                "ecmaVersion": 6,
+                "sourceType": "module",
+                "ecmaFeatures": {
+                    "jsx": true,
+                    "modules": true,
+                    "experimentalObjectRestSpread": true
+                }
+            }
         }
     ]
 }
