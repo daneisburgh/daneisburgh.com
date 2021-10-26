@@ -26,19 +26,26 @@ const preventDefaultForScrollKeys = (event: KeyboardEvent) => {
 };
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class ScrollService {
-    private readonly wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+    private readonly wheelEvent =
+        'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
     private supportsPassive = false;
     private wheelOpt: false | { passive: false } = false;
 
     setWheelOpt() {
         try {
-            window.addEventListener('test', () => { }, Object.defineProperty({}, 'passive', {
-                get: () => { this.supportsPassive = true; }
-            }));
-        } catch (event: any) { }
+            window.addEventListener(
+                'test',
+                () => {},
+                Object.defineProperty({}, 'passive', {
+                    get: () => {
+                        this.supportsPassive = true;
+                    },
+                })
+            );
+        } catch (event: any) {}
         this.wheelOpt = this.supportsPassive ? { passive: false } : false;
     }
 
@@ -53,6 +60,10 @@ export class ScrollService {
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
         window.removeEventListener(this.wheelEvent, preventDefault);
         window.removeEventListener('touchmove', preventDefault);
-        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+        window.removeEventListener(
+            'keydown',
+            preventDefaultForScrollKeys,
+            false
+        );
     }
 }

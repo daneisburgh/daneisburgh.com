@@ -12,7 +12,7 @@ export interface Element {
 }
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class ElementService {
     sortData(elements: Element[]) {
@@ -29,7 +29,9 @@ export class ElementService {
         } else if (startDate.getTime() === endDate.getTime()) {
             return `${startDateString}`;
         } else if (startDate.getFullYear() === endDate.getFullYear()) {
-            return `${this.getDateMonth(startDate)} - ${this.getDateMonth(endDate)} ${startDate.getFullYear()}`;
+            return `${this.getDateMonth(startDate)} - ${this.getDateMonth(
+                endDate
+            )} ${startDate.getFullYear()}`;
         } else {
             return `${startDateString} - ${this.getDateString(endDate)}`;
         }
@@ -41,11 +43,20 @@ export class ElementService {
 
     private getDateMonth(date: Date) {
         const monthNames = [
-            'January', 'February', 'March', 'April', 'May', 'June',
-            'July', 'August', 'September', 'October', 'November', 'December'
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
         ];
 
         return monthNames[date.getMonth()];
     }
-
 }

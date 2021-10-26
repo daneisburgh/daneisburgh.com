@@ -1,4 +1,11 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import {
+    Component,
+    ElementRef,
+    EventEmitter,
+    Input,
+    Output,
+    ViewChild,
+} from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 
 import * as photoswipe from 'photoswipe';
@@ -15,7 +22,7 @@ interface ImageData {
 @Component({
     selector: 'app-image-gallery',
     templateUrl: './image-gallery.component.html',
-    styleUrls: ['./image-gallery.component.css']
+    styleUrls: ['./image-gallery.component.css'],
 })
 export class ImageGalleryComponent {
     @Input()
@@ -30,9 +37,11 @@ export class ImageGalleryComponent {
     @ViewChild('photoswipeElement')
     photoswipeElement!: ElementRef;
 
-    get imageDirectoryPath() { return `assets/images/${this.imageDirectory}`; }
+    get imageDirectoryPath() {
+        return `assets/images/${this.imageDirectory}`;
+    }
 
-    constructor(private scrollService: ScrollService) { }
+    constructor(private scrollService: ScrollService) {}
 
     getImageFilePath(imageName: string) {
         return `${this.imageDirectoryPath}/${imageName}.jpg`;
@@ -43,16 +52,17 @@ export class ImageGalleryComponent {
         this.scrollService.disableScroll();
 
         if (this.galleryData) {
-            images = this.galleryData
-                .map(imageData => ({
-                    src: `${location.origin}/${this.getImageFilePath(imageData.name)}`,
-                    title: imageData.description
-                }));
+            images = this.galleryData.map((imageData) => ({
+                src: `${location.origin}/${this.getImageFilePath(
+                    imageData.name
+                )}`,
+                title: imageData.description,
+            }));
         } else {
             images = (assetsFilePaths as string[])
-                .filter(path => path.includes(this.imageDirectoryPath))
-                .map(path => ({
-                    src: `${location.origin}/${path}`
+                .filter((path) => path.includes(this.imageDirectoryPath))
+                .map((path) => ({
+                    src: `${location.origin}/${path}`,
                 }));
         }
 
@@ -65,10 +75,15 @@ export class ImageGalleryComponent {
             index,
             pinchToClose: false,
             closeOnScroll: false,
-            closeOnVerticalDrag: false
+            closeOnVerticalDrag: false,
         };
 
-        const gallery = new photoswipe(this.photoswipeElement.nativeElement, photoswipeUIDefault, images, options);
+        const gallery = new photoswipe(
+            this.photoswipeElement.nativeElement,
+            photoswipeUIDefault,
+            images,
+            options
+        );
 
         gallery.listen('close', () => {
             this.scrollService.enableScroll();

@@ -21,12 +21,8 @@ import { ImageGalleryComponent } from './shared/components/image-gallery/image-g
         ProjectCardsComponent,
         ImageGalleryComponent,
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FontAwesomeModule
-    ],
+    imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

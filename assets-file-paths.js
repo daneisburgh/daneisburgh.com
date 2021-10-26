@@ -1,8 +1,6 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const ignoreFiles = [
-    '.DS_Store'
-];
+const ignoreFiles = [".DS_Store"];
 
 const getAllFilePaths = (directory, filePaths) => {
     filePaths = filePaths || [];
@@ -15,12 +13,15 @@ const getAllFilePaths = (directory, filePaths) => {
             if (fs.statSync(filePath).isDirectory()) {
                 filePaths = getAllFilePaths(filePath, filePaths);
             } else {
-                filePaths.push(filePath.replace('src/', ''));
+                filePaths.push(filePath.replace("src/", ""));
             }
         }
     }
 
     return filePaths;
-}
+};
 
-fs.writeFileSync('src/assets/file-paths.json', JSON.stringify(getAllFilePaths('src/assets')));
+fs.writeFileSync(
+    "src/assets/file-paths.json",
+    JSON.stringify(getAllFilePaths("src/assets"))
+);

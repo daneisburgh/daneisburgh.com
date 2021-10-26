@@ -8,7 +8,7 @@ import { ElementService } from 'src/app/shared/services/element/element.service'
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.css']
+    styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit {
     @ViewChild('imageGallery') imageGallery!: ImageGalleryComponent;
@@ -19,14 +19,19 @@ export class ProjectsComponent implements OnInit {
     projectModalElement: ProjectElement | undefined;
     imageDirectory!: string | undefined;
     technologies = orderBy(technologies, 'name');
-    projectElements = this.elementService.sortData(projectElements) as ProjectElement[];
+    projectElements = this.elementService.sortData(
+        projectElements
+    ) as ProjectElement[];
     projectElements1: ProjectElement[] = [];
     projectElements2: ProjectElement[] = [];
 
-    constructor(private elementService: ElementService) { }
+    constructor(private elementService: ElementService) {}
 
     ngOnInit() {
-        this.projectElements.forEach(element => element.technologies = orderBy(element.technologies, 'name'));
+        this.projectElements.forEach(
+            (element) =>
+                (element.technologies = orderBy(element.technologies, 'name'))
+        );
 
         for (let i = 0; i < this.projectElements.length; i++) {
             if (i % 2 === 0 && i < this.projectElements.length - 1) {
