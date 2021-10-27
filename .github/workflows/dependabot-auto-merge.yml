@@ -1,8 +1,11 @@
 name: Dependabot Auto Merge
 on: [pull_request]
 jobs:
-    auto-merge-pr:
+    call-integration:
+        uses: ./.github/workflows/integration.yml@v1
+    dependabot-auto-merge:
         name: Auto Merge PR
+        needs: call-integration
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2

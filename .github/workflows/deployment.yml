@@ -4,7 +4,7 @@ on:
         types: [released]
 jobs:
     deploy-release:
-        name: Deploy release
+        name: Deploy Release
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
