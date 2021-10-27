@@ -2,7 +2,7 @@ name: Dependabot Auto Merge
 on: [pull_request]
 jobs:
     call-integration:
-        uses: ./.github/workflows/integration.yml@v1
+        uses: ${{ github.repository }}/.github/workflows/integration.yml@v1
     dependabot-auto-merge:
         name: Auto Merge PR
         needs: call-integration
