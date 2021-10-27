@@ -1,8 +1,11 @@
 name: Dependabot Auto Merge
 on: [pull_request]
 jobs:
+    call-integration:
+        uses: daneisburgh/daneisburgh.com/.github/workflows/integration.yml@main
     dependabot-auto-merge:
         name: Auto Merge PR
+        needs: call-integration
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
