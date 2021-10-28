@@ -25,6 +25,15 @@ hr {
     text-align: center;
 }
 
+.app-content {
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+.app-content.ready {
+    opacity: 1;
+}
+
 .hamburger-box {
     width: 32px;
 }
@@ -54,6 +63,11 @@ hr {
 .shrug {
     padding-top: 5rem;
     font-size: calc(7rem + 4.5vw);
+}
+
+.spinner-border {
+    width: 4rem;
+    height: 4rem;
 }
 
 @media (min-width: 768px) {

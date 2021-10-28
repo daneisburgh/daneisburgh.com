@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import {
-    AfterViewInit,
+    AfterViewChecked,
     ChangeDetectorRef,
     Component,
     OnInit,
@@ -23,7 +23,7 @@ interface Link {
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit, AfterViewChecked {
     static isHamburgerDisabled = false;
     isHamburgerActive = false;
     get isHamburgerDisabled() {
@@ -41,6 +41,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     isReady = false;
     isError = false;
+    showContent = false;
     activeLink: Link | undefined;
     faExternalLinkAlt = faExternalLinkAlt;
     upperFirst = upperFirst;
@@ -74,9 +75,11 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.watchRoute();
     }
 
-    ngAfterViewInit() {
-        this.isReady = true;
-        this.cdr.detectChanges();
+    ngAfterViewChecked() {
+        setTimeout(() => {
+            this.isReady = true;
+            this.cdr.detectChanges();
+        }, 500);
     }
 
     toggleHamburger() {

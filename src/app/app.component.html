@@ -1,86 +1,108 @@
-<nav
-    [hidden]="!isReady"
-    class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm"
->
-    <div class="container-lg">
-        <div class="fs-3 me-lg-4">Dane Isburgh</div>
-        <button
-            class="navbar-toggler collapsed p-0 hamburger hamburger--squeeze"
-            type="button"
-            data-bs-target="#navbar-links"
-            aria-controls="navbar-links"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            [attr.data-bs-toggle]="isHamburgerDisabled ? undefined : 'collapse'"
-            [ngClass]="{ 'is-active': isHamburgerActive }"
-            [disabled]="isHamburgerDisabled"
-            (click)="toggleHamburger()"
-        >
-            <span class="hamburger-box align-middle">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-        <div id="navbar-links" class="navbar-collapse collapse">
-            <ul class="navbar-nav ms-auto">
-                <li *ngFor="let link of links" class="nav-item me-lg-3">
-                    <a
-                        class="nav-link d-inline-flex align-items-center"
-                        data-bs-toggle="collapse"
-                        data-bs-target=".navbar-collapse.show"
-                        [ngClass]="{ active: link === activeLink }"
-                        [routerLink]="'/' + link.id"
-                        (click)="isHamburgerActive = false"
-                    >
-                        <img class="me-2" [src]="getLinkIcon(link.icon)" />
-                        <span>{{ upperFirst(link.id) }}</span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="nav-link d-inline-flex align-items-center pe-0"
-                        target="_blank"
-                        href="assets/files/Dane Isburgh's Résumé.pdf"
-                    >
-                        <img class="me-2" [src]="getLinkIcon('document')" />
-                        <span>Résumé</span>
-                        <fa-icon
-                            class="fa-icon-external-link"
-                            [icon]="faExternalLinkAlt"
-                        ></fa-icon>
-                    </a>
-                </li>
-            </ul>
+<div class="app-content" [ngClass]="{ ready: isReady }">
+    <nav
+        class="
+            navbar navbar-expand-md navbar-light
+            bg-light
+            fixed-top
+            shadow-sm
+        "
+    >
+        <div class="container-lg">
+            <div class="fs-3 me-lg-4">Dane Isburgh</div>
+            <button
+                class="
+                    navbar-toggler
+                    collapsed
+                    p-0
+                    hamburger hamburger--squeeze
+                "
+                type="button"
+                data-bs-target="#navbar-links"
+                aria-controls="navbar-links"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                [attr.data-bs-toggle]="
+                    isHamburgerDisabled ? undefined : 'collapse'
+                "
+                [ngClass]="{ 'is-active': isHamburgerActive }"
+                [disabled]="isHamburgerDisabled"
+                (click)="toggleHamburger()"
+            >
+                <span class="hamburger-box align-middle">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div id="navbar-links" class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li *ngFor="let link of links" class="nav-item me-lg-3">
+                        <a
+                            class="nav-link d-inline-flex align-items-center"
+                            data-bs-toggle="collapse"
+                            data-bs-target=".navbar-collapse.show"
+                            [ngClass]="{ active: link === activeLink }"
+                            [routerLink]="'/' + link.id"
+                            (click)="isHamburgerActive = false"
+                        >
+                            <img class="me-2" [src]="getLinkIcon(link.icon)" />
+                            <span>{{ upperFirst(link.id) }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="
+                                nav-link
+                                d-inline-flex
+                                align-items-center
+                                pe-0
+                            "
+                            target="_blank"
+                            href="assets/files/Dane Isburgh's Résumé.pdf"
+                        >
+                            <img class="me-2" [src]="getLinkIcon('document')" />
+                            <span>Résumé</span>
+                            <fa-icon
+                                class="fa-icon-external-link"
+                                [icon]="faExternalLinkAlt"
+                            ></fa-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<main
-    class="container-md flex-grow-1 d-flex justify-content-center"
-    [ngClass]="{ 'pt-4': !isError }"
->
-    <div *ngIf="isError" class="align-self-center text-center">
-        <div class="display-1 mb-4">Page not found</div>
-        <button type="button" class="btn btn-primary fs-2" routerLink="home">
-            Back to Safety
-        </button>
-    </div>
-    <div *ngIf="!isError">
-        <app-home id="home"></app-home>
-        <hr />
-        <app-about id="about"></app-about>
-        <hr />
-        <app-timeline id="timeline"></app-timeline>
-        <hr />
-        <app-projects id="projects"></app-projects>
-    </div>
-</main>
-<footer class="container-md py-3 py-md-4">
-    <div class="row row-cols-1 row-cols-md-2">
-        <div class="col text-center text-md-start">
-            Contact:
-            <a [href]="'mailto:' + email" target="_blank">{{ email }}</a>
+    </nav>
+    <main
+        class="container-md flex-grow-1 d-flex justify-content-center"
+        [ngClass]="{ 'pt-4': !isError }"
+    >
+        <div *ngIf="isError" class="align-self-center text-center">
+            <div class="display-1 mb-4">Page not found</div>
+            <button
+                type="button"
+                class="btn btn-primary fs-2"
+                routerLink="home"
+            >
+                Back to Safety
+            </button>
         </div>
-        <div class="col text-center text-md-end">
-            &copy; Copyright {{ currentYear }} Dane Isburgh
+        <div *ngIf="!isError">
+            <app-home id="home"></app-home>
+            <hr />
+            <app-about id="about"></app-about>
+            <hr />
+            <app-timeline id="timeline"></app-timeline>
+            <hr />
+            <app-projects id="projects"></app-projects>
         </div>
-    </div>
-</footer>
+    </main>
+    <footer class="container-md py-3 py-md-4">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col text-center text-md-start">
+                Contact:
+                <a [href]="'mailto:' + email" target="_blank">{{ email }}</a>
+            </div>
+            <div class="col text-center text-md-end">
+                &copy; Copyright {{ currentYear }} Dane Isburgh
+            </div>
+        </div>
+    </footer>
+</div>
