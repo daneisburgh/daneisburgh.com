@@ -1,11 +1,8 @@
 name: Integration
-on:
-    push:
-        branches: [main]
-    workflow_call:
+on: [push]
 jobs:
-    install-lint-test-build-release:
-        name: Install, Lint, Test, Build, and Release
+    install-lint-test-build:
+        name: Install, Lint, Test, and Build
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -21,6 +18,18 @@ jobs:
             - run: npm run lint:check
             - run: npm run test
             - run: npm run build
+    release:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+            - uses: actions/cache@v2
+              with:
+                  path: node_modules
+                  key: node-modules-${{ hashFiles('package-lock.json') }}
             - run: npm run release
               env:
                   GH_TOKEN: ${{ secrets.GH_TOKEN }}
