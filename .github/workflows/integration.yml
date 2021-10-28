@@ -22,7 +22,6 @@ jobs:
         name: Release
         needs: install-lint-test-build
         runs-on: ubuntu-latest
-        permissions: write-all
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
@@ -35,4 +34,4 @@ jobs:
             - run: npm install
             - run: npm run release
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GIT_CREDENTIALS: ${{ secrets.GH_TOKEN }}
