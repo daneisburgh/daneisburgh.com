@@ -10,7 +10,7 @@
         "release": "semantic-release",
         "ng": "ng",
         "start": "ng serve",
-        "start:local": "ng serve --host=0.0.0.0 --disableHostCheck",
+        "start:local": "ng serve --host=0.0.0.0 --disable-host-check",
         "format:check": "prettier --check .",
         "format:fix": "prettier --write .",
         "lint:check": "ng lint",

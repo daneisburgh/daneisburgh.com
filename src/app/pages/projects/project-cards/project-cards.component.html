@@ -23,46 +23,30 @@
                     <a
                         class="btn btn-element"
                         *ngIf="element.fileName"
-                        [href]="
-                            'assets/files/projects/' + element.fileName + '.pdf'
-                        "
+                        [href]="'assets/files/projects/' + element.fileName + '.pdf'"
                         target="_blank"
                     >
                         <fa-icon [icon]="faFileAlt"></fa-icon>
                         Docs
-                        <fa-icon
-                            class="fa-icon-external-link"
-                            [icon]="faExternalLinkAlt"
-                        ></fa-icon>
+                        <fa-icon class="fa-icon-external-link" [icon]="faExternalLinkAlt"></fa-icon>
                     </a>
                     <a
                         class="btn btn-element"
                         *ngIf="element.githubRepo"
-                        [href]="
-                            'https://github.com/daneisburgh/' +
-                            element.githubRepo
-                        "
+                        [href]="'https://github.com/daneisburgh/' + element.githubRepo"
                         target="_blank"
                     >
                         <fa-icon [icon]="faGithub"></fa-icon>
                         GitHub
-                        <fa-icon
-                            class="fa-icon-external-link"
-                            [icon]="faExternalLinkAlt"
-                        ></fa-icon>
+                        <fa-icon class="fa-icon-external-link" [icon]="faExternalLinkAlt"></fa-icon>
                     </a>
                 </div>
             </div>
         </div>
         <div class="mb-3" [innerHTML]="element.description"></div>
         <div class="technologies">
-            <div
-                class="row row-cols-2 row-cols-sm-3 row-cols-lg-2 mx-auto w-100"
-            >
-                <div
-                    class="col mt-2 px-1"
-                    *ngFor="let technology of element.technologies"
-                >
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-2 mx-auto w-100">
+                <div class="col mt-2 px-1" *ngFor="let technology of element.technologies">
                     <div
                         class="technology p-2 text-center rounded"
                         [style.borderColor]="technology.color"

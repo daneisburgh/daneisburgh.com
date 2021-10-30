@@ -21,7 +21,7 @@ export const technologies: Technology[] = [
     { name: 'Database', color: '#ea8c10' },
     { name: 'Data Science', color: '#92252e' },
     { name: 'Image Processing', color: '#27aa4b' },
-    { name: 'Embedded System', color: '#385f46' },
+    { name: 'Embedded System', color: '#385f46' }
 ];
 
 export interface ProjectElement extends Element {
@@ -54,7 +54,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('JavaScript'),
             getTechnology('PHP'),
             getTechnology('Database'),
-            getTechnology('Data Science'),
+            getTechnology('Data Science')
         ],
         description: `
             One of my first projects while on co-op was a social networking and management web application for sports
@@ -68,7 +68,7 @@ export const projectElements: ProjectElement[] = [
             <a href="https://phalcon.io/" target="_blank">Phalcon</a> backend with a
             <a href="https://www.mysql.com/" target="_blank">MySQL</a>
             database.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -85,7 +85,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('PHP'),
             getTechnology('Python'),
             getTechnology('Database'),
-            getTechnology('Data Science'),
+            getTechnology('Data Science')
         ],
         description: `
             My last project while on co-op was assisting in the development of a web and embedded application
@@ -99,7 +99,7 @@ export const projectElements: ProjectElement[] = [
             database.
             The embedded application, which ran on enterprise broadband routers, was written in Python and utilized their SDK
             to send/receive information to our database, including data transfer, CPU/memory usage, temperature, and location.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -117,7 +117,7 @@ export const projectElements: ProjectElement[] = [
             <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, and hosted in AWS's
             <a href="https://aws.amazon.com/s3/" target="_blank">Simple Storage Service</a>.
             I plan to continue to update the site with future projects and events in the coming years.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -132,7 +132,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Database'),
             getTechnology('Data Science'),
             getTechnology('JavaScript'),
-            getTechnology('Serverless'),
+            getTechnology('Serverless')
         ],
         description: `
             I've been working on an investing application since late 2019.
@@ -143,7 +143,7 @@ export const projectElements: ProjectElement[] = [
             <a href="https://aws.amazon.com/lambda/" target="_blank">Lambda</a>
             service.
             My goal is to build the app into a reliable source of supplemental income.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -158,7 +158,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Database'),
             getTechnology('Container'),
             getTechnology('JavaScript'),
-            getTechnology('Serverless'),
+            getTechnology('Serverless')
         ],
         description: `
             Sarah and I created a dynamic web application for our wedding guests, hosted at our own domain.
@@ -172,7 +172,7 @@ export const projectElements: ProjectElement[] = [
             database.
             The site is no longer active but the static content can be seen
             <a href="assets/websites/daneandsarahwedding.com/index.html" target="_blank">here</a>.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -187,7 +187,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Data Science'),
             getTechnology('Embedded System'),
             getTechnology('Image Processing'),
-            getTechnology('Python'),
+            getTechnology('Python')
         ],
         description: `
             I assisted UC's aerospace team, the Galacticats, in the development of a payload for the
@@ -195,13 +195,12 @@ export const projectElements: ProjectElement[] = [
             competition during my senior year.
             We developed the rocket/payload over the course of the year, presented our project at local high schools,
             and traveled to Huntsville, AL several times for testing before the competition in April.
-        `,
+        `
     },
     {
         icon: faCode,
         title: 'First Personal Website',
-        githubRepo:
-            'daneisburgh.com/tree/main/src/assets/websites/daneisburgh.com',
+        githubRepo: 'daneisburgh.com/tree/main/src/assets/websites/daneisburgh.com',
         fileName: undefined,
         imageDirectory: undefined,
         startDate: new Date(2018, 1),
@@ -215,7 +214,7 @@ export const projectElements: ProjectElement[] = [
             and was also my first experience purchasing and routing a domain as well as setting up SMTP to send/receive emails.
             The original static content can be seen
             <a href="assets/websites/daneisburgh.com/index.html" target="_blank">here</a>.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -230,7 +229,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('Database'),
             getTechnology('Embedded System'),
             getTechnology('Image Processing'),
-            getTechnology('JavaScript'),
+            getTechnology('JavaScript')
         ],
         description: `
             I worked on a robotics web and embedded app, codenamed Botsyn, with three of my classmates for our senior design capstone.
@@ -245,7 +244,7 @@ export const projectElements: ProjectElement[] = [
             service with embedded software written using the
             <a href="http://johnny-five.io/" target="_blank">Johnny-Five</a>
             JavaScript robotics framework.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -258,7 +257,7 @@ export const projectElements: ProjectElement[] = [
         technologies: [
             getTechnology('Embedded System'),
             getTechnology('Image Processing'),
-            getTechnology('Java'),
+            getTechnology('Java')
         ],
         description: `
             Back when I had a Galaxy S6, I created an augmented reality Android app for the Samsung
@@ -267,7 +266,7 @@ export const projectElements: ProjectElement[] = [
             It used the camera's pass-through ability to process frame data in real-time and display it to the user.
             The app was controlled using the GearVR's input to zoom, take pictures, track people/objects,
             and switch between several different displays including a custom HUD.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -284,7 +283,7 @@ export const projectElements: ProjectElement[] = [
             Android app to the Google Play Store as a final project for an Engineering Statistics course during my
             sophomore year of college.
             It could perform a large number of different calculations that I had learned throughout the course.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -300,7 +299,7 @@ export const projectElements: ProjectElement[] = [
             <a href="https://play.google.com/store/apps/details?id=com.cyningstan.boxoff" target="_blank">BoxOff</a>.
             I was responsible for developing the UI components, completing the procedural puzzle generation,
             incorporating in-app purchasing, and deploying the application to the Play Store.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -314,7 +313,7 @@ export const projectElements: ProjectElement[] = [
             getTechnology('C++'),
             getTechnology('Embedded System'),
             getTechnology('Image Processing'),
-            getTechnology('Java'),
+            getTechnology('Java')
         ],
         description: `
             My biggest project at the AFRL was a custom telepresence robot named Rosie.
@@ -326,7 +325,7 @@ export const projectElements: ProjectElement[] = [
             Rosie could be remotely controlled by an Android application that communicated over a simple peer-to-peer network.
             We had the opportunity to showcase Rosie at several expos including the
             <a href="https://oetc.ohio.gov/" target="_blank">Ohio Educational Technology Conference</a>.
-        `,
+        `
     },
     {
         icon: faCode,
@@ -339,7 +338,7 @@ export const projectElements: ProjectElement[] = [
         technologies: [
             getTechnology('Database'),
             getTechnology('Embedded System'),
-            getTechnology('Java'),
+            getTechnology('Java')
         ],
         description: `
             My last major project at the AFRL was a personnel management and logistics application named
@@ -348,6 +347,6 @@ export const projectElements: ProjectElement[] = [
             <a href="https://internetofthings.ibmcloud.com/" target="_blank">IBM Watson IoT Platform</a>
             to send/receive basic messages and GPS coordinate info to connected devices that
             could then be viewed and managed from a single external source.
-        `,
-    },
+        `
+    }
 ];

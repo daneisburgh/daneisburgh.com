@@ -19,10 +19,10 @@ import { ImageGalleryComponent } from './shared/components/image-gallery/image-g
         TimelineComponent,
         ProjectsComponent,
         ProjectCardsComponent,
-        ImageGalleryComponent,
+        ImageGalleryComponent
     ],
     imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
     providers: [],
-    bootstrap: [AppComponent],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

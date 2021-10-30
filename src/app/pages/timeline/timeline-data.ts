@@ -12,7 +12,7 @@ import {
     faMotorcycle,
     faPlaceOfWorship,
     faShip,
-    faUmbrellaBeach,
+    faUmbrellaBeach
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Element } from 'src/app/shared/services/element/element.service';
@@ -33,7 +33,7 @@ export const timelineElements: TimelineElement[] = [
             I've continued to pursue a career in data engineering and am currently working as a lead on Kroger's DataOps team.
             I'm assisting in the development of the company's data platform as well as gaining knowledge and experience designing
             pragmatic enterprise data solutions.
-        `,
+        `
     },
     {
         icon: faHorse,
@@ -47,7 +47,7 @@ export const timelineElements: TimelineElement[] = [
             just north of Lake Cumberland.
             We spent our time fishing, reading, and hanging out with the farm's six horses, six cats, four dogs, and flock of chickens
             as well as visiting the nearby towns in the Kentucky countryside.
-        `,
+        `
     },
     {
         icon: faHome,
@@ -63,7 +63,7 @@ export const timelineElements: TimelineElement[] = [
             We officially moved into our new home in early June and are currently working to paint and remodel
             much of the house.
             We're very fortunate and excited to have found a home that we can grow into for years to come.
-        `,
+        `
     },
     {
         icon: faShip,
@@ -78,7 +78,7 @@ export const timelineElements: TimelineElement[] = [
             We stayed at an <a href="https://www.airbnb.com/rooms/26587175" target="_blank">Airbnb</a>
             near the coast of Lake Michigan and spent time on the water with a view of Chicago
             as well as explored the city's historic district.
-        `,
+        `
     },
     {
         icon: faHorse,
@@ -92,7 +92,7 @@ export const timelineElements: TimelineElement[] = [
             Our <a href="https://www.airbnb.com/rooms/3166748" target="_blank">Airbnb</a>
             was in a renovated portion of the owner's barn that was situated above several stables with plenty of livestock below.
             We enjoyed sitting out, grilling, watching the horses, and exploring the property.
-        `,
+        `
     },
     {
         icon: faPlaceOfWorship,
@@ -110,7 +110,7 @@ export const timelineElements: TimelineElement[] = [
             and, although our total guest count was a fraction of the original due to the pandemic, we were able to live-stream
             everything on
             <a href="https://www.youtube.com/watch?v=F36Ywpa7USI" target="_blank">YouTube</a>.
-        `,
+        `
     },
     {
         icon: faHiking,
@@ -124,7 +124,7 @@ export const timelineElements: TimelineElement[] = [
             We hiked over 12 miles of the trails at the Pinnacles and enjoyed local barbecue.
             We stayed at an <a href="https://www.airbnb.com/rooms/33905811" target="_blank">Airbnb</a>
             situated on a small farm that served an amazing breakfast and had very vocal cattle.
-        `,
+        `
     },
     {
         icon: faEuroSign,
@@ -145,7 +145,7 @@ export const timelineElements: TimelineElement[] = [
             <a href="https://en.wikipedia.org/wiki/Heidelberg" target="_blank">Heidelberg</a> and
             <a href="https://en.wikipedia.org/wiki/Neuschwanstein_Castle" target="_blank">Neuschwanstein</a> castles.
             It was a great adventure.
-        `,
+        `
     },
     {
         icon: faGem,
@@ -157,7 +157,7 @@ export const timelineElements: TimelineElement[] = [
         description: `
             I proposed to Sarah on October 3rd at our favorite spot along a private trail near our home in Cincinnati.
             We had photos taken with our wedding photographer at the end of the month including some together on our motorcycle.
-        `,
+        `
     },
     {
         icon: faCar,
@@ -173,7 +173,7 @@ export const timelineElements: TimelineElement[] = [
             <a href="https://turo.com/" target="_blank">Turo</a>
             for the first time and rented a manual transmission Mazda Miata convertible.
             Besides driving around and exploring the city, we visited the local aviation museum and several small breweries.
-        `,
+        `
     },
     {
         icon: faMotorcycle,
@@ -188,7 +188,7 @@ export const timelineElements: TimelineElement[] = [
             for fun in the spring of 2019.
             We enjoyed the training, after which we received our endorsements and purchased a 2015 Harley Street 750.
             It's been a great starter bike and we ride a few times per month from spring through the fall each year.
-        `,
+        `
     },
     {
         icon: faUmbrellaBeach,
@@ -202,7 +202,7 @@ export const timelineElements: TimelineElement[] = [
             We stayed at the same resort as our previous adventure and spent most of our time between the pool and the beach,
             as well as exploring downtown.
             We were also there for the whale watching season and got to see some amazing humpback whales.
-        `,
+        `
     },
     {
         icon: faBriefcase,
@@ -215,7 +215,7 @@ export const timelineElements: TimelineElement[] = [
             I started my professional career as an Analytics Engineer for GE after graduating from UC.
             While at GE, I had the opportunity to build several enterprise applications and data automation projects to
             host/manage both physical and cloud infrastructure.
-        `,
+        `
     },
     {
         icon: faBeer,
@@ -229,7 +229,7 @@ export const timelineElements: TimelineElement[] = [
             We stayed downtown, watched the parade from our hotel room, visited the Columbus Zoo, went axe throwing
             for the first time (with green beer), and saw the Blue Jackets play the Toronto Maple Leafs.
             It was a lot of fun.
-        `,
+        `
     },
     {
         icon: faUmbrellaBeach,
@@ -245,7 +245,7 @@ export const timelineElements: TimelineElement[] = [
             resort with a great view of the Pacific Ocean.
             During our trip, we went horseback riding, ATVing, and snorkeling, as well as tried to limit
             our sunburns while hanging out at the pool and on the beach.
-        `,
+        `
     },
     {
         icon: faBriefcase,
@@ -260,7 +260,7 @@ export const timelineElements: TimelineElement[] = [
             It was my introduction to AWS and cloud hosting, as well as to enterprise web frameworks.
             I learned a lot and got to work on both large and small web application projects as well as built
             and deployed an Android puzzle game.
-        `,
+        `
     },
     {
         icon: faBriefcase,
@@ -274,7 +274,7 @@ export const timelineElements: TimelineElement[] = [
             co-op rotations during my freshman and sophomore years of college.
             It was a great learning experience and an important part of my life because it's where I met Sarah.
             After the operation was moved to Columbus, Sarah and I both chose to pursue jobs near our respective universities.
-        `,
+        `
     },
     {
         icon: faGraduationCap,
@@ -292,6 +292,6 @@ export const timelineElements: TimelineElement[] = [
             and enjoyed seeing movies at
             <a href="https://esquiretheatre.com/" target="_blank">Esquire Theater</a>
             as well as having some of the best food in Cincinnati around the corner on Ludlow Ave.
-        `,
-    },
+        `
+    }
 ];

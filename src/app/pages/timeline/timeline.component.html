@@ -1,16 +1,12 @@
 <div class="display-5">What I've been up to</div>
 <div class="fs-5 mb-3 mb-md-4">
-    Below is a short timeline including some of my major life events and trips
-    with Sarah.
+    Below is a short timeline including some of my major life events and trips with Sarah.
 </div>
 <div class="row">
     <div class="col mt-3">
         <ul class="timeline mb-0">
             <li
-                *ngFor="
-                    let element of timelineElements;
-                    let timelineIndex = index
-                "
+                *ngFor="let element of timelineElements; let timelineIndex = index"
                 [ngClass]="{ 'timeline-inverted': timelineIndex % 2 }"
             >
                 <div class="timeline-badge d-flex align-items-center">
@@ -26,9 +22,7 @@
                         <div class="row">
                             <div class="col-sm-8">
                                 <div class="fs-6 text-muted">
-                                    {{
-                                        elementService.getDateSubtitle(element)
-                                    }}
+                                    {{ elementService.getDateSubtitle(element) }}
                                 </div>
                             </div>
                             <div class="col-sm-4 text-sm-end fa-icon-column">
@@ -44,10 +38,7 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="timeline-body"
-                        [innerHTML]="element.description"
-                    ></div>
+                    <div class="timeline-body" [innerHTML]="element.description"></div>
                 </div>
             </li>
         </ul>

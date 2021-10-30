@@ -22,7 +22,4 @@ const getAllFilePaths = (directory, filePaths) => {
     return filePaths;
 };
 
-fs.writeFileSync(
-    "src/assets/file-paths.json",
-    JSON.stringify(getAllFilePaths("src/assets"))
-);
+fs.writeFileSync("src/assets/file-paths.json", JSON.stringify(getAllFilePaths("src/assets")));

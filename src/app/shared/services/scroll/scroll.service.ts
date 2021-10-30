@@ -2,15 +2,7 @@ import { Injectable } from '@angular/core';
 
 // Modified from https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 
-const keyCodes = [
-    'Space',
-    'Home',
-    'End',
-    'ArrowUp',
-    'ArrowDown',
-    'PageUp',
-    'PageDown',
-];
+const keyCodes = ['Space', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown'];
 
 const preventDefault = (event: any) => {
     event.preventDefault();
@@ -26,7 +18,7 @@ const preventDefaultForScrollKeys = (event: KeyboardEvent) => {
 };
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class ScrollService {
     private readonly wheelEvent =
@@ -42,7 +34,7 @@ export class ScrollService {
                 Object.defineProperty({}, 'passive', {
                     get: () => {
                         this.supportsPassive = true;
-                    },
+                    }
                 })
             );
         } catch (event: any) {}
@@ -60,10 +52,6 @@ export class ScrollService {
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
         window.removeEventListener(this.wheelEvent, preventDefault);
         window.removeEventListener('touchmove', preventDefault);
-        window.removeEventListener(
-            'keydown',
-            preventDefaultForScrollKeys,
-            false
-        );
+        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 }

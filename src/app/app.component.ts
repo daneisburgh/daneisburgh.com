@@ -1,10 +1,5 @@
 import { Location } from '@angular/common';
-import {
-    AfterViewChecked,
-    ChangeDetectorRef,
-    Component,
-    OnInit,
-} from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NavigationStart, Router } from '@angular/router';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +16,7 @@ interface Link {
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterViewChecked {
     static isHamburgerDisabled = false;
@@ -36,7 +31,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
         { id: 'home', icon: 'home', bottom: 0 },
         { id: 'about', icon: 'info', bottom: 0 },
         { id: 'timeline', icon: 'timeline', bottom: 0 },
-        { id: 'projects', icon: 'support', bottom: 0 },
+        { id: 'projects', icon: 'support', bottom: 0 }
     ];
 
     isReady = false;
@@ -49,11 +44,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private isNavigating = false;
     private isScrollNavigation = false;
     private isFirstNavigation = true;
-    private navigationTimeout: ReturnType<typeof setTimeout> | undefined =
-        undefined;
+    private navigationTimeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
     private get topDiff() {
-        return window.innerWidth < 768 ? 86 : 106;
+        return window.innerWidth < 768 ? 88 : 108;
     }
 
     constructor(
@@ -92,9 +86,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
 
     private setTitle() {
-        this.title.setTitle(
-            `Dane Isburgh | ${upperFirst(this.activeLink?.id)}`
-        );
+        this.title.setTitle(`Dane Isburgh | ${upperFirst(this.activeLink?.id)}`);
     }
 
     private watchRoute() {
@@ -103,9 +95,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
                 this.disableScroll();
 
                 const id = event.url === '/' ? 'home' : event.url.substring(1);
-                const activeLink = this.links.find((link) =>
-                    id.startsWith(link.id)
-                );
+                const activeLink = this.links.find((link) => id.startsWith(link.id));
                 this.isError = activeLink === undefined;
 
                 if (activeLink) {
@@ -118,9 +108,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
                         setTimeout(
                             (isFirstNavigation: boolean) => {
                                 const elementTop =
-                                    this.getBoundingClientRect(
-                                        this.activeLink?.id
-                                    ).top - this.topDiff;
+                                    this.getBoundingClientRect(this.activeLink?.id).top -
+                                    this.topDiff;
                                 window.scrollTo(0, window.scrollY + elementTop);
 
                                 if (isFirstNavigation) {
@@ -142,8 +131,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
         window.addEventListener('scroll', () => {
             this.setNavigationTimeout();
             this.links.forEach(
-                (link) =>
-                    (link.bottom = this.getBoundingClientRect(link.id).bottom)
+                (link) => (link.bottom = this.getBoundingClientRect(link.id).bottom)
             );
 
             if (!this.isNavigating) {
@@ -154,11 +142,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
                 )[0];
                 this.setTitle();
 
-                if (
-                    !this.location.isCurrentPathEqualTo(
-                        `/${this.activeLink.id}`
-                    )
-                ) {
+                if (!this.location.isCurrentPathEqualTo(`/${this.activeLink.id}`)) {
                     this.isScrollNavigation = true;
                     this.router.navigate([this.activeLink.id]);
                     setTimeout(() => (this.isScrollNavigation = false), 100);

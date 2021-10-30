@@ -8,7 +8,7 @@ describe('ProjectCardsComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ProjectCardsComponent],
+            declarations: [ProjectCardsComponent]
         }).compileComponents();
     });
 

@@ -1,35 +1,21 @@
 <div class="app-content" [ngClass]="{ ready: isReady }">
-    <nav
-        class="
-            navbar navbar-expand-md navbar-light
-            bg-light
-            fixed-top
-            shadow-sm
-        "
-    >
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm">
         <div class="container-lg">
             <div class="fs-3 me-lg-4">Dane Isburgh</div>
             <button
-                class="
-                    navbar-toggler
-                    collapsed
-                    p-0
-                    hamburger hamburger--squeeze
-                "
+                class="navbar-toggler collapsed p-0 hamburger hamburger--squeeze"
                 type="button"
                 data-bs-target="#navbar-links"
                 aria-controls="navbar-links"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-                [attr.data-bs-toggle]="
-                    isHamburgerDisabled ? undefined : 'collapse'
-                "
+                [attr.data-bs-toggle]="isHamburgerDisabled ? undefined : 'collapse'"
                 [ngClass]="{ 'is-active': isHamburgerActive }"
                 [disabled]="isHamburgerDisabled"
                 (click)="toggleHamburger()"
             >
                 <span class="hamburger-box align-middle">
-                    <span class="hamburger-inner"></span>
+                    <span class="hamburger-inner bg-dark"></span>
                 </span>
             </button>
             <div id="navbar-links" class="navbar-collapse collapse">
@@ -49,12 +35,7 @@
                     </li>
                     <li>
                         <a
-                            class="
-                                nav-link
-                                d-inline-flex
-                                align-items-center
-                                pe-0
-                            "
+                            class="nav-link d-inline-flex align-items-center pe-0"
                             target="_blank"
                             href="assets/files/Dane Isburgh's Résumé.pdf"
                         >
@@ -76,11 +57,7 @@
     >
         <div *ngIf="isError" class="align-self-center text-center">
             <div class="display-1 mb-4">Page not found</div>
-            <button
-                type="button"
-                class="btn btn-primary fs-2"
-                routerLink="home"
-            >
+            <button type="button" class="btn btn-primary fs-2" routerLink="home">
                 Back to Safety
             </button>
         </div>

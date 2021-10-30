@@ -12,7 +12,7 @@ export interface Element {
 }
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class ElementService {
     sortData(elements: Element[]) {
@@ -54,7 +54,7 @@ export class ElementService {
             'September',
             'October',
             'November',
-            'December',
+            'December'
         ];
 
         return monthNames[date.getMonth()];
