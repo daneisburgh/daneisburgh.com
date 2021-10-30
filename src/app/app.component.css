@@ -1,12 +1,12 @@
 main {
-    margin-top: 62px;
+    margin-top: 4rem;
 }
 
 main,
 nav > div,
 footer {
-    min-width: 300px;
-    max-width: 992px;
+    min-width: 20rem;
+    max-width: 62rem;
 }
 
 hr {
@@ -35,14 +35,14 @@ hr {
 }
 
 .hamburger-box {
-    width: 32px;
+    width: 2rem;
 }
 
 .hamburger-inner,
 .hamburger-inner:after,
 .hamburger-inner:before {
-    height: 2px;
-    width: 32px;
+    width: 2rem;
+    height: 0.1rem !important;
 }
 
 .navbar-toggler > img {
@@ -72,7 +72,7 @@ hr {
 
 @media (min-width: 768px) {
     main {
-        margin-top: 82px;
+        margin-top: 5rem;
     }
 
     hr {
