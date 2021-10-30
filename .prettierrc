@@ -1,0 +1,13 @@
+{
+    "endOfLine": "auto",
+    "printWidth": 100,
+    "trailingComma": "none",
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
+}
