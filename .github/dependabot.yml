@@ -9,6 +9,6 @@ updates:
       schedule:
           interval: "daily"
       commit-message:
-          prefix: fix
-          prefix-development: chore
-          include: scope
+          prefix: "fix"
+          prefix-development: "chore"
+          include: "scope"
