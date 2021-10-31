@@ -2,6 +2,7 @@ dist
 src/assets/websites
 
 .czrc
+.editorconfig
 .prettierignore
 CHANGELOG.md
 deploy.sh
