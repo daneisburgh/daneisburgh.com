@@ -1,11 +1,11 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from "@angular/core";
+import { AppComponent } from "src/app/app.component";
 
-import * as photoswipe from 'photoswipe';
-import * as photoswipeUIDefault from 'photoswipe/dist/photoswipe-ui-default';
+import * as photoswipe from "photoswipe";
+import * as photoswipeUIDefault from "photoswipe/dist/photoswipe-ui-default";
 
-import { default as assetsFilePaths } from 'src/assets/file-paths.json';
-import { ScrollService } from 'src/app/shared/services/scroll/scroll.service';
+import { default as assetsFilePaths } from "src/assets/file-paths.json";
+import { ScrollService } from "src/app/shared/services/scroll/scroll.service";
 
 interface ImageData {
     name: string;
@@ -13,9 +13,9 @@ interface ImageData {
 }
 
 @Component({
-    selector: 'app-image-gallery',
-    templateUrl: './image-gallery.component.html',
-    styleUrls: ['./image-gallery.component.css']
+    selector: "app-image-gallery",
+    templateUrl: "./image-gallery.component.html",
+    styleUrls: ["./image-gallery.component.css"]
 })
 export class ImageGalleryComponent {
     @Input()
@@ -27,7 +27,7 @@ export class ImageGalleryComponent {
     @Output()
     galleryClose: EventEmitter<any> = new EventEmitter();
 
-    @ViewChild('photoswipeElement')
+    @ViewChild("photoswipeElement")
     photoswipeElement!: ElementRef;
 
     get imageDirectoryPath() {
@@ -76,13 +76,13 @@ export class ImageGalleryComponent {
             options
         );
 
-        gallery.listen('close', () => {
+        gallery.listen("close", () => {
             this.scrollService.enableScroll();
             AppComponent.temporarilyDisableHamburger();
             this.galleryClose.emit();
         });
 
-        gallery.listen('gettingData', (_: any, item: any) => {
+        gallery.listen("gettingData", (_: any, item: any) => {
             if (item.w < 1 || item.h < 1) {
                 const img = new Image();
                 img.src = item.src;

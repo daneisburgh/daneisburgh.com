@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { orderBy } from 'lodash';
+import { Injectable } from "@angular/core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { orderBy } from "lodash";
 
 export interface Element {
     icon: IconDefinition;
@@ -12,11 +12,11 @@ export interface Element {
 }
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: "root"
 })
 export class ElementService {
     sortData(elements: Element[]) {
-        return orderBy(elements, 'endDate', 'desc');
+        return orderBy(elements, "endDate", "desc");
     }
 
     getDateSubtitle(element: Element) {
@@ -43,18 +43,18 @@ export class ElementService {
 
     private getDateMonth(date: Date) {
         const monthNames = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
         ];
 
         return monthNames[date.getMonth()];

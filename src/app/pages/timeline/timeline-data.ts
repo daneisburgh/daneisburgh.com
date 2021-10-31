@@ -13,9 +13,9 @@ import {
     faPlaceOfWorship,
     faShip,
     faUmbrellaBeach
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 
-import { Element } from 'src/app/shared/services/element/element.service';
+import { Element } from "src/app/shared/services/element/element.service";
 
 export interface TimelineElement extends Element {
     color: string | undefined;
@@ -24,7 +24,7 @@ export interface TimelineElement extends Element {
 export const timelineElements: TimelineElement[] = [
     {
         icon: faBriefcase,
-        title: 'Sr. Data Engineer @ Kroger',
+        title: "Sr. Data Engineer @ Kroger",
         startDate: new Date(2021, 7),
         endDate: undefined,
         color: undefined,
@@ -37,11 +37,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faHorse,
-        title: 'Relaxing in Columbia, KY',
+        title: "Relaxing in Columbia, KY",
         startDate: new Date(2021, 7),
         endDate: new Date(2021, 7),
         color: undefined,
-        imageDirectory: 'columbia',
+        imageDirectory: "columbia",
         description: `
             Sarah and I went on a short trip to an <a href="https://www.airbnb.com/rooms/48522039" target="_blank">Airbnb</a>
             just north of Lake Cumberland.
@@ -51,11 +51,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faHome,
-        title: 'First House',
+        title: "First House",
         startDate: new Date(2021, 4),
         endDate: new Date(2021, 4),
         color: undefined,
-        imageDirectory: 'house',
+        imageDirectory: "house",
         description: `
             After a lot of searching, Sarah and I bought our first home in May of 2021.
             The house is in West Chester, just north of our previous apartment and equidistant to our families
@@ -67,11 +67,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faShip,
-        title: 'Michigan City',
+        title: "Michigan City",
         startDate: new Date(2020, 7),
         endDate: new Date(2020, 7),
         color: undefined,
-        imageDirectory: 'michigan',
+        imageDirectory: "michigan",
         description: `
             Sarah and I took a weekend trip to Michigan City, IN.
             We stopped at Indianapolis along the way and went go-karting at the Motor Speedway.
@@ -82,11 +82,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faHorse,
-        title: 'Honeymoon',
+        title: "Honeymoon",
         startDate: new Date(2020, 9),
         endDate: new Date(2020, 9),
         color: undefined,
-        imageDirectory: 'honeymoon',
+        imageDirectory: "honeymoon",
         description: `
             Sarah and I stayed at a small, remote farm in Springfield, KY, near the Bourbon Trail.
             Our <a href="https://www.airbnb.com/rooms/3166748" target="_blank">Airbnb</a>
@@ -96,11 +96,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faPlaceOfWorship,
-        title: 'Wedding',
+        title: "Wedding",
         startDate: new Date(2020, 9),
         endDate: new Date(2020, 9),
         color: undefined,
-        imageDirectory: 'wedding',
+        imageDirectory: "wedding",
         description: `
             Sarah and I were married at
             <a href="https://www.allsaintswalton.com/" target="_blank">All Saints Church</a> in Walton, KY
@@ -114,11 +114,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faHiking,
-        title: 'Hiking in Berea, KY',
+        title: "Hiking in Berea, KY",
         startDate: new Date(2020, 8),
         endDate: new Date(2020, 8),
         color: undefined,
-        imageDirectory: 'berea',
+        imageDirectory: "berea",
         description: `
             Sarah and I took a trip to the Berea Pinnacles before our wedding to relieve some stress.
             We hiked over 12 miles of the trails at the Pinnacles and enjoyed local barbecue.
@@ -128,11 +128,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faEuroSign,
-        title: 'Euro Trip',
+        title: "Euro Trip",
         startDate: new Date(2019, 9),
         endDate: new Date(2019, 9),
         color: undefined,
-        imageDirectory: 'europe',
+        imageDirectory: "europe",
         description: `
             Sarah and I traveled to Europe with my parents after our engagement.
             We flew into Paris and went to the top of the Eiffel Tower, visited the historic
@@ -149,11 +149,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faGem,
-        title: 'Engagement',
+        title: "Engagement",
         startDate: new Date(2019, 9),
         endDate: new Date(2019, 9),
         color: undefined,
-        imageDirectory: 'engagement',
+        imageDirectory: "engagement",
         description: `
             I proposed to Sarah on October 3rd at our favorite spot along a private trail near our home in Cincinnati.
             We had photos taken with our wedding photographer at the end of the month including some together on our motorcycle.
@@ -161,11 +161,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faCar,
-        title: 'Driving in Charlotte, NC',
+        title: "Driving in Charlotte, NC",
         startDate: new Date(2019, 5),
         endDate: new Date(2019, 5),
         color: undefined,
-        imageDirectory: 'charlotte',
+        imageDirectory: "charlotte",
         description: `
             Sarah surprised me with a trip to Charlotte, her childhood hometown, for my birthday in 2019.
             Our <a href="https://www.airbnb.com/rooms/33271724" target="_blank">Airbnb</a> was a tiny house near the city.
@@ -177,7 +177,7 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faMotorcycle,
-        title: 'Motorcycling',
+        title: "Motorcycling",
         startDate: new Date(2019, 4),
         endDate: new Date(2019, 4),
         color: undefined,
@@ -192,11 +192,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faUmbrellaBeach,
-        title: 'Cabo Trip #2',
+        title: "Cabo Trip #2",
         startDate: new Date(2019, 0),
         endDate: new Date(2019, 0),
         color: undefined,
-        imageDirectory: 'cabo2',
+        imageDirectory: "cabo2",
         description: `
             Sarah and I were fortunate enough to travel to Cabo for the second time together at the beginning of 2019.
             We stayed at the same resort as our previous adventure and spent most of our time between the pool and the beach,
@@ -206,7 +206,7 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faBriefcase,
-        title: 'Analytics Engineer @ GE',
+        title: "Analytics Engineer @ GE",
         startDate: new Date(2018, 4),
         endDate: new Date(2021, 7),
         color: undefined,
@@ -223,7 +223,7 @@ export const timelineElements: TimelineElement[] = [
         startDate: new Date(2018, 2),
         endDate: new Date(2018, 2),
         color: undefined,
-        imageDirectory: 'columbus',
+        imageDirectory: "columbus",
         description: `
             Sarah and I traveled to Columbus, OH during the St. Patrick's Day celebrations for our senior spring break.
             We stayed downtown, watched the parade from our hotel room, visited the Columbus Zoo, went axe throwing
@@ -233,11 +233,11 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faUmbrellaBeach,
-        title: 'Cabo Trip #1',
+        title: "Cabo Trip #1",
         startDate: new Date(2017, 4),
         endDate: new Date(2017, 4),
         color: undefined,
-        imageDirectory: 'cabo1',
+        imageDirectory: "cabo1",
         description: `
             Sarah and I traveled to Cabo San Lucas, Mexico for the first time together with my parents in the summer of 2017.
             We stayed at the
@@ -249,7 +249,7 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faBriefcase,
-        title: 'Full Stack Developer @ UC',
+        title: "Full Stack Developer @ UC",
         startDate: new Date(2016, 4),
         endDate: new Date(2017, 8),
         color: undefined,
@@ -264,7 +264,7 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faBriefcase,
-        title: 'R&D Intern @ AFRL',
+        title: "R&D Intern @ AFRL",
         startDate: new Date(2015, 0),
         endDate: new Date(2015, 11),
         color: undefined,
@@ -278,7 +278,7 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faGraduationCap,
-        title: 'BS in CS @ UC',
+        title: "BS in CS @ UC",
         startDate: new Date(2014, 8),
         endDate: new Date(2018, 4),
         color: undefined,

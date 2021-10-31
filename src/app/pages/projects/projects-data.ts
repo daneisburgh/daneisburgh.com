@@ -1,6 +1,6 @@
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
-import { Element } from 'src/app/shared/services/element/element.service';
+import { Element } from "src/app/shared/services/element/element.service";
 
 export interface Technology {
     name: string;
@@ -8,20 +8,20 @@ export interface Technology {
 }
 
 export const technologies: Technology[] = [
-    { name: 'Container', color: '#2391e6' },
-    { name: 'C++', color: '#6295cb' },
-    { name: 'Java', color: '#205568' },
-    { name: 'JavaScript', color: '#efd81d' },
-    { name: 'Python', color: '#568bb9' },
-    { name: 'PHP', color: '#7377ad' },
-    { name: 'AWS', color: '#ff9900' },
-    { name: 'Azure', color: '#0085cf' },
-    { name: 'Cloud', color: '#66358a' },
-    { name: 'Serverless', color: '#f6544e' },
-    { name: 'Database', color: '#ea8c10' },
-    { name: 'Data Science', color: '#92252e' },
-    { name: 'Image Processing', color: '#27aa4b' },
-    { name: 'Embedded System', color: '#385f46' }
+    { name: "Container", color: "#2391e6" },
+    { name: "C++", color: "#6295cb" },
+    { name: "Java", color: "#205568" },
+    { name: "JavaScript", color: "#efd81d" },
+    { name: "Python", color: "#568bb9" },
+    { name: "PHP", color: "#7377ad" },
+    { name: "AWS", color: "#ff9900" },
+    { name: "Azure", color: "#0085cf" },
+    { name: "Cloud", color: "#66358a" },
+    { name: "Serverless", color: "#f6544e" },
+    { name: "Database", color: "#ea8c10" },
+    { name: "Data Science", color: "#92252e" },
+    { name: "Image Processing", color: "#27aa4b" },
+    { name: "Embedded System", color: "#385f46" }
 ];
 
 export interface ProjectElement extends Element {
@@ -43,18 +43,18 @@ const getTechnology = (name: string) => {
 export const projectElements: ProjectElement[] = [
     {
         icon: faCode,
-        title: 'Sports App @ UC',
+        title: "Sports App @ UC",
         fileName: undefined,
-        imageDirectory: 'sdd',
+        imageDirectory: "sdd",
         githubRepo: undefined,
         startDate: new Date(2016, 4),
         endDate: new Date(2017, 7),
         technologies: [
-            getTechnology('AWS'),
-            getTechnology('JavaScript'),
-            getTechnology('PHP'),
-            getTechnology('Database'),
-            getTechnology('Data Science')
+            getTechnology("AWS"),
+            getTechnology("JavaScript"),
+            getTechnology("PHP"),
+            getTechnology("Database"),
+            getTechnology("Data Science")
         ],
         description: `
             One of my first projects while on co-op was a social networking and management web application for sports
@@ -72,20 +72,20 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Broadband App @ UC',
+        title: "Broadband App @ UC",
         fileName: undefined,
         imageDirectory: undefined,
         githubRepo: undefined,
         startDate: new Date(2017, 4),
         endDate: new Date(2017, 8),
         technologies: [
-            getTechnology('AWS'),
-            getTechnology('Container'),
-            getTechnology('JavaScript'),
-            getTechnology('PHP'),
-            getTechnology('Python'),
-            getTechnology('Database'),
-            getTechnology('Data Science')
+            getTechnology("AWS"),
+            getTechnology("Container"),
+            getTechnology("JavaScript"),
+            getTechnology("PHP"),
+            getTechnology("Python"),
+            getTechnology("Database"),
+            getTechnology("Data Science")
         ],
         description: `
             My last project while on co-op was assisting in the development of a web and embedded application
@@ -103,13 +103,13 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Current Personal Website',
+        title: "Current Personal Website",
         fileName: undefined,
         imageDirectory: undefined,
-        githubRepo: 'daneisburgh.com',
+        githubRepo: "daneisburgh.com",
         startDate: new Date(2021, 2),
         endDate: new Date(2021, 2),
-        technologies: [getTechnology('AWS'), getTechnology('JavaScript')],
+        technologies: [getTechnology("AWS"), getTechnology("JavaScript")],
         description: `
             This is an update of my original site using some of what I've learned over the last few years.
             It's built with
@@ -121,18 +121,18 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Automated Investing',
+        title: "Automated Investing",
         fileName: undefined,
         imageDirectory: undefined,
         githubRepo: undefined,
         startDate: new Date(2019, 10),
         endDate: undefined,
         technologies: [
-            getTechnology('AWS'),
-            getTechnology('Database'),
-            getTechnology('Data Science'),
-            getTechnology('JavaScript'),
-            getTechnology('Serverless')
+            getTechnology("AWS"),
+            getTechnology("Database"),
+            getTechnology("Data Science"),
+            getTechnology("JavaScript"),
+            getTechnology("Serverless")
         ],
         description: `
             I've been working on an investing application since late 2019.
@@ -147,18 +147,18 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Wedding Website',
-        githubRepo: 'daneandsarahwedding.com',
+        title: "Wedding Website",
+        githubRepo: "daneandsarahwedding.com",
         fileName: undefined,
         imageDirectory: undefined,
         startDate: new Date(2020, 0),
         endDate: new Date(2020, 7),
         technologies: [
-            getTechnology('AWS'),
-            getTechnology('Database'),
-            getTechnology('Container'),
-            getTechnology('JavaScript'),
-            getTechnology('Serverless')
+            getTechnology("AWS"),
+            getTechnology("Database"),
+            getTechnology("Container"),
+            getTechnology("JavaScript"),
+            getTechnology("Serverless")
         ],
         description: `
             Sarah and I created a dynamic web application for our wedding guests, hosted at our own domain.
@@ -176,18 +176,18 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'NASA Competition @ UC',
-        fileName: 'Galacticats PDR',
-        imageDirectory: 'nasa',
+        title: "NASA Competition @ UC",
+        fileName: "Galacticats PDR",
+        imageDirectory: "nasa",
         githubRepo: undefined,
         startDate: new Date(2017, 8),
         endDate: new Date(2018, 3),
         technologies: [
-            getTechnology('C++'),
-            getTechnology('Data Science'),
-            getTechnology('Embedded System'),
-            getTechnology('Image Processing'),
-            getTechnology('Python')
+            getTechnology("C++"),
+            getTechnology("Data Science"),
+            getTechnology("Embedded System"),
+            getTechnology("Image Processing"),
+            getTechnology("Python")
         ],
         description: `
             I assisted UC's aerospace team, the Galacticats, in the development of a payload for the
@@ -199,13 +199,13 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'First Personal Website',
-        githubRepo: 'daneisburgh.com/tree/main/src/assets/websites/daneisburgh.com',
+        title: "First Personal Website",
+        githubRepo: "daneisburgh.com/tree/main/src/assets/websites/daneisburgh.com",
         fileName: undefined,
         imageDirectory: undefined,
         startDate: new Date(2018, 1),
         endDate: new Date(2018, 1),
-        technologies: [getTechnology('AWS'), getTechnology('JavaScript')],
+        technologies: [getTechnology("AWS"), getTechnology("JavaScript")],
         description: `
             I created my first personal website during my senior year to showcase some of my projects when
             applying to jobs.
@@ -218,18 +218,18 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Robotics App @ UC',
-        fileName: 'Botsyn Design Report',
-        imageDirectory: 'botsyn',
+        title: "Robotics App @ UC",
+        fileName: "Botsyn Design Report",
+        imageDirectory: "botsyn",
         githubRepo: undefined,
         startDate: new Date(2017, 0),
         endDate: new Date(2018, 3),
         technologies: [
-            getTechnology('AWS'),
-            getTechnology('Database'),
-            getTechnology('Embedded System'),
-            getTechnology('Image Processing'),
-            getTechnology('JavaScript')
+            getTechnology("AWS"),
+            getTechnology("Database"),
+            getTechnology("Embedded System"),
+            getTechnology("Image Processing"),
+            getTechnology("JavaScript")
         ],
         description: `
             I worked on a robotics web and embedded app, codenamed Botsyn, with three of my classmates for our senior design capstone.
@@ -248,16 +248,16 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Augmented Reality Binoculars',
+        title: "Augmented Reality Binoculars",
         fileName: undefined,
         imageDirectory: undefined,
         githubRepo: undefined,
         startDate: new Date(2015, 11),
         endDate: new Date(2016, 1),
         technologies: [
-            getTechnology('Embedded System'),
-            getTechnology('Image Processing'),
-            getTechnology('Java')
+            getTechnology("Embedded System"),
+            getTechnology("Image Processing"),
+            getTechnology("Java")
         ],
         description: `
             Back when I had a Galaxy S6, I created an augmented reality Android app for the Samsung
@@ -270,13 +270,13 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Statistics Calculator @ UC',
+        title: "Statistics Calculator @ UC",
         fileName: undefined,
-        imageDirectory: 'statcalc',
+        imageDirectory: "statcalc",
         githubRepo: undefined,
         startDate: new Date(2015, 5),
         endDate: new Date(2015, 7),
-        technologies: [getTechnology('Java')],
+        technologies: [getTechnology("Java")],
         description: `
             I developed and deployed a
             <a href="https://play.google.com/store/apps/details?id=com.daneisburgh.statcalc" target="_blank">Statistics Calculator</a>
@@ -287,13 +287,13 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Puzzle Game @ UC',
+        title: "Puzzle Game @ UC",
         fileName: undefined,
-        imageDirectory: 'boxoff',
+        imageDirectory: "boxoff",
         githubRepo: undefined,
         startDate: new Date(2016, 4),
         endDate: new Date(2016, 8),
-        technologies: [getTechnology('Java')],
+        technologies: [getTechnology("Java")],
         description: `
             My second major project while on co-op was an Android puzzle game called
             <a href="https://play.google.com/store/apps/details?id=com.cyningstan.boxoff" target="_blank">BoxOff</a>.
@@ -303,17 +303,17 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Telepresence Robot @ AFRL',
-        fileName: 'Rosie Tech Paper',
-        imageDirectory: 'rosie',
+        title: "Telepresence Robot @ AFRL",
+        fileName: "Rosie Tech Paper",
+        imageDirectory: "rosie",
         githubRepo: undefined,
         startDate: new Date(2015, 2),
         endDate: new Date(2015, 11),
         technologies: [
-            getTechnology('C++'),
-            getTechnology('Embedded System'),
-            getTechnology('Image Processing'),
-            getTechnology('Java')
+            getTechnology("C++"),
+            getTechnology("Embedded System"),
+            getTechnology("Image Processing"),
+            getTechnology("Java")
         ],
         description: `
             My biggest project at the AFRL was a custom telepresence robot named Rosie.
@@ -329,16 +329,16 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: 'Personnel App @ AFRL',
-        fileName: 'VICC Tech Paper',
-        imageDirectory: 'vicc',
+        title: "Personnel App @ AFRL",
+        fileName: "VICC Tech Paper",
+        imageDirectory: "vicc",
         githubRepo: undefined,
         startDate: new Date(2015, 7),
         endDate: new Date(2015, 11),
         technologies: [
-            getTechnology('Database'),
-            getTechnology('Embedded System'),
-            getTechnology('Java')
+            getTechnology("Database"),
+            getTechnology("Embedded System"),
+            getTechnology("Java")
         ],
         description: `
             My last major project at the AFRL was a personnel management and logistics application named

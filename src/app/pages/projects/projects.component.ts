@@ -1,24 +1,24 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { orderBy } from 'lodash';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { orderBy } from "lodash";
 
-import { ProjectElement, projectElements, technologies } from './projects-data';
-import { ImageGalleryComponent } from 'src/app/shared/components/image-gallery/image-gallery.component';
-import { ElementService } from 'src/app/shared/services/element/element.service';
+import { ProjectElement, projectElements, technologies } from "./projects-data";
+import { ImageGalleryComponent } from "src/app/shared/components/image-gallery/image-gallery.component";
+import { ElementService } from "src/app/shared/services/element/element.service";
 
 @Component({
-    selector: 'app-projects',
-    templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.css']
+    selector: "app-projects",
+    templateUrl: "./projects.component.html",
+    styleUrls: ["./projects.component.css"]
 })
 export class ProjectsComponent implements OnInit {
-    @ViewChild('imageGallery') imageGallery!: ImageGalleryComponent;
-    @ViewChild('projectModal') projectModal!: ElementRef;
+    @ViewChild("imageGallery") imageGallery!: ImageGalleryComponent;
+    @ViewChild("projectModal") projectModal!: ElementRef;
 
-    projectFilter = 'Hide';
-    projectFilters = ['Hide', 'Technology', 'Type'];
+    projectFilter = "Hide";
+    projectFilters = ["Hide", "Technology", "Type"];
     projectModalElement: ProjectElement | undefined;
     imageDirectory!: string | undefined;
-    technologies = orderBy(technologies, 'name');
+    technologies = orderBy(technologies, "name");
     projectElements = this.elementService.sortData(projectElements) as ProjectElement[];
     projectElements1: ProjectElement[] = [];
     projectElements2: ProjectElement[] = [];
@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit {
 
     ngOnInit() {
         this.projectElements.forEach(
-            (element) => (element.technologies = orderBy(element.technologies, 'name'))
+            (element) => (element.technologies = orderBy(element.technologies, "name"))
         );
 
         for (let i = 0; i < this.projectElements.length; i++) {

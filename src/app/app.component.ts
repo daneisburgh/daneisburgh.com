@@ -1,11 +1,11 @@
-import { Location } from '@angular/common';
-import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { NavigationStart, Router } from '@angular/router';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { orderBy, upperFirst } from 'lodash';
+import { Location } from "@angular/common";
+import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from "@angular/core";
+import { Title } from "@angular/platform-browser";
+import { NavigationStart, Router } from "@angular/router";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { orderBy, upperFirst } from "lodash";
 
-import { ScrollService } from './shared/services/scroll/scroll.service';
+import { ScrollService } from "./shared/services/scroll/scroll.service";
 
 interface Link {
     id: string;
@@ -14,9 +14,9 @@ interface Link {
 }
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    selector: "app-root",
+    templateUrl: "./app.component.html",
+    styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit, AfterViewChecked {
     static isHamburgerDisabled = false;
@@ -25,13 +25,13 @@ export class AppComponent implements OnInit, AfterViewChecked {
         return AppComponent.isHamburgerDisabled;
     }
 
-    readonly email = 'hello@daneisburgh.com';
+    readonly email = "hello@daneisburgh.com";
     readonly currentYear = new Date().getFullYear();
     readonly links: Link[] = [
-        { id: 'home', icon: 'home', bottom: 0 },
-        { id: 'about', icon: 'info', bottom: 0 },
-        { id: 'timeline', icon: 'timeline', bottom: 0 },
-        { id: 'projects', icon: 'support', bottom: 0 }
+        { id: "home", icon: "home", bottom: 0 },
+        { id: "about", icon: "info", bottom: 0 },
+        { id: "timeline", icon: "timeline", bottom: 0 },
+        { id: "projects", icon: "support", bottom: 0 }
     ];
 
     isReady = false;
@@ -94,7 +94,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             if (!this.isScrollNavigation && event instanceof NavigationStart) {
                 this.disableScroll();
 
-                const id = event.url === '/' ? 'home' : event.url.substring(1);
+                const id = event.url === "/" ? "home" : event.url.substring(1);
                 const activeLink = this.links.find((link) => id.startsWith(link.id));
                 this.isError = activeLink === undefined;
 
@@ -128,7 +128,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
 
     private watchScroll() {
-        window.addEventListener('scroll', () => {
+        window.addEventListener("scroll", () => {
             this.setNavigationTimeout();
             this.links.forEach(
                 (link) => (link.bottom = this.getBoundingClientRect(link.id).bottom)
@@ -137,8 +137,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
             if (!this.isNavigating) {
                 this.activeLink = orderBy(
                     this.links.filter((link) => link.bottom > 0),
-                    'bottom',
-                    'asc'
+                    "bottom",
+                    "asc"
                 )[0];
                 this.setTitle();
 
@@ -160,7 +160,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
 
     private getBoundingClientRect(id?: string) {
-        const element = document.getElementById(id ? id : '');
+        const element = document.getElementById(id ? id : "");
         return element ? element.getBoundingClientRect() : new DOMRect();
     }
 

@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 // Modified from https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 
-const keyCodes = ['Space', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown'];
+const keyCodes = ["Space", "Home", "End", "ArrowUp", "ArrowDown", "PageUp", "PageDown"];
 
 const preventDefault = (event: any) => {
     event.preventDefault();
@@ -18,20 +18,20 @@ const preventDefaultForScrollKeys = (event: KeyboardEvent) => {
 };
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: "root"
 })
 export class ScrollService {
     private readonly wheelEvent =
-        'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+        "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
     private supportsPassive = false;
     private wheelOpt: false | { passive: false } = false;
 
     setWheelOpt() {
         try {
             window.addEventListener(
-                'test',
+                "test",
                 () => {},
-                Object.defineProperty({}, 'passive', {
+                Object.defineProperty({}, "passive", {
                     get: () => {
                         this.supportsPassive = true;
                     }
@@ -42,16 +42,16 @@ export class ScrollService {
     }
 
     disableScroll() {
-        window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.addEventListener("DOMMouseScroll", preventDefault, false);
         window.addEventListener(this.wheelEvent, preventDefault, this.wheelOpt);
-        window.addEventListener('touchmove', preventDefault, this.wheelOpt);
-        window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+        window.addEventListener("touchmove", preventDefault, this.wheelOpt);
+        window.addEventListener("keydown", preventDefaultForScrollKeys, false);
     }
 
     enableScroll() {
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.removeEventListener("DOMMouseScroll", preventDefault, false);
         window.removeEventListener(this.wheelEvent, preventDefault);
-        window.removeEventListener('touchmove', preventDefault);
-        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+        window.removeEventListener("touchmove", preventDefault);
+        window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
     }
 }

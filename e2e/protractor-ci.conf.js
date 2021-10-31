@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 var config = require("./protractor.conf").config;
 
 config.capabilities = {
