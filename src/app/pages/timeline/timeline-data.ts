@@ -2,7 +2,6 @@ import {
     faBeer,
     faBriefcase,
     faCar,
-    faDesktop,
     faEuroSign,
     faGem,
     faGraduationCap,
