@@ -1,4 +1,13 @@
-<div class="app-content" [ngClass]="{ ready: isReady }">
+<div
+    id="loading-content"
+    class="position-fixed vh-100 vw-100 d-flex align-items-center justify-content-center"
+    [ngClass]="{ 'is-content-ready': isContentReady }"
+>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div id="app-content" [ngClass]="{ 'is-content-ready': isContentReady }">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm">
         <div class="container-lg">
             <div class="fs-3 me-lg-4">Dane Isburgh</div>

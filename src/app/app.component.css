@@ -13,6 +13,20 @@ hr {
     margin: 3.5rem 0 3rem;
 }
 
+#app-content {
+    transition: opacity 0.5s;
+}
+
+#app-content,
+#loading-content.is-content-ready {
+    opacity: 0;
+}
+
+#app-content.is-content-ready,
+#loading-content {
+    opacity: 1;
+}
+
 #error {
     top: 0;
     bottom: 0;
@@ -23,15 +37,6 @@ hr {
     height: fit-content;
     position: absolute;
     text-align: center;
-}
-
-.app-content {
-    opacity: 0;
-    transition: 0.5s opacity;
-}
-
-.app-content.ready {
-    opacity: 1;
 }
 
 .hamburger-box {

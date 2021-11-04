@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
         { id: "projects", icon: "support", bottom: 0 }
     ];
 
-    isReady = false;
+    isContentReady = false;
     isError = false;
     showContent = false;
     activeLink: Link | undefined;
@@ -71,9 +71,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
     ngAfterViewChecked() {
         setTimeout(() => {
-            this.isReady = true;
+            this.isContentReady = true;
             this.cdr.detectChanges();
-        }, 500);
+        }, 1500);
     }
 
     toggleHamburger() {
@@ -86,7 +86,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
 
     private setTitle() {
-        this.title.setTitle(`Dane Isburgh | ${upperFirst(this.activeLink?.id)}`);
+        const linkId = this.activeLink?.id;
+        this.title.setTitle("Dane Isburgh" + (linkId === "home" ? "" : ` | ${upperFirst(linkId)}`));
     }
 
     private watchRoute() {
@@ -152,11 +153,15 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
 
     private setNavigationTimeout() {
-        if (this.navigationTimeout) {
-            clearTimeout(this.navigationTimeout);
-        }
+        if (this.isContentReady) {
+            if (this.navigationTimeout) {
+                clearTimeout(this.navigationTimeout);
+            }
 
-        this.navigationTimeout = setTimeout(() => this.enableScroll(), 100);
+            this.navigationTimeout = setTimeout(() => this.enableScroll(), 100);
+        } else {
+            setTimeout(() => this.setNavigationTimeout(), 100);
+        }
     }
 
     private getBoundingClientRect(id?: string) {
