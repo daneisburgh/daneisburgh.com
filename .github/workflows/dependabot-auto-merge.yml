@@ -1,10 +1,9 @@
 name: Dependabot Auto Merge
 on:
     workflow_run:
-        workflows: ["Install, Lint, Test, and Build"]
+        workflows: ["Integration"]
         branches: ["dependabot/**"]
-        types:
-            - completed
+        types: [completed]
 jobs:
     dependabot-auto-merge:
         name: Auto Merge PR
