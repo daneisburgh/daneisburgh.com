@@ -1,11 +1,5 @@
 {
-    "branches": [
-        "main",
-        {
-            "name": "stage",
-            "prerelease": true
-        }
-    ],
+    "branches": ["main"],
     "npmPublish": false,
     "plugins": [
         "@semantic-release/commit-analyzer",
