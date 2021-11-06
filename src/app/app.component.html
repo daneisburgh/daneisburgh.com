@@ -1,11 +1,17 @@
 <div
+    *ngIf="!isError"
     id="loading-content"
     class="position-fixed vh-100 vw-100 d-flex align-items-center justify-content-center"
-    [ngClass]="{ 'is-content-ready': isContentReady }"
+    [ngClass]="{ 'is-content-ready': isError || isContentReady }"
 >
     <div class="spinner-border" role="status"></div>
 </div>
-<div id="app-content" [ngClass]="{ 'is-content-ready': isContentReady }">
+<div
+    *ngIf="!isError"
+    id="app-content"
+    class="d-flex flex-column h-100"
+    [ngClass]="{ 'is-content-ready': isContentReady }"
+>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm">
         <div class="container-lg">
             <div class="fs-3 me-lg-4">Dane Isburgh</div>
@@ -58,17 +64,8 @@
             </div>
         </div>
     </nav>
-    <main
-        class="container-md flex-grow-1 d-flex justify-content-center"
-        [ngClass]="{ 'pt-4': !isError }"
-    >
-        <div *ngIf="isError" class="align-self-center text-center">
-            <div class="display-1 mb-4">Page not found</div>
-            <button type="button" class="btn btn-primary fs-2" routerLink="home">
-                Back to Safety
-            </button>
-        </div>
-        <div *ngIf="!isError">
+    <main class="container-md flex-grow-1 d-flex justify-content-center">
+        <div>
             <app-home id="home"></app-home>
             <hr />
             <app-about id="about"></app-about>
@@ -78,7 +75,7 @@
             <app-projects id="projects"></app-projects>
         </div>
     </main>
-    <footer class="container-md py-3 py-md-4">
+    <footer class="container-md mt-auto py-3 py-md-4">
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col text-center text-md-start">
                 Contact:
@@ -89,4 +86,20 @@
             </div>
         </div>
     </footer>
+</div>
+<div
+    *ngIf="isError"
+    class="
+        position-fixed
+        vh-100
+        vw-100
+        d-flex
+        flex-column
+        align-items-center
+        justify-content-center
+        pb-4
+    "
+>
+    <div class="display-1 mb-4">Page not found</div>
+    <button type="button" class="btn btn-primary fs-2" routerLink="home">Back to Safety</button>
 </div>

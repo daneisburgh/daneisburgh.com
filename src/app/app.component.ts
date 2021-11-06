@@ -71,8 +71,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
     ngAfterViewChecked() {
         setTimeout(() => {
-            this.isContentReady = true;
-            this.cdr.detectChanges();
+            if (!this.isError) {
+                this.isContentReady = true;
+                this.cdr.detectChanges();
+            }
         }, 1500);
     }
 
