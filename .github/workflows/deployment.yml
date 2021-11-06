@@ -15,7 +15,6 @@ jobs:
               with:
                   path: node_modules
                   key: node-modules-${{ hashFiles('package-lock.json') }}
-            - run: npm install
             - run: npm run build:production
             - run: npm run deploy
               env:

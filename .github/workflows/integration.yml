@@ -71,7 +71,6 @@ jobs:
               with:
                   path: node_modules
                   key: node-modules-${{ hashFiles('package-lock.json') }}
-            - run: npm install
             - run: npm run release
               env:
                   GH_TOKEN: ${{ secrets.GH_TOKEN }}
