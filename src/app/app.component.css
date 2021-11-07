@@ -18,13 +18,11 @@ hr {
     z-index: 0;
 }
 
-#app-content,
-#loading-content.is-content-ready {
+#app-content {
     opacity: 0;
 }
 
-#app-content.is-content-ready,
-#loading-content {
+#app-content.is-content-ready {
     opacity: 1;
 }
 
