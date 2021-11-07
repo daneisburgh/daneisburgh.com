@@ -59,7 +59,7 @@ jobs:
             - run: npm run build
     release:
         name: Release
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
         needs: [lint, test, build]
         runs-on: ubuntu-latest
         steps:
