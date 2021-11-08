@@ -4,6 +4,7 @@ import { orderBy } from "lodash";
 import { ProjectElement, projectElements, technologies } from "./projects-data";
 import { ImageGalleryComponent } from "src/app/shared/components/image-gallery/image-gallery.component";
 import { ElementService } from "src/app/shared/services/element/element.service";
+import { AnalyticsService } from "src/app/shared/services/analytics.service";
 
 @Component({
     selector: "app-projects",
@@ -23,7 +24,10 @@ export class ProjectsComponent implements OnInit {
     projectElements1: ProjectElement[] = [];
     projectElements2: ProjectElement[] = [];
 
-    constructor(private elementService: ElementService) {}
+    constructor(
+        private analyticsService: AnalyticsService,
+        private elementService: ElementService
+    ) {}
 
     ngOnInit() {
         this.projectElements.forEach(
@@ -46,6 +50,7 @@ export class ProjectsComponent implements OnInit {
             setTimeout(() => this.openGallery(element), 100);
         } else {
             this.imageGallery.openGallery(0);
+            this.analyticsService.openGallery(this.imageDirectory);
         }
     }
 

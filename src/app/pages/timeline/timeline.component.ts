@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { faImage, faSortUp, faSortDown, faWrench } from "@fortawesome/free-solid-svg-icons";
 
 import { ImageGalleryComponent } from "src/app/shared/components/image-gallery/image-gallery.component";
+import { AnalyticsService } from "src/app/shared/services/analytics.service";
 import { ElementService } from "src/app/shared/services/element/element.service";
 import { TimelineElement, timelineElements } from "./timeline-data";
 
@@ -20,7 +21,10 @@ export class TimelineComponent implements OnInit {
     imageDirectory!: string | undefined;
     timelineElements = this.elementService.sortData(timelineElements) as TimelineElement[];
 
-    constructor(public elementService: ElementService) {}
+    constructor(
+        private analyticsService: AnalyticsService,
+        public elementService: ElementService
+    ) {}
 
     ngOnInit() {
         let colorIndex = 0;
@@ -38,6 +42,7 @@ export class TimelineComponent implements OnInit {
             setTimeout(() => this.openGallery(element), 100);
         } else {
             this.imageGallery.openGallery(0);
+            this.analyticsService.openGallery(this.imageDirectory);
         }
     }
 

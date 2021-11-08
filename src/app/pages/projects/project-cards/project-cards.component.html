@@ -25,6 +25,7 @@
                         *ngIf="element.fileName"
                         [href]="'assets/files/projects/' + element.fileName + '.pdf'"
                         target="_blank"
+                        (click)="openProjectFile(element.fileName)"
                     >
                         <fa-icon [icon]="faFileAlt"></fa-icon>
                         Docs
@@ -35,6 +36,7 @@
                         *ngIf="element.githubRepo"
                         [href]="'https://github.com/daneisburgh/' + element.githubRepo"
                         target="_blank"
+                        (click)="openGitHubRepo(element.githubRepo)"
                     >
                         <fa-icon [icon]="faGithub"></fa-icon>
                         GitHub

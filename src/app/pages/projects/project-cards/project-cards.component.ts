@@ -4,6 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { ProjectElement } from "../projects-data";
 import { ElementService } from "src/app/shared/services/element/element.service";
+import { AnalyticsService } from "src/app/shared/services/analytics.service";
 
 @Component({
     selector: "app-project-cards",
@@ -22,5 +23,16 @@ export class ProjectCardsComponent {
     faGithub = faGithub;
     faImage = faImage;
 
-    constructor(public elementService: ElementService) {}
+    constructor(
+        private analyticsService: AnalyticsService,
+        public elementService: ElementService
+    ) {}
+
+    openGitHubRepo(githubRepo: string) {
+        this.analyticsService.openGitHubRepo(githubRepo);
+    }
+
+    openProjectFile(fileName: string) {
+        this.analyticsService.openProjectFile(fileName);
+    }
 }

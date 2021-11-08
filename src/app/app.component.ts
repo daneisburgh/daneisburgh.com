@@ -5,6 +5,7 @@ import { NavigationStart, Router } from "@angular/router";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { orderBy, upperFirst } from "lodash";
 
+import { AnalyticsService } from "./shared/services/analytics.service";
 import { ScrollService } from "./shared/services/scroll/scroll.service";
 
 interface Link {
@@ -51,6 +52,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
 
     constructor(
+        private analyticsService: AnalyticsService,
         private cdr: ChangeDetectorRef,
         private location: Location,
         private scrollService: ScrollService,
@@ -95,6 +97,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private watchRoute() {
         this.router.events.subscribe((event) => {
             if (!this.isScrollNavigation && event instanceof NavigationStart) {
+                this.analyticsService.pageView();
                 this.disableScroll();
 
                 const id = event.url === "/" ? "home" : event.url.substring(1);
@@ -102,7 +105,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
                 this.isError = activeLink === undefined;
 
                 if (activeLink) {
-                    if (id.length !== activeLink.id.length) {
+                    if (id !== activeLink.id) {
                         this.router.navigate([activeLink.id]);
                     } else {
                         this.activeLink = activeLink;
