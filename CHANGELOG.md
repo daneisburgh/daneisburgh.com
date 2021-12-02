@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.1...v1.7.2) (2021-12-02)
+
+
+### Bug Fixes
+
+* bump deps ([0bf2e4b](https://github.com/daneisburgh/daneisburgh.com/commit/0bf2e4b89748a62cf3df1fd799429942ee0699bd))
+
 # [1.7.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.0...v1.7.1) (2021-11-29)
 
 
