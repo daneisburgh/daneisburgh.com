@@ -30,11 +30,11 @@ export class ImageGalleryComponent {
     @ViewChild("photoswipeElement")
     photoswipeElement!: ElementRef;
 
+    constructor(private scrollService: ScrollService) {}
+
     get imageDirectoryPath() {
         return `assets/images/${this.imageDirectory}`;
     }
-
-    constructor(private scrollService: ScrollService) {}
 
     getImageFilePath(imageName: string) {
         return `${this.imageDirectoryPath}/${imageName}.jpg`;

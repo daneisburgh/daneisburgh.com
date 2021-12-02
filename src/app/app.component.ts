@@ -21,10 +21,6 @@ interface Link {
 })
 export class AppComponent implements OnInit, AfterViewChecked {
     static isHamburgerDisabled = false;
-    isHamburgerActive = false;
-    get isHamburgerDisabled() {
-        return AppComponent.isHamburgerDisabled;
-    }
 
     readonly email = "hello@daneisburgh.com";
     readonly currentYear = new Date().getFullYear();
@@ -37,6 +33,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
     isContentReady = false;
     isError = false;
+    isHamburgerActive = false;
     showContent = false;
     activeLink: Link | undefined;
     faExternalLinkAlt = faExternalLinkAlt;
@@ -47,10 +44,6 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private isFirstNavigation = true;
     private navigationTimeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
-    private get topDiff() {
-        return window.innerWidth < 768 ? 88 : 108;
-    }
-
     constructor(
         private analyticsService: AnalyticsService,
         private cdr: ChangeDetectorRef,
@@ -59,6 +52,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
         private router: Router,
         private title: Title
     ) {}
+
+    get isHamburgerDisabled() {
+        return AppComponent.isHamburgerDisabled;
+    }
+
+    private get topDiff() {
+        return window.innerWidth < 768 ? 88 : 108;
+    }
 
     static temporarilyDisableHamburger() {
         this.isHamburgerDisabled = true;
