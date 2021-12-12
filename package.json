@@ -22,7 +22,7 @@
         "deploy": "./deploy.sh"
     },
     "dependencies": {
-        "@angular/animations": "^13.0.3",
+        "@angular/animations": "^13.1.0",
         "@angular/common": "^13.1.0",
         "@angular/compiler": "^13.0.3",
         "@angular/core": "^13.0.3",
