@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.2...v1.7.3) (2021-12-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/common from 13.0.3 to 13.1.0 ([1784f03](https://github.com/daneisburgh/daneisburgh.com/commit/1784f03dc91e8c677b0f2a4ad54e34779519e325))
+
 ## [1.7.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.1...v1.7.2) (2021-12-02)
 
 
