@@ -87,6 +87,6 @@
         "semantic-release": "^18.0.1",
         "semantic-release-cli": "^5.4.4",
         "ts-node": "^10.4.0",
-        "typescript": "~4.4.4"
+        "typescript": "~4.5.3"
     }
 }
