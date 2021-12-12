@@ -1,3 +1,12 @@
+## [1.7.4](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.3...v1.7.4) (2021-12-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/animations from 13.0.3 to 13.1.0 ([846b266](https://github.com/daneisburgh/daneisburgh.com/commit/846b266ecfb50557ce89b0363e1ff1bb8d3b6332))
+* **deps:** bump @angular/forms from 13.0.3 to 13.1.0 ([41cadb6](https://github.com/daneisburgh/daneisburgh.com/commit/41cadb6885e9bbbe9b79c02453d2621e751e5033))
+* **deps:** bump @angular/platform-browser-dynamic from 13.0.3 to 13.1.0 ([33b7b76](https://github.com/daneisburgh/daneisburgh.com/commit/33b7b7692a23de45771fb25f0555b4be448fa98d))
+
 ## [1.7.3](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.2...v1.7.3) (2021-12-12)
 
 
