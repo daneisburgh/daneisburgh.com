@@ -2,7 +2,7 @@
     "name": "daneisburgh.com",
     "author": "Dane Isburgh <hello@daneisburgh.com> (https://daneisburgh.com)",
     "repository": "https://github.com/daneisburgh/daneisburgh.com",
-    "version": "1.7.4",
+    "version": "1.7.5",
     "private": true,
     "scripts": {
         "prepare": "husky install",

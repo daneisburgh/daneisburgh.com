@@ -1,3 +1,11 @@
+## [1.7.5](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.4...v1.7.5) (2021-12-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/platform-browser from 13.0.3 to 13.1.0 ([d7b92c9](https://github.com/daneisburgh/daneisburgh.com/commit/d7b92c9b2cbb0e5e914eed9379aca76afb4a5cd0))
+* **deps:** bump @angular/router from 13.0.3 to 13.1.0 ([af11c04](https://github.com/daneisburgh/daneisburgh.com/commit/af11c0457823f58415627e44ab753979a4a75e1f))
+
 ## [1.7.4](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.3...v1.7.4) (2021-12-12)
 
 
