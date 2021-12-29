@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.5...v1.7.6) (2021-12-29)
+
+
+### Bug Fixes
+
+* **deps:** bump rxjs from 7.4.0 to 7.5.1 ([22384f4](https://github.com/daneisburgh/daneisburgh.com/commit/22384f42a72634c137c50c79cfcbdd0e538c7a4c))
+
 ## [1.7.5](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.4...v1.7.5) (2021-12-12)
 
 
