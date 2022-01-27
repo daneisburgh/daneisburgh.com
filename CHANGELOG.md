@@ -1,3 +1,14 @@
+## [1.7.7](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.6...v1.7.7) (2022-01-27)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/forms from 13.1.0 to 13.2.0 ([0fe10a2](https://github.com/daneisburgh/daneisburgh.com/commit/0fe10a2d2b86d2d88bc19d90ce22329c8f861bb4))
+* **deps:** bump @angular/router from 13.1.0 to 13.2.0 ([d9bfc21](https://github.com/daneisburgh/daneisburgh.com/commit/d9bfc2184fc6eab90dfecae395699cc8c0c55453))
+* **deps:** bump log4js from 6.3.0 to 6.4.1 ([8d3ff83](https://github.com/daneisburgh/daneisburgh.com/commit/8d3ff83bc034389b653a00de8a88078632566395))
+* **deps:** bump nanoid from 3.1.30 to 3.2.0 ([775a30f](https://github.com/daneisburgh/daneisburgh.com/commit/775a30fdf43e87b25b6f407bdeb2d6f9726e4fe6))
+* **deps:** bump node-fetch from 2.6.6 to 2.6.7 ([30c57bd](https://github.com/daneisburgh/daneisburgh.com/commit/30c57bd8e41c9cbc69fe53748ff9a252033ad07c))
+
 ## [1.7.6](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.5...v1.7.6) (2021-12-29)
 
 
