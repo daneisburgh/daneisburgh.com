@@ -1,3 +1,11 @@
+## [1.7.8](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.7...v1.7.8) (2022-01-28)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/common from 13.1.0 to 13.2.0 ([14a5978](https://github.com/daneisburgh/daneisburgh.com/commit/14a5978e1dd0cf857414c4634e70983d3e410b8a))
+* **deps:** bump @angular/platform-browser from 13.1.0 to 13.2.0 ([caf6473](https://github.com/daneisburgh/daneisburgh.com/commit/caf6473d48f33c2f80739c4003031f31b89b118e))
+
 ## [1.7.7](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.6...v1.7.7) (2022-01-27)
 
 
