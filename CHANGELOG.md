@@ -1,3 +1,10 @@
+## [1.7.10](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.9...v1.7.10) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** bump follow-redirects from 1.14.5 to 1.14.8 ([3b1c394](https://github.com/daneisburgh/daneisburgh.com/commit/3b1c3946bca106ff756613a6c8a96b7d25356f1e))
+
 ## [1.7.9](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.8...v1.7.9) (2022-01-29)
 
 
