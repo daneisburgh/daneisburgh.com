@@ -1,3 +1,10 @@
+## [1.7.11](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.10...v1.7.11) (2022-03-20)
+
+
+### Bug Fixes
+
+* **deps:** bump hamburgers from 1.1.3 to 1.2.1 ([1a83daa](https://github.com/daneisburgh/daneisburgh.com/commit/1a83daaca9ed83bd76636a994dfe27ada75d2fc9))
+
 ## [1.7.10](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.9...v1.7.10) (2022-03-11)
 
 
