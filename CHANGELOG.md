@@ -1,3 +1,12 @@
+## [1.7.12](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.11...v1.7.12) (2022-04-16)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/common from 13.2.0 to 13.3.3 ([f4d37e8](https://github.com/daneisburgh/daneisburgh.com/commit/f4d37e8b7dd91aae2463cdbe4843d3915ab3a990))
+* **deps:** bump @angular/forms from 13.2.0 to 13.3.3 ([62ec6a3](https://github.com/daneisburgh/daneisburgh.com/commit/62ec6a3d9f39cdba20df788dc8961e7ca6fdf819))
+* **deps:** bump node-forge from 1.2.1 to 1.3.0 ([064d79a](https://github.com/daneisburgh/daneisburgh.com/commit/064d79a8aff75427a585e45c9f99f2f6dbe1d057))
+
 ## [1.7.11](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.10...v1.7.11) (2022-03-20)
 
 
