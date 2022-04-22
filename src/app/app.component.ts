@@ -5,7 +5,7 @@ import { NavigationStart, Router } from "@angular/router";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { orderBy, upperFirst } from "lodash";
 
-import { AnalyticsService } from "./shared/services/analytics.service";
+import { AnalyticsService } from "./shared/services/analytics/analytics.service";
 import { ScrollService } from "./shared/services/scroll/scroll.service";
 
 interface Link {
