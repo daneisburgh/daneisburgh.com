@@ -4,7 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { ProjectElement } from "../projects-data";
 import { ElementService } from "src/app/shared/services/element/element.service";
-import { AnalyticsService } from "src/app/shared/services/analytics.service";
+import { AnalyticsService } from "src/app/shared/services/analytics/analytics.service";
 
 @Component({
     selector: "app-project-cards",

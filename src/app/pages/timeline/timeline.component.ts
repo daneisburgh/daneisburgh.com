@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { faImage, faSortUp, faSortDown, faWrench } from "@fortawesome/free-solid-svg-icons";
 
 import { ImageGalleryComponent } from "src/app/shared/components/image-gallery/image-gallery.component";
-import { AnalyticsService } from "src/app/shared/services/analytics.service";
+import { AnalyticsService } from "src/app/shared/services/analytics/analytics.service";
 import { ElementService } from "src/app/shared/services/element/element.service";
 import { TimelineElement, timelineElements } from "./timeline-data";
 
