@@ -1,3 +1,10 @@
+## [1.7.13](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.12...v1.7.13) (2022-04-23)
+
+
+### Bug Fixes
+
+* **deps:** bump @angular/platform-browser-dynamic from 13.2.0 to 13.3.4 ([38e26bd](https://github.com/daneisburgh/daneisburgh.com/commit/38e26bd58788a5fd09c77edfbb5aedd8bcc229f8))
+
 ## [1.7.12](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.11...v1.7.12) (2022-04-16)
 
 
