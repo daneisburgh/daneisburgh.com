@@ -1,3 +1,10 @@
+## [1.7.14](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.13...v1.7.14) (2022-04-29)
+
+
+### Bug Fixes
+
+* **deps:** bump @fortawesome/free-regular-svg-icons from 5.15.4 to 6.1.1 ([1721dad](https://github.com/daneisburgh/daneisburgh.com/commit/1721dadb657ee6d6120a6725931c45149528491b))
+
 ## [1.7.13](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.12...v1.7.13) (2022-04-23)
 
 
