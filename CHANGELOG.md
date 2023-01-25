@@ -1,3 +1,17 @@
+## [1.7.10](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.9...v1.7.10) (2023-01-25)
+
+
+### Bug Fixes
+
+* add no index tag to websites ([466a3f2](https://github.com/daneisburgh/daneisburgh.com/commit/466a3f2d410fbcddded908438ce1ac6704ca2b32))
+* **deps:** bump @angular/common from 13.2.0 to 13.3.3 ([ccba946](https://github.com/daneisburgh/daneisburgh.com/commit/ccba9463e5ad99ea261afc7121b61ecb6a76e375))
+* **deps:** bump @angular/forms from 13.2.0 to 13.3.3 ([cf5d151](https://github.com/daneisburgh/daneisburgh.com/commit/cf5d151e94b03074bcbaf808a4bfb0b344c2973e))
+* **deps:** bump @angular/platform-browser-dynamic from 13.2.0 to 13.3.4 ([b593be2](https://github.com/daneisburgh/daneisburgh.com/commit/b593be2b2d2e984b35381b8c8a725cecd2f706b3))
+* **deps:** bump @fortawesome/free-regular-svg-icons from 5.15.4 to 6.1.1 ([c03bbc9](https://github.com/daneisburgh/daneisburgh.com/commit/c03bbc910f9724b6eff02b120483d4cff6f46469))
+* **deps:** bump follow-redirects from 1.14.5 to 1.14.8 ([74ba210](https://github.com/daneisburgh/daneisburgh.com/commit/74ba210a54da0e0f2cd267965f6c982a3fda216f))
+* **deps:** bump hamburgers from 1.1.3 to 1.2.1 ([271be92](https://github.com/daneisburgh/daneisburgh.com/commit/271be9202ec4b243295eaaf3822249fd7fe5b879))
+* **deps:** bump node-forge from 1.2.1 to 1.3.0 ([064f659](https://github.com/daneisburgh/daneisburgh.com/commit/064f65919904def72ee5f680d3d6006ed5e0c90f))
+
 ## [1.7.9](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.8...v1.7.9) (2022-01-29)
 
 
