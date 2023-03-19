@@ -1,3 +1,12 @@
+## [1.7.11](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.10...v1.7.11) (2023-03-19)
+
+
+### Bug Fixes
+
+* button hover border style ([49cc39b](https://github.com/daneisburgh/daneisburgh.com/commit/49cc39b18f3fecba7501dc6648a42228727b4843))
+* update angular version ([e849c0c](https://github.com/daneisburgh/daneisburgh.com/commit/e849c0cb2e5a58b0af5f05d34017afbc46367230))
+* update package versions ([77bdbf9](https://github.com/daneisburgh/daneisburgh.com/commit/77bdbf9dec07e692b32bc12c3c22678653fc3696))
+
 ## [1.7.10](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.9...v1.7.10) (2023-01-25)
 
 
