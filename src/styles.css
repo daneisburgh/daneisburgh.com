@@ -39,6 +39,11 @@ a.nav-link.active > span {
     border-bottom: 1px solid;
 }
 
+.btn:focus-visible,
+.btn:hover {
+    border-color: inherit;
+}
+
 .btn-element {
     border: 2px solid;
     padding: 2px 8px;
