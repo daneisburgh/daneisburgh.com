@@ -131,7 +131,6 @@
             }
         }
     },
-    "defaultProject": "daneisburgh.com",
     "schematics": {
         "@angular-eslint/schematics:application": {
             "setParserOptionsProject": true
