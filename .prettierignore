@@ -1,6 +1,6 @@
 .angular
 dist
-src/assets/websites
+src/assets
 
 .czrc
 .gitignore
