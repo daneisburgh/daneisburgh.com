@@ -1,7 +1,10 @@
 import {
+    faAppleWhole,
     faBeer,
+    faBridgeWater,
     faBriefcase,
     faCar,
+    faCity,
     faEuroSign,
     faGem,
     faGraduationCap,
@@ -11,6 +14,7 @@ import {
     faMotorcycle,
     faPlaceOfWorship,
     faShip,
+    faTree,
     faUmbrellaBeach
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,6 +26,59 @@ export interface TimelineElement extends Element {
 
 export const timelineElements: TimelineElement[] = [
     {
+        icon: faCity,
+        title: "Family trip to Chicago, IL",
+        startDate: new Date(2023, 6),
+        endDate: new Date(2023, 6),
+        color: undefined,
+        imageDirectory: "chicago",
+        description: `
+            We drove to Chicago with my parents the week after returning from our trip to San Francisco (see below).
+            We stayed for a few days downtown and our activities included visiting the Shedd Aquarium, Art Institute of Chicago, Millennium Park, and Willis Tower
+            as well as attending a performance by <a href="https://en.wikipedia.org/wiki/The_Second_City" target="_blank">The Second City</a> and a Chicago FC game at Soldier Field.
+        `
+    },
+    {
+        icon: faBridgeWater,
+        title: "Exploring San Francisco, CA",
+        startDate: new Date(2023, 5),
+        endDate: new Date(2023, 5),
+        color: undefined,
+        imageDirectory: "san-francisco",
+        description: `
+            Sarah and I traveled to California for the first time in the summer of 2023 and spent almost two weeks in San Francisco.
+            We had a lot of fun exploring the city and nearby towns. Our activities included touring the Golden Gate Bridge and Alcatraz Island,
+            hiking in Muir Woods, wine tasting in Napa Valley, and visiting the Ferry Building, Fisherman's Wharf, Coit Tower, and Palace of Fine Arts.
+        `
+    },
+    {
+        icon: faTree,
+        title: "Off grid in Rockbridge, OH",
+        startDate: new Date(2023, 3),
+        endDate: new Date(2023, 3),
+        color: undefined,
+        imageDirectory: "rockbridge",
+        description: `
+            In the spring of 2023, we spent a few days in Rockbridge, a nature preserve south of Columbus, and enjoyed hiking, canoeing, and zip lining.
+            We stayed in cabin that had water and power but no internet or cell service, and was only accessible by 4x4.
+            It was a lot of fun to get away from the city and relax in the wilderness for a few days.
+        `
+    },
+    {
+        icon: faAppleWhole,
+        title: "Family trip to New York, NY",
+        startDate: new Date(2022, 8),
+        endDate: new Date(2022, 8),
+        color: undefined,
+        imageDirectory: "new-york",
+        description: `
+            Our family traveled to the Big Apple in the summer of 2022.
+            We stayed in Chinatown and our activities included enjoying lots of Chinese food, navigating the
+            <a href="https://en.wikipedia.org/wiki/Feast_of_San_Gennaro" target="_blank">Feast of San Gennaro</a> food festival in Little Italy,
+            a boat tour of the Statue of Liberty, several walking tours, and attending two Broadway shows: Beetlejuice and The Music Man.
+        `
+    },
+    {
         icon: faBriefcase,
         title: "Sr. Data Engineer @ Kroger",
         startDate: new Date(2021, 7),
@@ -29,8 +86,8 @@ export const timelineElements: TimelineElement[] = [
         color: undefined,
         imageDirectory: undefined,
         description: `
-            I've continued to pursue a career in data engineering and am currently working as a lead on Kroger's DataOps team.
-            I'm assisting in the development of the company's data platform as well as gaining knowledge and experience designing
+            In mid-2021 I decided to leave GE and began work as a data engineer for Kroger.
+            I'm assisting in the engineering and development of the company's data platform as well as gaining knowledge and experience designing
             pragmatic enterprise data solutions.
         `
     },
@@ -205,13 +262,13 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faBriefcase,
-        title: "Analytics Engineer @ GE",
+        title: "Data Engineer @ GE",
         startDate: new Date(2018, 4),
         endDate: new Date(2021, 7),
         color: undefined,
         imageDirectory: undefined,
         description: `
-            I started my professional career as an Analytics Engineer for GE after graduating from UC.
+            I started my professional career as a Data Engineer for GE after graduating from UC.
             While at GE, I had the opportunity to build several enterprise applications and data automation projects to
             host/manage both physical and cloud infrastructure.
         `
