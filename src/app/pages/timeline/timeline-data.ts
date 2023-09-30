@@ -27,7 +27,7 @@ export interface TimelineElement extends Element {
 export const timelineElements: TimelineElement[] = [
     {
         icon: faCity,
-        title: "Family trip to Chicago, IL",
+        title: "Family Trip to Chicago, IL",
         startDate: new Date(2023, 6),
         endDate: new Date(2023, 6),
         color: undefined,
@@ -53,7 +53,7 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faTree,
-        title: "Off grid in Rockbridge, OH",
+        title: "Off-grid in Rockbridge, OH",
         startDate: new Date(2023, 3),
         endDate: new Date(2023, 3),
         color: undefined,
@@ -66,13 +66,13 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faAppleWhole,
-        title: "Family trip to New York, NY",
+        title: "Family Trip to The Big Apple",
         startDate: new Date(2022, 8),
         endDate: new Date(2022, 8),
         color: undefined,
         imageDirectory: "new-york",
         description: `
-            Our family traveled to the Big Apple in the summer of 2022.
+            Our family traveled to New York City in the summer of 2022.
             We stayed in Chinatown and our activities included enjoying lots of Chinese food, navigating the
             <a href="https://en.wikipedia.org/wiki/Feast_of_San_Gennaro" target="_blank">Feast of San Gennaro</a> food festival in Little Italy,
             a boat tour of the Statue of Liberty, several walking tours, and attending two Broadway shows: Beetlejuice and The Music Man.
