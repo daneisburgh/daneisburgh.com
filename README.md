@@ -1,6 +1,6 @@
 # My personal website
 
-This is the second version of my personal website that I've built to include basic info, a timeline of life events, and a selection of projects and technology interests. The application is built with Angular and hosted in AWS S3 with CloudFront.
+This is the second version of my personal website that I've built to include basic info, a timeline of life events, and a selection of projects and technology interests. The application is built with Angular and hosted in AWS [S3](https://aws.amazon.com/s3/) with [CloudFront](https://aws.amazon.com/cloudfront/).
 
 [![Integration](https://github.com/daneisburgh/daneisburgh.com/actions/workflows/integration.yml/badge.svg)](https://github.com/daneisburgh/daneisburgh.com/actions/workflows/integration.yml)
 [![Deployment](https://github.com/daneisburgh/daneisburgh.com/actions/workflows/deployment.yml/badge.svg)](https://github.com/daneisburgh/daneisburgh.com/actions/workflows/deployment.yml)
