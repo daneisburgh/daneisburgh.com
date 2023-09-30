@@ -8,7 +8,7 @@ export interface Technology {
 }
 
 export const technologies: Technology[] = [
-    { name: "Container", color: "#2391e6" },
+    { name: "Kubernetes", color: "#3069de" },
     { name: "C++", color: "#6295cb" },
     { name: "Java", color: "#205568" },
     { name: "JavaScript", color: "#efd81d" },
@@ -16,9 +16,10 @@ export const technologies: Technology[] = [
     { name: "PHP", color: "#7377ad" },
     { name: "AWS", color: "#ff9900" },
     { name: "Azure", color: "#0085cf" },
-    { name: "Cloud", color: "#66358a" },
     { name: "Serverless", color: "#f6544e" },
-    { name: "Database", color: "#ea8c10" },
+    { name: "Database", color: "#0e256d" },
+    { name: "Data Lake", color: "#0e256d" },
+    { name: "Data Engineering", color: "#627db3" },
     { name: "Data Science", color: "#92252e" },
     { name: "Image Processing", color: "#27aa4b" },
     { name: "Embedded System", color: "#385f46" }
@@ -43,6 +44,58 @@ const getTechnology = (name: string) => {
 export const projectElements: ProjectElement[] = [
     {
         icon: faCode,
+        title: "Real Estate Forecasting",
+        fileName: undefined,
+        imageDirectory: "real-estate-forecast",
+        githubRepo: undefined,
+        startDate: new Date(2021, 3),
+        endDate: new Date(2023, 1),
+        technologies: [
+            getTechnology("Azure"),
+            getTechnology("Data Engineering"),
+            getTechnology("Data Science"),
+            getTechnology("Data Lake"),
+            getTechnology("Python")
+        ],
+        description: `<a href="" target="_blank"></a>
+            I became interested in real-estate market forecasting when Sarah and I were thinking about purchasing our first home.
+            I developed <a href="https://www.databricks.com/" target="_blank">Databricks</a> workflows in
+            <a href="https://azure.microsoft.com/en-us" target="_blank">Azure</a> to collect historical property sales data for southwest Ohio
+            and generate forecasts for county sales as well as predictions for individual property sales and sale prices.
+            The historical sales and prediction data was stored in the <a href="https://www.databricks.com/product/data-lake-on-azure" target="_blank">data lake</a> format.
+            I used Databricks <a href="https://learn.microsoft.com/en-us/azure/databricks/machine-learning/" target="_blank">Machine Learning</a>
+            to generate classification and regression models used create the property sales forecasts and predictions.
+        `
+    },
+    {
+        icon: faCode,
+        title: "Practical Tuples",
+        fileName: undefined,
+        imageDirectory: "practical-tuples",
+        githubRepo: "practical-tuples",
+        startDate: new Date(2021, 3),
+        endDate: new Date(2023, 1),
+        technologies: [
+            getTechnology("AWS"),
+            getTechnology("Serverless"),
+            getTechnology("JavaScript"),
+            getTechnology("Kubernetes"),
+            getTechnology("Database")
+        ],
+        description: `
+            This project is a "to-do list" type application built on serverless real-time architecture.
+            The app's frontend is built with <a href="https://angular.io/" target="_blank">Angular</a> and the backend is built with
+            <a href="https://nestjs.com/" target="_blank">NestJS</a>,
+            and uses a <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> relational database.
+            The app can be hosted in AWS with the frontend in <a href="https://aws.amazon.com/s3/" target="_blank">S3</a> and the backend in
+            <a href="https://aws.amazon.com/lambda/" target="_blank">Lambda</a>,
+            managed by the <a href="https://www.serverless.com/" target="_blank">Serverless</a> framework.
+            Real-time communication between the frontend and backend is performed by persistent websocket connection that is maintained by
+            <a href="https://aws.amazon.com/api-gateway/" target="_blank">API Gateway</a>.
+        `
+    },
+    {
+        icon: faCode,
         title: "Sports App @ UC",
         fileName: undefined,
         imageDirectory: "sdd",
@@ -51,10 +104,9 @@ export const projectElements: ProjectElement[] = [
         endDate: new Date(2017, 7),
         technologies: [
             getTechnology("AWS"),
-            getTechnology("JavaScript"),
-            getTechnology("PHP"),
             getTechnology("Database"),
-            getTechnology("Data Science")
+            getTechnology("JavaScript"),
+            getTechnology("PHP")
         ],
         description: `
             One of my first projects while on co-op was a social networking and management web application for sports
@@ -80,12 +132,12 @@ export const projectElements: ProjectElement[] = [
         endDate: new Date(2017, 8),
         technologies: [
             getTechnology("AWS"),
-            getTechnology("Container"),
+            getTechnology("Kubernetes"),
+            getTechnology("Database"),
+            getTechnology("Data Engineering"),
             getTechnology("JavaScript"),
             getTechnology("PHP"),
-            getTechnology("Python"),
-            getTechnology("Database"),
-            getTechnology("Data Science")
+            getTechnology("Python")
         ],
         description: `
             My last project while on co-op was assisting in the development of a web and embedded application
@@ -108,14 +160,14 @@ export const projectElements: ProjectElement[] = [
         imageDirectory: undefined,
         githubRepo: "daneisburgh.com",
         startDate: new Date(2021, 2),
-        endDate: new Date(2021, 2),
+        endDate: undefined,
         technologies: [getTechnology("AWS"), getTechnology("JavaScript")],
         description: `
             This is an update of my original site using some of what I've learned over the last few years.
             It's built with
             <a href="https://angular.io/" target="_blank">Angular</a> and
-            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, and hosted in AWS's
-            <a href="https://aws.amazon.com/s3/" target="_blank">Simple Storage Service</a>.
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, and hosted in AWS
+            <a href="https://aws.amazon.com/s3/" target="_blank">S3</a>.
             I plan to continue to update the site with future projects and events in the coming years.
         `
     },
@@ -126,17 +178,17 @@ export const projectElements: ProjectElement[] = [
         imageDirectory: undefined,
         githubRepo: undefined,
         startDate: new Date(2019, 10),
-        endDate: undefined,
+        endDate: new Date(2021, 11),
         technologies: [
             getTechnology("AWS"),
+            getTechnology("Serverless"),
             getTechnology("Database"),
-            getTechnology("Data Science"),
-            getTechnology("JavaScript"),
-            getTechnology("Serverless")
+            getTechnology("Data Engineering"),
+            getTechnology("JavaScript")
         ],
         description: `
             I've been working on an investing application since late 2019.
-            It currently processes thousands of options contracts per day and can create/execute orders in real-time
+            It can currently process thousands of options contracts per day and can create/execute orders in real-time
             by running scheduled events using the
             <a href="https://www.serverless.com/" target="_blank">Serverless</a>
             framework with AWS's
@@ -155,13 +207,15 @@ export const projectElements: ProjectElement[] = [
         endDate: new Date(2020, 7),
         technologies: [
             getTechnology("AWS"),
+            getTechnology("Serverless"),
             getTechnology("Database"),
-            getTechnology("Container"),
-            getTechnology("JavaScript"),
-            getTechnology("Serverless")
+            getTechnology("Kubernetes"),
+            getTechnology("JavaScript")
         ],
         description: `
             Sarah and I created a dynamic web application for our wedding guests, hosted at our own domain.
+            The site is no longer active but the static content can be seen
+            <a href="assets/websites/daneandsarahwedding.com/index.html" target="_blank">here</a>.
             It included important wedding info and allowed guests to RSVP, manage their invitees, and set food preferences.
             The app was completely serverless and included an
             <a href="https://angular.io/" target="_blank">Angular</a>
@@ -170,8 +224,6 @@ export const projectElements: ProjectElement[] = [
             service to host a serverless
             <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
             database.
-            The site is no longer active but the static content can be seen
-            <a href="assets/websites/daneandsarahwedding.com/index.html" target="_blank">here</a>.
         `
     },
     {
@@ -183,10 +235,11 @@ export const projectElements: ProjectElement[] = [
         startDate: new Date(2017, 8),
         endDate: new Date(2018, 3),
         technologies: [
-            getTechnology("C++"),
+            getTechnology("Data Engineering"),
             getTechnology("Data Science"),
             getTechnology("Embedded System"),
             getTechnology("Image Processing"),
+            getTechnology("C++"),
             getTechnology("Python")
         ],
         description: `
@@ -200,7 +253,7 @@ export const projectElements: ProjectElement[] = [
     {
         icon: faCode,
         title: "First Personal Website",
-        githubRepo: "daneisburgh.com/tree/main/src/assets/websites/daneisburgh.com",
+        githubRepo: undefined,
         fileName: undefined,
         imageDirectory: undefined,
         startDate: new Date(2018, 1),
@@ -226,6 +279,7 @@ export const projectElements: ProjectElement[] = [
         endDate: new Date(2018, 3),
         technologies: [
             getTechnology("AWS"),
+            getTechnology("Data Engineering"),
             getTechnology("Database"),
             getTechnology("Embedded System"),
             getTechnology("Image Processing"),
@@ -279,10 +333,11 @@ export const projectElements: ProjectElement[] = [
         technologies: [getTechnology("Java")],
         description: `
             I developed and deployed a
-            <a href="https://play.google.com/store/apps/details?id=com.daneisburgh.statcalc" target="_blank">Statistics Calculator</a>
+            <a href="https://www.appbrain.com/app/statistics-calculator/com.daneisburgh.statcalc" target="_blank">Statistics Calculator</a>
             Android app to the Google Play Store as a final project for an Engineering Statistics course during my
             sophomore year of college.
             It could perform a large number of different calculations that I had learned throughout the course.
+            The app is no longer available but attained over 12K downloads with a rating of 4.4 stars.
         `
     },
     {
@@ -310,9 +365,9 @@ export const projectElements: ProjectElement[] = [
         startDate: new Date(2015, 2),
         endDate: new Date(2015, 11),
         technologies: [
-            getTechnology("C++"),
             getTechnology("Embedded System"),
             getTechnology("Image Processing"),
+            getTechnology("C++"),
             getTechnology("Java")
         ],
         description: `
