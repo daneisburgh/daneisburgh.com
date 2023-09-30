@@ -1,3 +1,22 @@
+# [1.8.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.11...v1.8.0) (2023-09-30)
+
+
+### Bug Fixes
+
+* update angular version ([07b2544](https://github.com/daneisburgh/daneisburgh.com/commit/07b2544edad3542f96cca5fcb0a6bfff8b3e9f7e))
+
+
+### Features
+
+* add Chicago timeline image ([807537b](https://github.com/daneisburgh/daneisburgh.com/commit/807537bfb8e71fc6052378cfd89c04d453dcdda7))
+* add timeline images and update file paths ([f7deae6](https://github.com/daneisburgh/daneisburgh.com/commit/f7deae6604f5d660421dd6762ba0abf735796372))
+* update about info ([2be3446](https://github.com/daneisburgh/daneisburgh.com/commit/2be34465997e349372eee4aad7590d3d24ef076e))
+* update about page info ([fd2b406](https://github.com/daneisburgh/daneisburgh.com/commit/fd2b4064461d5148d48b330c4fdf17c6faf18ea6))
+* update project data ([276c331](https://github.com/daneisburgh/daneisburgh.com/commit/276c3319849e80d4495438e3616534b9f32edea7))
+* update projects images ([d24b3b2](https://github.com/daneisburgh/daneisburgh.com/commit/d24b3b2ae2d97ba6d47e75de84c33db6f10b595b))
+* update résumé ([661e7dd](https://github.com/daneisburgh/daneisburgh.com/commit/661e7ddfcb025c09c8cbd229caae16cae2a92818))
+* update timeline data ([3462dee](https://github.com/daneisburgh/daneisburgh.com/commit/3462dee029dbc7006594a9944ab62fc57c7ea859))
+
 ## [1.7.11](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.10...v1.7.11) (2023-03-19)
 
 
