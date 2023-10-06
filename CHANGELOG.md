@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.8.0...v1.9.0) (2023-10-06)
+
+
+### Features
+
+* update Practical Tuples images ([855fa22](https://github.com/daneisburgh/daneisburgh.com/commit/855fa225d23a43e2804e939129db52c4c7996f86))
+* update project data ([766b168](https://github.com/daneisburgh/daneisburgh.com/commit/766b168fedf5515c4a4d6cfee01bdd5818895537))
+* update résumé ([4fb950d](https://github.com/daneisburgh/daneisburgh.com/commit/4fb950d72d14a61c814cbb050d26fb269c047b5f))
+
 # [1.8.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.7.11...v1.8.0) (2023-09-30)
 
 
