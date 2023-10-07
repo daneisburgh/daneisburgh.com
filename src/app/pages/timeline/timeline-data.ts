@@ -262,13 +262,13 @@ export const timelineElements: TimelineElement[] = [
     },
     {
         icon: faBriefcase,
-        title: "Data Engineer @ GE",
+        title: "Analytics Engineer @ GE",
         startDate: new Date(2018, 4),
         endDate: new Date(2021, 7),
         color: undefined,
         imageDirectory: undefined,
         description: `
-            I started my professional career as a Data Engineer for GE after graduating from UC.
+            I started my professional career as a Analytics Engineer for GE after graduating from UC.
             While at GE, I had the opportunity to build several enterprise applications and data automation projects to
             host/manage both physical and cloud infrastructure.
         `
