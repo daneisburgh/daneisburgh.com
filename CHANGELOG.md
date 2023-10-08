@@ -1,3 +1,11 @@
+## [1.9.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.9.0...v1.9.1) (2023-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([ac212b0](https://github.com/daneisburgh/daneisburgh.com/commit/ac212b0366d9f5017dc2ef5dd318d66f765b7e79))
+* update node version ([eba9839](https://github.com/daneisburgh/daneisburgh.com/commit/eba98399a3d025253624bc2acc8a3b617a05ba58))
+
 # [1.9.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.8.0...v1.9.0) (2023-10-06)
 
 
