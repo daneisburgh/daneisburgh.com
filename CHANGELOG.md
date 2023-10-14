@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.9.1...v1.10.0) (2023-10-14)
+
+
+### Features
+
+* update project data ([55681f6](https://github.com/daneisburgh/daneisburgh.com/commit/55681f6a3e8fe3e334447203f925d28aa3aed659))
+* update project image directory ([fd52f9f](https://github.com/daneisburgh/daneisburgh.com/commit/fd52f9f56edc89fa755021e2f6edbe950f5a8acf))
+
 ## [1.9.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.9.0...v1.9.1) (2023-10-08)
 
 
