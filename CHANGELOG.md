@@ -1,3 +1,16 @@
+# [1.12.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.11.0...v1.12.0) (2023-12-01)
+
+
+### Bug Fixes
+
+* update file paths ([93eedee](https://github.com/daneisburgh/daneisburgh.com/commit/93eedee532a623024afaeccec3ff4ddc2a53ee17))
+
+
+### Features
+
+* add Ireland info and images ([1b4d45c](https://github.com/daneisburgh/daneisburgh.com/commit/1b4d45c579ba3b6bf020a821666cbfcab396357b))
+* update résumé ([63731fe](https://github.com/daneisburgh/daneisburgh.com/commit/63731feff274fe30cd5476ff7d9404d188e8db83))
+
 # [1.11.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.10.0...v1.11.0) (2023-11-19)
 
 
