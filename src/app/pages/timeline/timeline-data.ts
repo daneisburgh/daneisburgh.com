@@ -4,6 +4,7 @@ import {
     faBridgeWater,
     faBriefcase,
     faCar,
+    faClover,
     faCity,
     faEuroSign,
     faGem,
@@ -25,6 +26,22 @@ export interface TimelineElement extends Element {
 }
 
 export const timelineElements: TimelineElement[] = [
+    {
+        icon: faClover,
+        title: "Thanksgiving in Ireland",
+        startDate: new Date(2023, 10),
+        endDate: new Date(2023, 10),
+        color: undefined,
+        imageDirectory: "ireland",
+        description: `
+            Sarah and I traveled to Ireland for Thanksgiving, 2023.
+            We flew into Dublin and drove clockwise around the island, staying in Kilkenny, Blarney, Galway, and Belfast before returning to Dublin.
+            We toured as many of the cities' attractions as possible as well as visited the
+            <a href="https://en.wikipedia.org/wiki/Waterford_Crystal" target="_blank">House of Waterford Crystal</a> and
+            <a href="https://en.wikipedia.org/wiki/Cliffs_of_Moher" target="_blank">Cliffs of Moher</a> along the way.
+            We had an amazing experience and we can't wait to visit Europe again soon.
+        `
+    },
     {
         icon: faCity,
         title: "Family Trip to Chicago, IL",
