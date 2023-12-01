@@ -103,9 +103,9 @@ export const timelineElements: TimelineElement[] = [
         color: undefined,
         imageDirectory: undefined,
         description: `
-            In mid-2021 I decided to leave GE and began work as a data engineer for Kroger.
-            I'm assisting in the engineering and development of the company's data platform as well as gaining knowledge and experience designing
-            pragmatic enterprise data solutions.
+            I decided to leave GE in 2021 for a data engineering position at Kroger.
+            I'm currently assisting in the engineering and development of the company's data platform as well as gaining knowledge
+            and experience designing pragmatic enterprise data solutions.
         `
     },
     {

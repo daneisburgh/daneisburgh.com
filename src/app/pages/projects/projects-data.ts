@@ -241,11 +241,13 @@ export const projectElements: ProjectElement[] = [
             getTechnology("Python")
         ],
         description: `
-            I assisted UC's aerospace team, the Galacticats, in the development of a payload for the
+            During my senior year at UC, I assisted the university's aerospace team in the development of a payload for the
             <a href="https://www.nasa.gov/stem/studentlaunch/home/index.html" target="_blank">NASA Student Launch</a>
-            competition during my senior year.
-            We developed the rocket/payload over the course of the year, presented our project at local high schools,
-            and traveled to Huntsville, AL several times for testing before the competition in April.
+            competition that could identify objects on the ground by shape and color.
+            To accomplish this, I used <a href="https://opencv.org/" target="_blank">OpenCV</a> with the
+            <a href="https://en.wikipedia.org/wiki/Nvidia_Jetson" target="_blank">Jetson TK1</a>.
+            We developed the rocket and payload over the course of the year, presented our project at local high schools,
+            and traveled to Huntsville, AL to compete against schools across the county.
         `
     },
     {
@@ -287,15 +289,11 @@ export const projectElements: ProjectElement[] = [
             I worked on a robotics web and embedded app, codenamed Botsyn, with three of my classmates for our senior design capstone.
             It started as one of my side projects in early 2017 and ultimately became a web app and open-source
             embedded robotics module that allowed users to build and operate other users' robots over the internet.
-            The app included an
-            <a href="https://angular.io/" target="_blank">Angular</a>
-            frontend and
+            The web app included an <a href="https://angular.io/" target="_blank">Angular</a> frontend and
             <a href="https://feathersjs.com/" target="_blank">Feathers</a>
-            backend hosted in AWS's
-            <a href="https://aws.amazon.com/ec2/" target="_blank">Elastic Compute Cloud</a>
-            service with embedded software written using the
-            <a href="http://johnny-five.io/" target="_blank">Johnny-Five</a>
-            JavaScript robotics framework.
+            backend, hosted in AWS's <a href="https://aws.amazon.com/ec2/" target="_blank">Elastic Compute Cloud</a> service.
+            Robots were controlled with embedded software written using the <a href="http://johnny-five.io/" target="_blank">Johnny-Five</a>
+            JavaScript robotics framework and could stream and process captured video using <a href="https://opencv.org/" target="_blank">OpenCV</a>.
         `
     },
     {
@@ -312,12 +310,10 @@ export const projectElements: ProjectElement[] = [
             getTechnology("Java")
         ],
         description: `
-            Back when I had a Galaxy S6, I created an augmented reality Android app for the Samsung
-            <a href="https://www.samsung.com/global/galaxy/gear-vr/" target="_blank">GearVR</a>
-            using some of what I learned at the AFRL.
-            It used the camera's pass-through ability to process frame data in real-time and display it to the user.
-            The app was controlled using the GearVR's input to zoom, take pictures, track people/objects,
-            and switch between several different displays including a custom HUD.
+            I created an augmented reality Android app that could be used with the Samsung <a href="https://en.wikipedia.org/wiki/Samsung_Gear_VR/" target="_blank">GearVR</a>.
+            The app used the camera's pass-through ability to process frame data in real-time with <a href="https://opencv.org/" target="_blank">OpenCV</a>,
+            and display it to the user. The app was controlled using the GearVR's input to zoom, take pictures, track people/objects,
+            and switch between several different displays, including a custom HUD.
         `
     },
     {
@@ -373,8 +369,8 @@ export const projectElements: ProjectElement[] = [
             We used several commercial robots in the lab and designed Rosie to be a way to connect with local schools for STEM education.
             Rosie's chassis was aluminum with a 3D printed outer shell and her brain was a
             <a href="https://en.wikipedia.org/wiki/Nvidia_Jetson" target="_blank">Jetson TK1</a>
-            single-board computer developed by Nvidia that allowed for image processing/streaming and control of the robot's
-            omnidirectional movement in real-time.
+            single-board computer developed by Nvidia that allowed for video streaming and image processing with <a href="https://opencv.org/" target="_blank">OpenCV</a>
+            as well as control of the robot's omnidirectional movement in real-time.
             Rosie could be remotely controlled by an Android application that communicated over a simple peer-to-peer network.
             We had the opportunity to showcase Rosie at several expos including the
             <a href="https://oetc.ohio.gov/" target="_blank">Ohio Educational Technology Conference</a>.
