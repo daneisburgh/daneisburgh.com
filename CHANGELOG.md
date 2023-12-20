@@ -1,3 +1,16 @@
+# [1.14.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.13.0...v1.14.0) (2023-12-20)
+
+
+### Bug Fixes
+
+* update dependencies ([09261b4](https://github.com/daneisburgh/daneisburgh.com/commit/09261b4de50a2ff64cf9b3f6a96caea04304d824))
+
+
+### Features
+
+* add new job to timeline data ([fc0df0e](https://github.com/daneisburgh/daneisburgh.com/commit/fc0df0ec156d206ff043ffbf6baa64ff72ac3f2a))
+* update résumé ([5996baf](https://github.com/daneisburgh/daneisburgh.com/commit/5996bafa2cd954b1dc4c20cc36b1010af59d4527))
+
 # [1.13.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.12.0...v1.13.0) (2023-12-04)
 
 
