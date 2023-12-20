@@ -27,6 +27,20 @@ export interface TimelineElement extends Element {
 
 export const timelineElements: TimelineElement[] = [
     {
+        icon: faBriefcase,
+        title: "Advanced Data Engineer @ Kroger",
+        startDate: new Date(2023, 10),
+        endDate: undefined,
+        color: undefined,
+        imageDirectory: undefined,
+        description: `
+            I was promoted to my current position at Kroger after my first two years with the company
+            and am now a technical lead on the company's Data Engineering and Platform team.
+            I'm assisting in the engineering of the company's primary data lake, supporting projects company-wide,
+            as well as developing analytics and machine learning applications to improve operations.
+        `
+    },
+    {
         icon: faClover,
         title: "Thanksgiving in Ireland",
         startDate: new Date(2023, 10),
@@ -99,7 +113,7 @@ export const timelineElements: TimelineElement[] = [
         icon: faBriefcase,
         title: "Sr. Data Engineer @ Kroger",
         startDate: new Date(2021, 7),
-        endDate: undefined,
+        endDate: new Date(2023, 10),
         color: undefined,
         imageDirectory: undefined,
         description: `
