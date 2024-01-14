@@ -82,7 +82,7 @@ export class ImageGalleryComponent {
             const item: any = event.data;
 
             if (item.w < 1 || item.h < 1) {
-                var img = new Image();
+                const img = new Image();
                 img.onload = () => {
                     console.log(img);
                     item.w = img.width;
