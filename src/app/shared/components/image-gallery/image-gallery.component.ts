@@ -1,8 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from "@angular/core";
 import { AppComponent } from "src/app/app.component";
 
-import * as photoswipe from "photoswipe";
-import * as photoswipeUIDefault from "photoswipe/dist/photoswipe-ui-default";
+import PhotoSwipe, { PreparedPhotoSwipeOptions } from "photoswipe";
 
 import { default as assetsFilePaths } from "src/assets/file-paths.json";
 import { ScrollService } from "src/app/shared/services/scroll/scroll.service";
@@ -62,35 +61,36 @@ export class ImageGalleryComponent {
             image.w = 0;
         }
 
-        const options = {
+        const options: Partial<PreparedPhotoSwipeOptions> = {
             index,
+            dataSource: images,
             pinchToClose: false,
-            closeOnScroll: false,
-            closeOnVerticalDrag: false
+            closeOnVerticalDrag: false,
+            zoomSVG: undefined
         };
 
-        const gallery = new photoswipe(
-            this.photoswipeElement.nativeElement,
-            photoswipeUIDefault,
-            images,
-            options
-        );
+        const gallery = new PhotoSwipe(options);
 
-        gallery.listen("close", () => {
+        gallery.on("close", () => {
             this.scrollService.enableScroll();
             AppComponent.temporarilyDisableHamburger();
             this.galleryClose.emit();
         });
 
-        gallery.listen("gettingData", (_: any, item: any) => {
+        gallery.on("gettingData", (event) => {
+            console.log(event);
+            const item: any = event.data;
+
             if (item.w < 1 || item.h < 1) {
-                const img = new Image();
-                img.src = item.src;
+                var img = new Image();
                 img.onload = () => {
+                    console.log(img);
                     item.w = img.width;
                     item.h = img.height;
                     gallery.updateSize(true);
+                    gallery.refreshSlideContent(event.index);
                 };
+                img.src = item.src;
             }
         });
 

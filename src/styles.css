@@ -1,7 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~hamburgers/dist/hamburgers.css";
 @import "~photoswipe/dist/photoswipe.css";
-@import "~photoswipe/dist/default-skin/default-skin.css";
 
 html,
 body,
@@ -62,4 +61,9 @@ a.nav-link.active > span {
 
 .fs-5 {
     font-size: calc(1rem + 0.3vw) !important;
+}
+
+.pswp__button--close,
+.pswp__button--zoom {
+    display: none !important;
 }
