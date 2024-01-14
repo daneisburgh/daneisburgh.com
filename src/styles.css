@@ -63,7 +63,6 @@ a.nav-link.active > span {
     font-size: calc(1rem + 0.3vw) !important;
 }
 
-.pswp__button--close,
 .pswp__button--zoom {
     display: none !important;
 }

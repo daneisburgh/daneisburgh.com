@@ -5,6 +5,7 @@ import PhotoSwipe, { PreparedPhotoSwipeOptions } from "photoswipe";
 
 import { default as assetsFilePaths } from "src/assets/file-paths.json";
 import { ScrollService } from "src/app/shared/services/scroll/scroll.service";
+import { LocationStrategy } from "@angular/common";
 
 interface ImageData {
     name: string;
@@ -29,7 +30,10 @@ export class ImageGalleryComponent {
     @ViewChild("photoswipeElement")
     photoswipeElement!: ElementRef;
 
-    constructor(private scrollService: ScrollService) {}
+    private gallery?: PhotoSwipe;
+    private onPopState: any;
+
+    constructor(private location: LocationStrategy, private scrollService: ScrollService) {}
 
     get imageDirectoryPath() {
         return `assets/images/${this.imageDirectory}`;
@@ -42,6 +46,13 @@ export class ImageGalleryComponent {
     openGallery(index: number) {
         let images: any[] = [];
         this.scrollService.disableScroll();
+        this.onPopState = this.location.onPopState;
+        this.location.onPopState(() => {
+            if (this.gallery) {
+                this.gallery.close();
+            }
+        });
+        history.pushState(null, "");
 
         if (this.galleryData) {
             images = this.galleryData.map((imageData) => ({
@@ -69,31 +80,31 @@ export class ImageGalleryComponent {
             zoomSVG: undefined
         };
 
-        const gallery = new PhotoSwipe(options);
+        this.gallery = new PhotoSwipe(options);
 
-        gallery.on("close", () => {
+        this.gallery.on("close", () => {
             this.scrollService.enableScroll();
             AppComponent.temporarilyDisableHamburger();
+            this.location.onPopState = this.onPopState;
             this.galleryClose.emit();
         });
 
-        gallery.on("gettingData", (event) => {
-            console.log(event);
+        const env = this; // eslint-disable-line
+        this.gallery.on("gettingData", (event) => {
             const item: any = event.data;
 
             if (item.w < 1 || item.h < 1) {
                 const img = new Image();
                 img.onload = () => {
-                    console.log(img);
                     item.w = img.width;
                     item.h = img.height;
-                    gallery.updateSize(true);
-                    gallery.refreshSlideContent(event.index);
+                    env.gallery?.updateSize(true);
+                    env.gallery?.refreshSlideContent(event.index);
                 };
                 img.src = item.src;
             }
         });
 
-        gallery.init();
+        this.gallery.init();
     }
 }
