@@ -9,5 +9,6 @@
     },
     "[ignore]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
-    }
+    },
+    "cSpell.words": ["cabo", "fonteinen", "zugspitze"]
 }
