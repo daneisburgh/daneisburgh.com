@@ -1,3 +1,11 @@
+## [1.14.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.0...v1.14.1) (2024-01-14)
+
+
+### Bug Fixes
+
+* update link character codes for résumé ([ef83100](https://github.com/daneisburgh/daneisburgh.com/commit/ef8310063852b6f9ba7fe3a220048f129bf801d7))
+* update photoswipe class usage ([7ea2210](https://github.com/daneisburgh/daneisburgh.com/commit/7ea22102506d185035e5053f78d30bd78360af4e))
+
 # [1.14.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.13.0...v1.14.0) (2023-12-20)
 
 
