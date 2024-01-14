@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.1...v1.14.2) (2024-01-14)
+
+
+### Bug Fixes
+
+* image gallery close and back button usage ([f3754dd](https://github.com/daneisburgh/daneisburgh.com/commit/f3754dded4581026fb0c8a50f49a42c46a1c0a3d))
+
 ## [1.14.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.0...v1.14.1) (2024-01-14)
 
 
