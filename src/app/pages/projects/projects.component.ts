@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { orderBy } from "lodash";
 
 import { ProjectElement, projectElements, technologies } from "./projects-data";
-import { ImageGalleryComponent } from "src/app/shared/components/image-gallery/image-gallery.component";
+import { ImageGalleryComponent } from "src/app/shared/image-gallery/image-gallery.component";
 import { ElementService } from "src/app/shared/services/element/element.service";
 import { AnalyticsService } from "src/app/shared/services/analytics/analytics.service";
 

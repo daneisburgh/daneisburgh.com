@@ -9,7 +9,7 @@ import { ProjectsComponent } from "./pages/projects/projects.component";
 import { TimelineComponent } from "./pages/timeline/timeline.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { ProjectCardsComponent } from "./pages/projects/project-cards/project-cards.component";
-import { ImageGalleryComponent } from "./shared/components/image-gallery/image-gallery.component";
+import { ImageGalleryComponent } from "./shared/image-gallery/image-gallery.component";
 
 @NgModule({
     declarations: [
