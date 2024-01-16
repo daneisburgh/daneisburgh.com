@@ -107,8 +107,8 @@ export class ImageGalleryComponent {
         this.gallery.on("slideActivate", (event) => {
             setTimeout(
                 () => {
-                    var elements = document.getElementsByTagName("img");
-                    for (var i = 0; i < elements.length; ++i) {
+                    const elements = document.getElementsByTagName("img");
+                    for (let i = 0; i < elements.length; ++i) {
                         const element = elements[i];
                         if (
                             element.className == "pswp__img" &&
