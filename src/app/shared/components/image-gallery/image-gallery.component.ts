@@ -32,6 +32,7 @@ export class ImageGalleryComponent {
 
     private gallery?: PhotoSwipe;
     private onPopState: any;
+    private slideOpacities: number[] = [];
 
     constructor(private location: LocationStrategy, private scrollService: ScrollService) {}
 
@@ -57,19 +58,22 @@ export class ImageGalleryComponent {
         if (this.galleryData) {
             images = this.galleryData.map((imageData) => ({
                 src: `${location.origin}/${this.getImageFilePath(imageData.name)}`,
-                title: imageData.description
+                title: imageData.description,
+                h: 0,
+                w: 0
             }));
         } else {
             images = (assetsFilePaths as string[])
                 .filter((path) => path.includes(this.imageDirectoryPath))
                 .map((path) => ({
-                    src: `${location.origin}/${path}`
+                    src: `${location.origin}/${path}`,
+                    h: 0,
+                    w: 0
                 }));
         }
 
-        for (const image of images) {
-            image.h = 0;
-            image.w = 0;
+        for (let i = 0; i < images.length; i++) {
+            this.slideOpacities[i] = 0;
         }
 
         const options: Partial<PreparedPhotoSwipeOptions> = {
@@ -82,27 +86,48 @@ export class ImageGalleryComponent {
 
         this.gallery = new PhotoSwipe(options);
 
+        const env = this; // eslint-disable-line
+
+        this.gallery.on("gettingData", (event) => {
+            if (event.data.w == 0 || event.data.h == 0) {
+                this.slideOpacities[event.index] = 0;
+                const img = new Image();
+                img.onload = () => {
+                    event.data.w = img.width;
+                    event.data.h = img.height;
+                    env.gallery?.refreshSlideContent(event.index);
+                    env.gallery?.updateSize(true);
+                };
+                img.src = event.data.src as string;
+            } else {
+                this.slideOpacities[event.index] = 1;
+            }
+        });
+
+        this.gallery.on("slideActivate", (event) => {
+            setTimeout(
+                () => {
+                    var elements = document.getElementsByTagName("img");
+                    for (var i = 0; i < elements.length; ++i) {
+                        const element = elements[i];
+                        if (
+                            element.className == "pswp__img" &&
+                            element.src == event.slide.data.src
+                        ) {
+                            element.style.opacity =
+                                this.slideOpacities[event.slide.index].toString();
+                        }
+                    }
+                },
+                event.slide.index === 0 ? 500 : 0
+            );
+        });
+
         this.gallery.on("close", () => {
             this.scrollService.enableScroll();
             AppComponent.temporarilyDisableHamburger();
             this.location.onPopState = this.onPopState;
             this.galleryClose.emit();
-        });
-
-        const env = this; // eslint-disable-line
-        this.gallery.on("gettingData", (event) => {
-            const item: any = event.data;
-
-            if (item.w < 1 || item.h < 1) {
-                const img = new Image();
-                img.onload = () => {
-                    item.w = img.width;
-                    item.h = img.height;
-                    env.gallery?.updateSize(true);
-                    env.gallery?.refreshSlideContent(event.index);
-                };
-                img.src = item.src;
-            }
         });
 
         this.gallery.init();
