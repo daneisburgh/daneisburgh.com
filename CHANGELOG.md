@@ -1,3 +1,10 @@
+## [1.14.4](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.3...v1.14.4) (2024-02-12)
+
+
+### Bug Fixes
+
+* update image gallery item loading ([2be77b1](https://github.com/daneisburgh/daneisburgh.com/commit/2be77b16873f8ff197676e49737386b67ced1dd9))
+
 ## [1.14.3](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.2...v1.14.3) (2024-01-16)
 
 
