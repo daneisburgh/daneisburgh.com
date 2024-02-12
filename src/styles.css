@@ -66,3 +66,7 @@ a.nav-link.active > span {
 .pswp__button--zoom {
     display: none !important;
 }
+
+.pswp__item {
+    opacity: 0;
+}

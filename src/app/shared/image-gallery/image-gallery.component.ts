@@ -32,7 +32,7 @@ export class ImageGalleryComponent {
 
     private gallery?: PhotoSwipe;
     private onPopState: any;
-    private slideOpacities: number[] = [];
+    private slideOpacities: string[] = [];
 
     constructor(private location: LocationStrategy, private scrollService: ScrollService) {}
 
@@ -73,7 +73,7 @@ export class ImageGalleryComponent {
         }
 
         for (let i = 0; i < images.length; i++) {
-            this.slideOpacities[i] = 0;
+            this.slideOpacities[i] = "0";
         }
 
         const options: Partial<PreparedPhotoSwipeOptions> = {
@@ -90,7 +90,7 @@ export class ImageGalleryComponent {
 
         this.gallery.on("gettingData", (event) => {
             if (event.data.w == 0 || event.data.h == 0) {
-                this.slideOpacities[event.index] = 0;
+                this.slideOpacities[event.index] = "0";
                 const img = new Image();
                 img.onload = () => {
                     event.data.w = img.width;
@@ -100,26 +100,38 @@ export class ImageGalleryComponent {
                 };
                 img.src = event.data.src as string;
             } else {
-                this.slideOpacities[event.index] = 1;
+                this.slideOpacities[event.index] = "1";
+                const itemElements = document.getElementsByClassName("pswp__item");
+
+                for (let i = 0; i < itemElements.length; i++) {
+                    const element = itemElements[i] as any;
+                    element.style.opacity = element.ariaHidden === "false" ? "1" : "0";
+                }
             }
         });
 
         this.gallery.on("slideActivate", (event) => {
             setTimeout(
                 () => {
-                    const elements = document.getElementsByTagName("img");
-                    for (let i = 0; i < elements.length; ++i) {
-                        const element = elements[i];
+                    const imgElements = document.getElementsByTagName("img");
+                    const itemElements = document.getElementsByClassName("pswp__item");
+
+                    for (let i = 0; i < imgElements.length; ++i) {
+                        const element = imgElements[i];
                         if (
                             element.className == "pswp__img" &&
                             element.src == event.slide.data.src
                         ) {
-                            element.style.opacity =
-                                this.slideOpacities[event.slide.index].toString();
+                            element.style.opacity = this.slideOpacities[event.slide.index];
                         }
                     }
+
+                    for (let i = 0; i < itemElements.length; i++) {
+                        const element = itemElements[i] as any;
+                        element.style.opacity = this.slideOpacities[event.slide.index];
+                    }
                 },
-                event.slide.index === 0 ? 500 : 0
+                event.slide.index === 0 ? 250 : 0
             );
         });
 
