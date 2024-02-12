@@ -1,3 +1,11 @@
+## [1.14.3](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.2...v1.14.3) (2024-01-16)
+
+
+### Bug Fixes
+
+* app and home component padding issues ([583c80e](https://github.com/daneisburgh/daneisburgh.com/commit/583c80ebdacb3b845b5ee26b75a45b648eaf7d28))
+* gallery load with slow connection ([427a633](https://github.com/daneisburgh/daneisburgh.com/commit/427a633a7260d3b66efba54546f9b6ce4b9e7852))
+
 ## [1.14.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.1...v1.14.2) (2024-01-14)
 
 
