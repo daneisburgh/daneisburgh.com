@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.4...v1.15.0) (2024-03-21)
+
+
+### Features
+
+* update résumé ([10f6052](https://github.com/daneisburgh/daneisburgh.com/commit/10f6052fd94a5f3e25030c9a797b6e767d349663))
+
 ## [1.14.4](https://github.com/daneisburgh/daneisburgh.com/compare/v1.14.3...v1.14.4) (2024-02-12)
 
 
