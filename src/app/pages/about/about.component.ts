@@ -31,6 +31,12 @@ export class AboutComponent {
         { name: "house", description: "Our first home in West Chester, Ohio" }
     ];
 
+    get yearsWorking(): number {
+        return Math.abs(
+            new Date(Date.now() - Date.parse("01 May 2018 00:00:00 GMT")).getUTCFullYear() - 1970
+        );
+    }
+
     getImageFilePath(name: string) {
         return `assets/images/about/${name}.jpg`;
     }
