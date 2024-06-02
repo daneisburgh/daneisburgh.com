@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.19.0...v1.20.0) (2024-06-02)
+
+
+### Features
+
+* update résumé and links ([ff1720b](https://github.com/daneisburgh/daneisburgh.com/commit/ff1720b22db0dae70a92069b6af03f364ffed566))
+
 # [1.19.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.18.0...v1.19.0) (2024-04-22)
 
 
