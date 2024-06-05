@@ -1,3 +1,18 @@
+# [1.21.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.20.1...v1.21.0) (2024-06-05)
+
+
+### Bug Fixes
+
+* install angular cdk and bump deps ([867eb12](https://github.com/daneisburgh/daneisburgh.com/commit/867eb12428892ebae1a24084095d581fecbb8394))
+* update image gallery defaults ([8182d1f](https://github.com/daneisburgh/daneisburgh.com/commit/8182d1f896afa345fc60a35ea76792a28dd91530))
+
+
+### Features
+
+* update about component ([33504a1](https://github.com/daneisburgh/daneisburgh.com/commit/33504a1d1fab6859b77f1cc34031c5b5751f7aff))
+* update image gallery functionality ([6d00ce9](https://github.com/daneisburgh/daneisburgh.com/commit/6d00ce9e6ab3d54fc209643c2cf7edebea4eed3a))
+* update resume ([3491402](https://github.com/daneisburgh/daneisburgh.com/commit/349140247fb7a6b08063942cd4b235d5b5dcd145))
+
 ## [1.20.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.20.0...v1.20.1) (2024-06-02)
 
 
