@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.20.0...v1.20.1) (2024-06-02)
+
+
+### Bug Fixes
+
+* resume pdf title ([1642bff](https://github.com/daneisburgh/daneisburgh.com/commit/1642bff9b942d4fa93ca695646e3e1a1517ae86b))
+
 # [1.20.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.19.0...v1.20.0) (2024-06-02)
 
 
