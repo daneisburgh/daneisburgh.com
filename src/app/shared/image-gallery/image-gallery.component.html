@@ -1,4 +1,4 @@
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" #photoswipeElement>
+<!-- <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" #photoswipeElement>
     <div class="pswp__bg"></div>
     <div class="pswp__scroll-wrap">
         <div class="pswp__container">
@@ -31,4 +31,13 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<!-- <img src="path-of-image.jpg" (click)="showLightbox(0)" /> -->
+
+<ng-image-fullscreen-view
+    [images]="imageObject"
+    [imageIndex]="selectedImageIndex"
+    [show]="showFlag"
+    [infinite]="true"
+    (close)="closeEventHandler()"
+></ng-image-fullscreen-view>

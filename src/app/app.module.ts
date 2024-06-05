@@ -10,6 +10,7 @@ import { TimelineComponent } from "./pages/timeline/timeline.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { ProjectCardsComponent } from "./pages/projects/project-cards/project-cards.component";
 import { ImageGalleryComponent } from "./shared/image-gallery/image-gallery.component";
+import { NgImageFullscreenViewModule } from "./shared/ng-image-fullscreen-view/ng-image-fullscreen-view.module";
 
 @NgModule({
     declarations: [
@@ -21,7 +22,7 @@ import { ImageGalleryComponent } from "./shared/image-gallery/image-gallery.comp
         ProjectCardsComponent,
         ImageGalleryComponent
     ],
-    imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+    imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, NgImageFullscreenViewModule],
     providers: [],
     bootstrap: [AppComponent]
 })
