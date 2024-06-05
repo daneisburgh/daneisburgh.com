@@ -1,8 +1,9 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from "@angular/core";
+import { Component, EventEmitter, HostListener, Input, Output } from "@angular/core";
 import { AppComponent } from "src/app/app.component";
 
 import { default as assetsFilePaths } from "src/assets/file-paths.json";
 import { ScrollService } from "src/app/shared/services/scroll/scroll.service";
+import { LocationStrategy } from "@angular/common";
 
 interface ImageData {
     name: string;
@@ -24,15 +25,12 @@ export class ImageGalleryComponent {
     @Output()
     galleryClose: EventEmitter<any> = new EventEmitter();
 
-    @ViewChild("photoswipeElement")
-    photoswipeElement!: ElementRef;
-
     showFlag = false;
-    currentIndex = -1;
     selectedImageIndex = -1;
     imageObject: Array<object> = [];
+    private onPopState: any;
 
-    constructor(private scrollService: ScrollService) {}
+    constructor(private location: LocationStrategy, private scrollService: ScrollService) {}
 
     get imageDirectoryPath() {
         return `assets/images/${this.imageDirectory}`;
@@ -40,8 +38,8 @@ export class ImageGalleryComponent {
 
     closeEventHandler() {
         this.showFlag = false;
-        this.currentIndex = -1;
         this.scrollService.enableScroll();
+        this.location.onPopState = this.onPopState;
         AppComponent.temporarilyDisableHamburger();
         this.galleryClose.emit();
     }
@@ -51,6 +49,10 @@ export class ImageGalleryComponent {
     }
 
     openGallery(index: number) {
+        this.onPopState = this.location.onPopState;
+        this.location.onPopState(() => this.closeEventHandler());
+        history.pushState(null, "");
+
         if (this.galleryData) {
             this.imageObject = this.galleryData.map((imageData) => ({
                 image: `${location.origin}/${this.getImageFilePath(imageData.name)}`,
