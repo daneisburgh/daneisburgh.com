@@ -33,7 +33,7 @@ export class NgImageFullscreenViewComponent implements OnDestroy {
     lightboxNextDisable = false;
     showLoading = true;
     effectStyle = "none";
-    speed: any = 1; // default speed in second
+    speed: any = 0.6; // default speed in second
     title = "";
     currentImageIndex: any = 0;
 
@@ -64,14 +64,14 @@ export class NgImageFullscreenViewComponent implements OnDestroy {
     }
     @Input() videoAutoPlay = false;
     @Input() direction = "ltr";
-    @Input() paginationShow = false;
+    @Input() paginationShow = true;
     @Input()
     set animationSpeed(data: any) {
         if (data && typeof data === "number" && data >= 0.1 && data <= 5) {
             this.speed = data;
         }
     }
-    @Input() infinite = false;
+    @Input() infinite = true;
     @Input() arrowKeyMove = true;
     @Input() showVideoControls = true;
 
@@ -149,8 +149,9 @@ export class NgImageFullscreenViewComponent implements OnDestroy {
 
     nextImageLightbox() {
         this.effectStyle = `all ${this.speed}s ease-in-out`;
-        if (this.currentImageIndex < this.images.length - 1 && !this.lightboxNextDisable) {
-            this.currentImageIndex++;
+        if (!this.lightboxNextDisable) {
+            this.currentImageIndex =
+                this.currentImageIndex < this.images.length - 1 ? this.currentImageIndex + 1 : 0;
             this.nextImage.emit();
             this.marginLeft = -1 * this.popupWidth * this.currentImageIndex;
             this.getImageData();
@@ -169,12 +170,12 @@ export class NgImageFullscreenViewComponent implements OnDestroy {
     applyButtonDisableCondition() {
         this.lightboxNextDisable = false;
         this.lightboxPrevDisable = false;
-        if (!this.infinite && this.currentImageIndex >= this.images.length - 1) {
-            this.lightboxNextDisable = true;
-        }
-        if (!this.infinite && this.currentImageIndex <= 0) {
-            this.lightboxPrevDisable = true;
-        }
+        // if (!this.infinite && this.currentImageIndex >= this.images.length - 1) {
+        //     this.lightboxNextDisable = true;
+        // }
+        // if (!this.infinite && this.currentImageIndex <= 0) {
+        //     this.lightboxPrevDisable = true;
+        // }
     }
 
     getImageData() {
