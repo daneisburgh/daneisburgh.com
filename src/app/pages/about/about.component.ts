@@ -33,7 +33,7 @@ export class AboutComponent {
 
     get yearsWorking(): number {
         return Math.abs(
-            new Date(Date.now() - Date.parse("01 May 2018 00:00:00 GMT")).getUTCFullYear() - 1970
+            new Date(Date.now() - Date.parse("01 May 2016 00:00:00 GMT")).getUTCFullYear() - 1970
         );
     }
 
