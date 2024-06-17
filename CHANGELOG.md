@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.21.0...v1.21.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* handle back button in image gallery ([83092c5](https://github.com/daneisburgh/daneisburgh.com/commit/83092c53327a24b965fdc9b45bed68259535289f))
+
 # [1.21.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.20.1...v1.21.0) (2024-06-05)
 
 
