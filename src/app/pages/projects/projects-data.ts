@@ -156,7 +156,7 @@ export const projectElements: ProjectElement[] = [
     },
     {
         icon: faCode,
-        title: "Current Personal Website",
+        title: "This Website",
         fileName: undefined,
         imageDirectory: undefined,
         githubRepo: "daneisburgh.com",
@@ -164,35 +164,35 @@ export const projectElements: ProjectElement[] = [
         endDate: undefined,
         technologies: [getTechnology("AWS"), getTechnology("JavaScript")],
         description: `
-            This is an update of my original site using some of what I've learned over the last few years.
+            This is my latest website, created using some of what I've learned over the last few years.
             It's built with
             <a href="https://angular.io/" target="_blank">Angular</a> and
-            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, and hosted in AWS
-            <a href="https://aws.amazon.com/s3/" target="_blank">S3</a>.
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, and hosted using AWS
+            <a href="https://aws.amazon.com/s3/" target="_blank">S3</a> with <a href="https://aws.amazon.com/cloudfront/" target="_blank">CloudFront</a>.
             I plan to continue to update the site with future projects and events in the coming years.
         `
     },
     {
         icon: faCode,
-        title: "Automated Investing",
+        title: "Investment as a Service",
         fileName: undefined,
         imageDirectory: undefined,
-        githubRepo: undefined,
-        startDate: new Date(2019, 10),
-        endDate: new Date(2021, 11),
+        githubRepo: "invaas",
+        startDate: new Date(2022, 1),
+        endDate: undefined,
         technologies: [
-            getTechnology("AWS"),
-            getTechnology("Serverless"),
-            getTechnology("Database"),
+            getTechnology("Azure"),
             getTechnology("Data Engineering"),
-            getTechnology("JavaScript")
+            getTechnology("Data Science"),
+            getTechnology("Python")
         ],
         description: `
-            I've been working on an investing application since late 2019.
-            It can currently process thousands of options contracts per day and can create/execute orders in real-time
-            by running scheduled events using the <a href="https://www.serverless.com/" target="_blank">Serverless Framework</a>
-            with AWS's <a href="https://aws.amazon.com/lambda/" target="_blank">Lambda</a> service.
-            My goal is to build the app into a reliable source of supplemental income.
+            This is an investing application designed to auto-trade ETFs, options, and crypto.
+            The application uses <a href="https://learn.microsoft.com/en-us/azure/databricks/workflows/" target="_blank">Databricks workflows</a>
+            to consume real-time trade data with <a href="https://spark.apache.org/" target="_blank">Spark</a> as well as create buy/sell orders using
+            standard indicators and <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">ML</a> models.
+            The application can trade on several platforms including Robinhood, Schwab, and Coinbase.
+            My goal is to ultimately build the app into a reliable source of supplemental income.
         `
     },
     {
