@@ -1,3 +1,15 @@
+# [1.22.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.21.2...v1.22.0) (2024-06-28)
+
+
+### Bug Fixes
+
+* increase loading spinner padding ([fcc6eea](https://github.com/daneisburgh/daneisburgh.com/commit/fcc6eeaaf507aff723df3180ef113322ac88eee8))
+
+
+### Features
+
+* update project data ([47ef48b](https://github.com/daneisburgh/daneisburgh.com/commit/47ef48b53fc416d7f15f96a97705ac2fff9a4b9d))
+
 ## [1.21.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.21.1...v1.21.2) (2024-06-17)
 
 
