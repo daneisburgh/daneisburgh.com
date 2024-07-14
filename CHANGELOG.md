@@ -1,3 +1,10 @@
+## [1.22.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.22.0...v1.22.1) (2024-07-14)
+
+
+### Bug Fixes
+
+* update resume ([1e68654](https://github.com/daneisburgh/daneisburgh.com/commit/1e686544d16d350ac44c94248f34e6d85c3ca424))
+
 # [1.22.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.21.2...v1.22.0) (2024-06-28)
 
 
