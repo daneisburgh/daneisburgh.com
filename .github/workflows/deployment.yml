@@ -3,7 +3,7 @@ on:
     release:
         types: [released]
 env:
-    NODE_VERSION: 20.10.0
+    NODE_VERSION: 22.13.1
 jobs:
     deploy-release:
         name: Deploy Release
