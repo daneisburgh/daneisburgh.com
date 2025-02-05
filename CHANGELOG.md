@@ -1,3 +1,15 @@
+## [1.22.2](https://github.com/daneisburgh/daneisburgh.com/compare/v1.22.1...v1.22.2) (2025-02-05)
+
+
+### Bug Fixes
+
+* migrate angular components ([7431fd9](https://github.com/daneisburgh/daneisburgh.com/commit/7431fd93955202c7482927478e8b3229f68fb322))
+* update angular cdk to latest version ([d8cd105](https://github.com/daneisburgh/daneisburgh.com/commit/d8cd105d80b8ba1f67204939476f6314f31f18c8))
+* update angular to latest version ([a35897b](https://github.com/daneisburgh/daneisburgh.com/commit/a35897b6bfdae1d8f18a4eab3bbd5429b4cb1c85))
+* update asset file paths ([365c054](https://github.com/daneisburgh/daneisburgh.com/commit/365c05426d59b7a738e75a679dff692135f46914))
+* update first website links ([9e1363f](https://github.com/daneisburgh/daneisburgh.com/commit/9e1363fb074a114a98ca73f020b82d387faccd29))
+* update fontawesome to latest version ([c86d42f](https://github.com/daneisburgh/daneisburgh.com/commit/c86d42f8a18eca669da90676e86d32fcbd5e84b2))
+
 ## [1.22.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.22.0...v1.22.1) (2024-07-14)
 
 
