@@ -18,11 +18,12 @@
             "prefix": "app",
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/daneisburgh.com",
+                        "outputPath": {
+                            "base": "dist/daneisburgh.com"
+                        },
                         "index": "src/index.html",
-                        "main": "src/main.ts",
                         "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
@@ -36,18 +37,17 @@
                         ],
                         "styles": ["src/styles.css"],
                         "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.js"],
-                        "allowedCommonJsDependencies": ["lodash", "photoswipe"]
+                        "allowedCommonJsDependencies": ["lodash", "photoswipe"],
+                        "browser": "src/main.ts"
                     },
                     "defaultConfiguration": "development",
                     "configurations": {
                         "development": {
-                            "buildOptimizer": false,
                             "optimization": {
                                 "scripts": false,
                                 "styles": false,
                                 "fonts": false
                             },
-                            "vendorChunk": true,
                             "extractLicenses": false,
                             "sourceMap": true,
                             "namedChunks": true
@@ -64,8 +64,6 @@
                             "sourceMap": false,
                             "namedChunks": false,
                             "extractLicenses": true,
-                            "vendorChunk": false,
-                            "buildOptimizer": true,
                             "budgets": [
                                 {
                                     "type": "initial",

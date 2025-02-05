@@ -1,6 +1,6 @@
-@import "~bootstrap/dist/css/bootstrap.css";
-@import "~hamburgers/dist/hamburgers.css";
-@import "~photoswipe/dist/photoswipe.css";
+@import "bootstrap/dist/css/bootstrap.css";
+@import "hamburgers/dist/hamburgers.css";
+@import "photoswipe/dist/photoswipe.css";
 
 html,
 body,
