@@ -13,7 +13,8 @@ interface ImageData {
 @Component({
     selector: "app-image-gallery",
     templateUrl: "./image-gallery.component.html",
-    styleUrls: ["./image-gallery.component.css"]
+    styleUrls: ["./image-gallery.component.css"],
+    standalone: false
 })
 export class ImageGalleryComponent {
     @Input()

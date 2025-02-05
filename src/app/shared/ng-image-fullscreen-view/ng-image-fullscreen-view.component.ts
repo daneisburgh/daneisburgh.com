@@ -21,7 +21,8 @@ const LIGHTBOX_NEXT_ARROW_CLICK_MESSAGE = "lightbox next",
     selector: "ng-image-fullscreen-view",
     templateUrl: "./ng-image-fullscreen-view.html",
     styleUrls: ["./ng-image-fullscreen-view.scss"],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class NgImageFullscreenViewComponent implements OnDestroy {
     totalImages: any = 0;

@@ -9,7 +9,8 @@ import { TimelineElement, timelineElements } from "./timeline-data";
 @Component({
     selector: "app-timeline",
     templateUrl: "./timeline.component.html",
-    styleUrls: ["./timeline.component.css"]
+    styleUrls: ["./timeline.component.css"],
+    standalone: false
 })
 export class TimelineComponent implements OnInit {
     @ViewChild("imageGallery") imageGallery!: ImageGalleryComponent;

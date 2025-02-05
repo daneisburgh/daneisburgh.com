@@ -9,7 +9,8 @@ import { AnalyticsService } from "src/app/shared/services/analytics/analytics.se
 @Component({
     selector: "app-project-cards",
     templateUrl: "./project-cards.component.html",
-    styleUrls: ["./project-cards.component.css", "../projects.component.css"]
+    styleUrls: ["./project-cards.component.css", "../projects.component.css"],
+    standalone: false
 })
 export class ProjectCardsComponent {
     @Input()
