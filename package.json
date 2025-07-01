@@ -55,7 +55,7 @@
         "@angular-eslint/template-parser": "19.0.2",
         "@angular/cli": "^19.1.5",
         "@angular/compiler-cli": "^19.1.4",
-        "@commitlint/cli": "^17.8.1",
+        "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^17.8.1",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "^10.0.1",
