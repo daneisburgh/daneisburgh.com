@@ -1,3 +1,18 @@
+# [1.23.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.22.3...v1.23.0) (2026-07-22)
+
+
+### Bug Fixes
+
+* change element server ordering ([499bb79](https://github.com/daneisburgh/daneisburgh.com/commit/499bb79441dd3ee506c1d23e73f8fb3d6fdf93f9))
+* update image file paths ([040bb0d](https://github.com/daneisburgh/daneisburgh.com/commit/040bb0dfae37198c99456f3f0c509721de6795e3))
+
+
+### Features
+
+* add and update images ([3a9501d](https://github.com/daneisburgh/daneisburgh.com/commit/3a9501ddc66ffa56177b935ab177fc74a982a551))
+* add timeline work and trip events ([205f0ca](https://github.com/daneisburgh/daneisburgh.com/commit/205f0ca5c2e693bb254db202248eab6b5a7be885))
+* update resume ([ddfa1e8](https://github.com/daneisburgh/daneisburgh.com/commit/ddfa1e80fedf0b05cc34dbced800fe4ac12b3f58))
+
 ## [1.22.3](https://github.com/daneisburgh/daneisburgh.com/compare/v1.22.2...v1.22.3) (2025-02-06)
 
 
