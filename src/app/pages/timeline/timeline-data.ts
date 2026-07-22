@@ -6,6 +6,7 @@ import {
     faCar,
     faClover,
     faCity,
+    faDollarSign,
     faEuroSign,
     faGem,
     faGraduationCap,
@@ -13,6 +14,7 @@ import {
     faHome,
     faHorse,
     faMotorcycle,
+    faMountain,
     faPlaceOfWorship,
     faShip,
     faTree,
@@ -28,9 +30,85 @@ export interface TimelineElement extends Element {
 export const timelineElements: TimelineElement[] = [
     {
         icon: faBriefcase,
+        title: "Sr. Forward Deployed Engineer @ Databricks",
+        startDate: new Date(2026, 6),
+        endDate: undefined,
+        color: undefined,
+        imageDirectory: undefined,
+        description: `
+            I stepped into the Senior Forward Deployed Engineer role at Databricks after about a year on the team.
+            Most of my work now involves sitting alongside client teams helping them think through migration strategy,
+            performance tuning, and governance as they modernize their data platforms.
+        `
+    },
+    {
+        icon: faDollarSign,
+        title: "Viva Las Vegas",
+        startDate: new Date(2025, 11),
+        endDate: new Date(2025, 11),
+        color: undefined,
+        imageDirectory: "vegas",
+        description: `
+            Sarah and I traveled to Las Vegas for a long weekend in December of 2025.
+            We stayed at the Bellagio and spent our time exploring the Strip and downtown Fremont Street, enjoying the local food and drinks.
+            We went to Cirque du Soleil's O as well as see a Battlebots competition and go behind the scenes and meet the teams.
+        `
+    },
+    {
+        icon: faMountain,
+        title: "Exploring Colorado",
+        startDate: new Date(2025, 8),
+        endDate: new Date(2025, 8),
+        color: undefined,
+        imageDirectory: "colorado",
+        description: `
+            Sarah and I took a trip to Denver and Boulder, CO to explore the cities and surrounding areas.
+            We stayed in downtown Denver and spent our time visiting the Coors Field, City Park, the Denver Botanic Gardens.
+            We then traveled to Boulder for a work trip and spent time hiking and exploring the city and local restaurants.
+        `
+    },
+    {
+        icon: faCity,
+        title: "Trip to Cleveland, OH",
+        startDate: new Date(2025, 7),
+        endDate: new Date(2025, 7),
+        color: undefined,
+        imageDirectory: "cleveland",
+        description: `
+            We took a weekend trip to Cleveland to visit the Rock and Roll Hall of Fame and see a Cleveland Guardians game at Progressive Field.
+            We also spent time exploring the city, breweries, and local attractions, including the Zephyr Silver Bronco train. We can't wait to return!
+        `
+    },
+    {
+        icon: faBriefcase,
+        title: "Forward Deployed Engineer @ Databricks",
+        startDate: new Date(2024, 8),
+        endDate: new Date(2026, 6),
+        color: undefined,
+        imageDirectory: undefined,
+        description: `
+            I left Kroger for a new role and I'm now embedded with client teams helping them plan and execute large scale cloud data migrations.
+            It's been a good way to see how different companies, from big established enterprises to newer tech forward ones, tackle the same kinds of infrastructure challenges.
+        `
+    },
+    {
+        icon: faCar,
+        title: "30th Birthday w/ Racing",
+        startDate: new Date(2024, 5),
+        endDate: new Date(2024, 5),
+        color: undefined,
+        imageDirectory: "30th-birthday",
+        description: `
+            Sarah took a weekend trip to Mid-Ohio Sports Car Course in Lexington, OH to celebrate my 30th birthday.
+            We stayed at a nice Airbnb in Mansfield, OH and spent the weekend watching the IMSA WeatherTech SportsCar Championship
+            and exploring the area.
+        `
+    },
+    {
+        icon: faBriefcase,
         title: "Advanced Data Engineer @ Kroger",
         startDate: new Date(2023, 10),
-        endDate: undefined,
+        endDate: new Date(2024, 8),
         color: undefined,
         imageDirectory: undefined,
         description: `
@@ -54,6 +132,19 @@ export const timelineElements: TimelineElement[] = [
             <a href="https://en.wikipedia.org/wiki/Waterford_Crystal" target="_blank">House of Waterford Crystal</a> and
             <a href="https://en.wikipedia.org/wiki/Cliffs_of_Moher" target="_blank">Cliffs of Moher</a> along the way.
             We had an amazing experience and we can't wait to visit Europe again soon.
+        `
+    },
+    {
+        icon: faHorse,
+        title: "Weekend in Irvine, KY",
+        startDate: new Date(2023, 8),
+        endDate: new Date(2023, 8),
+        color: undefined,
+        imageDirectory: "irvine",
+        description: `
+            Sarah took a weekend trip to Irvine, KY to escape the city and enjoy some time in the country.
+            We stayed at a small cabin on a farm and spent our time hiking and relaxing in the quiet of the countryside.
+            We also visited the nearby town of Berea and enjoyed some local food and shopping.
         `
     },
     {
