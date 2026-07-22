@@ -16,7 +16,7 @@ export interface Element {
 })
 export class ElementService {
     sortData(elements: Element[]) {
-        return orderBy(elements, "endDate", "desc");
+        return orderBy(elements, "startDate", "desc");
     }
 
     getDateSubtitle(element: Element) {
