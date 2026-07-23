@@ -80,6 +80,19 @@ export const timelineElements: TimelineElement[] = [
         `
     },
     {
+        icon: faHome,
+        title: "New Home in Loveland, OH",
+        startDate: new Date(2025, 6),
+        endDate: new Date(2025, 6),
+        color: undefined,
+        imageDirectory: "house2",
+        description: `
+            After a few years in our first home, we decided to move to a new house in Loveland, OH.
+            We found a great home in a quiet neighborhood near downtown Loveland, with plenty of space for us to grow into.
+            We're excited to make this house our home for years to come.
+        `
+    },
+    {
         icon: faBriefcase,
         title: "Forward Deployed Engineer @ Databricks",
         startDate: new Date(2024, 8),
@@ -233,7 +246,7 @@ export const timelineElements: TimelineElement[] = [
         startDate: new Date(2021, 4),
         endDate: new Date(2021, 4),
         color: undefined,
-        imageDirectory: "house",
+        imageDirectory: "house1",
         description: `
             After a lot of searching, Sarah and I bought our first home in May of 2021.
             The house is in West Chester, just north of our previous apartment and equidistant to our families

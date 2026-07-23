@@ -29,7 +29,7 @@ export class AboutComponent {
             name: "wedding",
             description: "Posing together after our first look"
         },
-        { name: "house", description: "Our first home in West Chester, Ohio" }
+        { name: "house2", description: "Our current home in Loveland, Ohio" }
     ];
 
     get yearsWorking(): number {
