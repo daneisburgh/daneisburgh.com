@@ -1,3 +1,12 @@
+## [1.23.1](https://github.com/daneisburgh/daneisburgh.com/compare/v1.23.0...v1.23.1) (2026-07-23)
+
+
+### Bug Fixes
+
+* add photos ([6672e9c](https://github.com/daneisburgh/daneisburgh.com/commit/6672e9c9c19e27cc370263a7f1722871997655eb))
+* update about and timeline ([5480967](https://github.com/daneisburgh/daneisburgh.com/commit/54809679fd320aa4442adbc13e7d57d02a9ff889))
+* update resume ([269d68c](https://github.com/daneisburgh/daneisburgh.com/commit/269d68cc6ef5006c032f6f49d7ca217023c858c8))
+
 # [1.23.0](https://github.com/daneisburgh/daneisburgh.com/compare/v1.22.3...v1.23.0) (2026-07-22)
 
 
